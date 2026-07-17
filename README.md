@@ -44,6 +44,17 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 5. [Content Inventory](docs/05_CONTENT_INVENTORY.md)
 6. [Implementation Plan](docs/06_IMPLEMENTATION_PLAN.md)
 7. [Featured Cases Plan](docs/07_FEATURED_CASES_PLAN.md)
+8. [Logo Concepts](docs/08_LOGO_CONCEPTS.md)
+9. [LP Wireframe](docs/09_LP_WIREFRAME.md)
+
+## Design Drafts
+
+- [F-hole logo concept sheet](design/logo/logo-concepts.svg)
+- [Responsive LP wireframe prototype](wireframes/lp-wireframe.html)
+
+ロゴラフは4方向を比較し、現時点ではF字孔の下端を信号線へつなぎ、小さな赤い点を置く **Signal F** を第一推奨としています。
+
+LPワイヤーフレームはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番にしています。
 
 ## Selected Featured Cases
 
@@ -79,8 +90,9 @@ AIを導入すること自体を目的にしません。
 - [x] 掲載事例の選定
 - [ ] 代表事例の画像・動画素材作成
 - [ ] 匿名業務デモの仕様確定
-- [ ] ロゴのラフ制作
-- [ ] LPワイヤーフレーム制作
+- [x] ロゴのラフ制作
+- [x] LPワイヤーフレーム制作
+- [ ] ロゴ方向性の選定・清書
 - [ ] ビジュアルデザイン
 - [ ] Astroによる実装
 - [ ] 名刺入稿データ制作
@@ -90,3 +102,5 @@ AIを導入すること自体を目的にしません。
 公開前に、勤務先や顧客に関する機密情報、実データ、認証情報、APIキーが含まれていないことを必ず確認します。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
+
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は方向性確認用です。最終ロゴ、最終ビジュアル、Astro実装ではありません。
