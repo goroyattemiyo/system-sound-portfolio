@@ -40,7 +40,7 @@
     .concept.selected { border-color: rgba(200, 117, 50, .76); }
     .concept-label { display: flex; min-height: 28px; align-items: center; justify-content: space-between; color: var(--maple); font: .68rem ui-monospace, monospace; }
     .concept-label b { color: var(--red); font-size: .52rem; letter-spacing: .1em; }
-    .concept img { display: block; width: 100%; aspect-ratio: 2 / 2.25; margin: 8px 0 18px; object-fit: contain; border-radius: 12px; background: var(--stage); }
+    .concept img { display: block; width: 100%; aspect-ratio: 2 / 2.25; margin: 8px 0 18px; padding: 18px; object-fit: contain; border-radius: 12px; background: radial-gradient(ellipse at 32% 38%, #da8a47 0, #a95b2e 46%, #5d2e1c 82%, #211310 100%); }
     .concept h3 { margin: 0; font: 400 1.35rem Georgia, serif; }
     .table-wrap { margin-top: 22px; overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
     table { width: 100%; min-width: 520px; border-collapse: collapse; }
@@ -105,50 +105,48 @@
   <main>
     <section class="shell">
       <p class="kicker">LOGO + FIRST VIEW</p>
-      <h1>実物に戻り、<br>信号を二層目へ。</h1>
-      <p class="lead">添付写真の黒い開口部を輪郭資料としてトレースしました。赤は独立した円ではなく、下側の涙滴状終端そのものへ統合します。</p>
+      <h1>実物の骨格を、<br>ブランド記号へ。</h1>
+      <p class="lead">実物トレースから細かな歪みと説明要素を減らし、F字孔の黒い面そのものを正式ロゴへ縮約しました。信号表現はWeb演出へ分離します。</p>
     </section>
 
     <section class="shell" aria-labelledby="issues-title">
       <p class="kicker">01 / CONFLICTS &amp; GAPS</p>
       <h2 id="issues-title">先に解いた矛盾と不足</h2>
       <div class="issue-grid">
-        <article class="issue"><b>線から面へ</b><p>従来の滑らかなS字線を廃止し、写真に写る開口部を黒い面として再構成しました。</p></article>
-        <article class="issue"><b>赤は終端の一部</b><p>通知バッジのような円を廃止し、下側の終端を形状のまま赤へ置換します。</p></article>
+        <article class="issue"><b>主役は黒い面</b><p>上下の終端、左右のノッチ、縦長のカーブだけを残し、正式ロゴの骨格へ整理します。</p></article>
+        <article class="issue"><b>軌道は正式ロゴ外</b><p>白い軌道線を静止ロゴと印刷物から外し、Webヒーローの補助演出だけに限定します。</p></article>
         <article class="issue"><b>色コード</b><p>最新指示を正とし、Ivory #F2EDE3 / Maple #C87532 / Wood #7A4526 / Red #E33A2Fに統一します。</p></article>
         <article class="issue"><b>未決定</b><p>連絡先、写真方針、フォント配信、名刺の印刷条件は、実データ入手後に確定します。</p></article>
       </div>
     </section>
 
     <section class="shell" aria-labelledby="concepts-title">
-      <p class="kicker">02 / THREE DIRECTIONS</p>
-      <h2 id="concepts-title">F字孔ロゴ 3案</h2>
+      <p class="kicker">02 / THREE APPLICATIONS</p>
+      <h2 id="concepts-title">用途別の3つの完成形</h2>
       <div class="concept-grid">
-        <article class="concept"><div class="concept-label"><span>A</span></div><img src="../design/logo/system-sound-concept-a-reference-trace.svg" alt="Concept A Reference Trace"><h3>Reference Trace</h3><p>添付写真の黒い開口部を忠実にトレース。比較と将来の調整基準にします。</p></article>
-        <article class="concept selected"><div class="concept-label"><span>B</span><b>RECOMMENDED</b></div><img src="../design/logo/system-sound-concept-b-instrument-signal.svg" alt="Concept B Instrument Signal"><h3>Instrument Signal</h3><p>実物の骨格を保ちながら輪郭を整理した正式ロゴ基準です。</p></article>
-        <article class="concept"><div class="concept-label"><span>C</span></div><img src="../design/logo/system-sound-concept-c-small-cut.svg" alt="Concept C Small Cut"><h3>Small Cut</h3><p>16pxでも中央の締まりとノッチが残るfavicon専用形です。</p></article>
+        <article class="concept selected"><div class="concept-label"><span>1</span><b>RECOMMENDED</b></div><img src="../design/logo/system-sound-formal-mark.svg" alt="Formal Mark"><h3>Formal Mark</h3><p>黒いF字孔面と、形状へ統合した赤い下端だけで成立する正式ロゴです。</p></article>
+        <article class="concept"><div class="concept-label"><span>2</span></div><img src="../design/logo/system-sound-animated-hero-mark.svg" alt="Animated Hero Mark"><h3>Animated Hero Mark</h3><p>Formal Markへ白い補助軌道と一度だけの信号移動を重ねるWeb専用形です。</p></article>
+        <article class="concept"><div class="concept-label"><span>3</span></div><img src="../design/logo/system-sound-small-icon.svg" alt="Small Icon"><h3>Small Icon</h3><p>16pxでも上下終端と中央ノッチが残るfavicon・SNS専用形です。</p></article>
       </div>
       <div class="table-wrap">
-        <table><thead><tr><th>評価軸 / 5点</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody>
-          <tr><th>実物への忠実度</th><td>5</td><td class="best">4</td><td>3</td></tr>
-          <tr><th>ロゴとしての均整</th><td>3</td><td class="best">5</td><td>4</td></tr>
-          <tr><th>小サイズ視認性</th><td>2</td><td class="best">4</td><td>5</td></tr>
-          <tr><th>白黒印刷</th><td>4</td><td class="best">5</td><td>5</td></tr>
-          <tr><th>Webアニメーション</th><td>4</td><td class="best">5</td><td>4</td></tr>
-          <tr><th>名刺適性</th><td>3</td><td class="best">5</td><td>4</td></tr>
-          <tr><th>合計 / 30</th><td>21</td><td class="best">28</td><td>25</td></tr>
+        <table><thead><tr><th>評価軸 / 5点</th><th>Formal</th><th>Hero</th><th>Small</th></tr></thead><tbody>
+          <tr><th>正式ロゴとしての強さ</th><td class="best">5</td><td>3</td><td>4</td></tr>
+          <tr><th>白黒印刷</th><td class="best">5</td><td>2</td><td>5</td></tr>
+          <tr><th>名刺・ヘッダー視認性</th><td class="best">5</td><td>2</td><td>5</td></tr>
+          <tr><th>F字孔らしさ</th><td class="best">5</td><td>5</td><td>4</td></tr>
+          <tr><th>補助演出との拡張性</th><td class="best">4</td><td>5</td><td>3</td></tr>
         </tbody></table>
       </div>
     </section>
 
     <section class="shell recommend" aria-labelledby="selected-title">
       <div class="logo-stage">
-        <svg viewBox="0 0 240 360" role="img" aria-label="推奨案 Instrument Signal">
+        <svg viewBox="0 0 240 360" role="img" aria-label="推奨案 Formal Mark">
           <path fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
-          <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/><path fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
+          <path fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
         </svg>
       </div>
-      <div class="decision"><p class="kicker">SELECTED / CONCEPT B</p><h2 id="selected-title">Instrument Signal</h2><p>下側の涙滴状終端を赤へ置き換え、独立した円は使いません。正式ロゴと名刺はB、faviconだけCを使用します。</p><ul><li>静止ロゴ：下側の終端そのものを赤へ置換</li><li>Web：下端から上端へ10.5秒で一度だけ移動</li><li>移動中の信号：小さな涙滴形</li><li>Reduced motion：赤い下端のまま静止</li></ul></div>
+      <div class="decision"><p class="kicker">SELECTED / FORMAL MARK</p><h2 id="selected-title">Formal Mark</h2><p>写真固有の細かな凸凹と白い軌道線を外し、F字孔の黒い面＋統合された赤い下端だけを正式ロゴとします。</p><ul><li>正式ロゴ：軌道線・独立した赤丸なし</li><li>白黒印刷：終端を含む一つの面</li><li>Webヒーロー：補助軌道と一度だけの信号移動</li><li>favicon・SNS：Small Icon</li></ul></div>
     </section>
 
     <section class="shell" aria-labelledby="hero-title">
