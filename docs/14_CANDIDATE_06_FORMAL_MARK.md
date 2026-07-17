@@ -32,7 +32,7 @@ Status: **Candidate 06 selected / owner-only preview**
 
 ### Integrated red terminal
 
-初回調整では下側終端全体を赤へ置換したため、接続していても録画ランプや通知バッジのように見えた。最終調整では赤の面積を下側カーブ外周の一部へ縮め、黒い終端を包む細い続きとして統合した。
+初回調整では下側終端全体を赤へ置換したため、接続していても録画ランプや通知バッジのように見えた。最終調整では赤の面積を下側カーブ先端の一部へ縮め、黒い本体から曲率に沿って切り替わる細い続きとして統合した。正式色はPhase 03でDeep Wine `#7A1F2B`に更新した。
 
 - 独立した円を置かない
 - 黒い終端の輪郭から外へはみ出さない
@@ -51,8 +51,8 @@ Status: **Candidate 06 selected / owner-only preview**
 
 ## 5. Color variants
 
-- 白背景：Stage Black `#0B0B0C`に近い黒面＋Signal Red `#E33A2F`
-- 黒背景：Soft Ivory `#F2EDE3`面＋Signal Red `#E33A2F`
+- 白背景：Stage Black `#0B0B0C`に近い黒面＋Deep Wine `#7A1F2B`
+- 黒背景：Soft Ivory `#F2EDE3`面＋Deep Wine `#7A1F2B`
 - 単色：終端を含む一つの黒面または白面
 - ロゴ本体にグラデーション、グロー、白い軌道線を含めない
 
