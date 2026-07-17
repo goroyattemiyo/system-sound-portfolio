@@ -4,6 +4,8 @@ Date: 2026-07-17 JST
 Scope: ロゴ3案、推奨案選定、ファーストビュー、スマートフォン優先確認  
 Out of scope: LP全ページの再設計、事例素材制作、名刺入稿データの完成
 
+> Status: この初回選定は、実物写真を基にした `docs/12_LOGO_TRACE_REVISION.md` の形状基準へ更新された。判断経緯として保存する。
+
 ## 1. Reviewed sources
 
 - `README.md`
@@ -169,4 +171,3 @@ Reference frame: 390 × 844px
 - 写真、音声、画面素材の権利を確認
 - 勤務先、顧客、設備、認証情報を含めない
 - 開発中／MVP／Private Caseの状態表示を再確認
-
