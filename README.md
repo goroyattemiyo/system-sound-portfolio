@@ -48,15 +48,19 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 9. [LP Wireframe](docs/09_LP_WIREFRAME.md)
 10. [Design System](docs/10_DESIGN_SYSTEM.md)
 11. [Phase 01 Logo / Hero Decision](docs/11_PHASE_01_LOGO_HERO_DECISION.md)
+12. [Photo-based Logo Trace Revision](docs/12_LOGO_TRACE_REVISION.md)
 
 ## Design Drafts
 
 - [Initial F-hole logo concept sheet](design/logo/logo-concepts.svg)
 - [Initial responsive LP wireframe](wireframes/lp-wireframe.html)
-- [Selected Phase 01 logo symbol](design/logo/system-sound-symbol.svg)
+- [Selected formal logo symbol](design/logo/system-sound-symbol.svg)
+- [A: reference trace](design/logo/system-sound-concept-a-reference-trace.svg)
+- [B: formal logo simplification](design/logo/system-sound-concept-b-instrument-signal.svg)
+- [C: favicon simplification](design/logo/system-sound-concept-c-small-cut.svg)
 - [Phase 01 logo / hero browser preview](wireframes/brand-phase-01.html)
 
-Phase 01では従来のSignal Fを再検討し、F字孔固有の上下の目と中央の切り欠きを残した **Resonant Signal** を正式ロゴ案として選定しました。Frequencyは外付けの線ではなく、F字孔の流れとWeb上の赤い点の移動で表現します。
+ユーザー提供のコントラバス実物写真を形状資料とし、黒い開口部を面としてトレースしました。正式ロゴは **B — Instrument Signal**、faviconは **C — Small Cut** を使用します。FrequencyはF字孔を変形せず、内側の細い軌道と赤い点へ分離します。
 
 LPはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番を維持します。
 
@@ -108,4 +112,4 @@ AIを導入すること自体を目的にしません。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
 
-`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。Phase 01の選定結果、変更理由、未決定事項は `docs/11_PHASE_01_LOGO_HERO_DECISION.md` を正として参照してください。
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。写真トレース後の正式な形状基準は `docs/12_LOGO_TRACE_REVISION.md` を参照してください。参照写真そのものはリポジトリへ含めません。
