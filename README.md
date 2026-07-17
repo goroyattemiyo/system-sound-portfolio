@@ -31,7 +31,7 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 - 艶のあるコントラバスの明るい橙褐色の木肌
 - 小規模な防音室で、約20人が近い距離で演奏を聴くような親密さ
 - 狭い舞台に差し込む柔らかなスポットライト
-- ロゴ終端にはごく小さな深いワインレッドを統合し、鮮やかな赤はUIの限定アクセントとして使用
+- Formal Markは黒または生成り一色とし、ワインレッドはHeroで一瞬走る反射としてだけ使用
 - F字孔の `F` と Frequency の `F` を重ねたシンボル
 - ネオンやサイバーパンクには寄せない
 
@@ -52,6 +52,7 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 13. [Brand Mark Reduction](docs/13_BRAND_MARK_REDUCTION.md)
 14. [Candidate 06 Formal Mark](docs/14_CANDIDATE_06_FORMAL_MARK.md)
 15. [Candidate 06 Terminal Color Decision](docs/15_TERMINAL_COLOR_DECISION.md)
+16. [Animated Hero Motion Comparison](docs/16_HERO_MOTION_COMPARISON.md)
 
 ## Design Drafts
 
@@ -61,7 +62,9 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 - [Candidate 06 Formal Mark](design/logo/system-sound-formal-mark.svg)
 - [Candidate 02 comparison reference](design/logo/system-sound-candidate-02-reference.svg)
 - [Candidate 10 Small Icon](design/logo/system-sound-small-icon.svg)
-- [Animated Hero Mark](design/logo/system-sound-animated-hero-mark.svg)
+- [Animated Hero Mark / Subtle Sweep](design/logo/system-sound-animated-hero-mark.svg)
+- [Soft Pulse animated SVG](design/logo/system-sound-animated-soft-pulse.svg)
+- [Varnish Glint animated SVG](design/logo/system-sound-animated-varnish-glint.svg)
 - [Dark-background horizontal lockup](design/logo/system-sound-horizontal-reversed.svg)
 - [Historical A: reference trace](design/logo/system-sound-concept-a-reference-trace.svg)
 - [Historical B: trace simplification](design/logo/system-sound-concept-b-instrument-signal.svg)
@@ -69,11 +72,12 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 - [Phase 01 logo / hero browser preview](wireframes/brand-phase-01.html)
 - [Phase 02 candidate 06 application preview](wireframes/brand-phase-02.html)
 - [Phase 03 terminal-color comparison preview](wireframes/brand-phase-03.html)
+- [Phase 04 live Hero motion comparison](wireframes/brand-phase-04.html)
 - [Terminal A / Deep Wine](design/logo/system-sound-terminal-a.svg)
 - [Terminal B / Burgundy](design/logo/system-sound-terminal-b.svg)
 - [Terminal C / Mature Red](design/logo/system-sound-terminal-c.svg)
 
-追加比較の結果、正式ロゴのベースは **候補06**、統合された終端色は **A / Deep Wine `#7A1F2B`** としました。**02** は比較参照、**10** はfavicon・SNS用の小型アイコン候補として保持します。Formal Mark、名刺、ヘッダー、小型アイコンは常に静止します。**Animated Hero Mark** だけ、終端付近から弱い反射光が内側を上へ一度流れ、`prefers-reduced-motion`では非表示になります。
+正式ロゴのベースは **候補06** とし、Formal Markは黒または生成り一色へ戻しました。ワインレッド `#7A1F2B` は静止終端色ではなく、Heroで10秒ごとに約1.8秒だけ下端から上端へ走る反射として使用します。第一候補は **Subtle Sweep**。名刺、ヘッダー、favicon、小型アイコンは完全静止し、`prefers-reduced-motion`では反射を非表示にします。
 
 LPはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番を維持します。
 
@@ -125,4 +129,4 @@ AIを導入すること自体を目的にしません。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
 
-`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の形状基準は `docs/14_CANDIDATE_06_FORMAL_MARK.md`、終端色とヒーロー演出は `docs/15_TERMINAL_COLOR_DECISION.md` を参照してください。写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の形状基準は `docs/14_CANDIDATE_06_FORMAL_MARK.md`、Heroの反射表現は `docs/16_HERO_MOTION_COMPARISON.md` を参照してください。終端色の比較は `docs/15_TERMINAL_COLOR_DECISION.md`、写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
