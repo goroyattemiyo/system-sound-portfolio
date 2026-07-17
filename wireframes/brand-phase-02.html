@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SYSTEM / SOUND — Candidate 06 Formal Mark</title>
+  <style>
+    :root { color-scheme: dark; --stage:#0b0b0c; --panel:#151414; --ivory:#f2ede3; --maple:#c87532; --red:#e33a2f; --muted:#aaa298; --line:rgba(242,237,227,.13); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--stage); color:var(--ivory); font-family:Inter,"Noto Sans JP",sans-serif; }
+    .shell { width:min(calc(100% - 32px),1120px); margin:auto; }
+    header { display:flex; min-height:68px; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); font-size:.7rem; letter-spacing:.12em; }
+    header span { color:var(--muted); }
+    section { padding:76px 0; border-bottom:1px solid var(--line); }
+    .kicker { margin:0 0 12px; color:var(--maple); font:.62rem ui-monospace,monospace; letter-spacing:.14em; }
+    h1 { max-width:900px; margin:0; font-size:clamp(2.8rem,11vw,6rem); letter-spacing:-.055em; line-height:1.12; }
+    h2 { margin:0 0 30px; font-size:clamp(2rem,7vw,3.8rem); letter-spacing:-.045em; }
+    .lead { max-width:760px; color:var(--muted); line-height:1.9; }
+    .grid { display:grid; gap:14px; }
+    .candidate { padding:16px; border:1px solid var(--line); border-radius:20px; background:#121213; }
+    .candidate.selected { border-color:rgba(200,117,50,.8); }
+    .candidate b { font:500 1.7rem Georgia,serif; }
+    .candidate small { float:right; color:var(--maple); font-size:.5rem; letter-spacing:.1em; }
+    .candidate figure { display:grid; min-height:340px; margin:12px 0 18px; place-items:center; border-radius:14px; background:radial-gradient(ellipse at 35% 38%,#dd8e4a,#a95b2e 48%,#211310 100%); }
+    .candidate img { width:130px; height:285px; object-fit:contain; }
+    .candidate p { color:var(--muted); font-size:.8rem; line-height:1.8; }
+    .scale, .variants, .mocks { display:grid; gap:14px; }
+    .scale article, .variant, .mock { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+    .scale article > p, .mock > p { margin:0; padding:14px 16px; color:var(--muted); font:.56rem ui-monospace,monospace; letter-spacing:.1em; }
+    .sizes { display:flex; min-height:220px; align-items:end; justify-content:space-around; padding:24px; background:#f4f1eb; }
+    .sizes div { display:grid; place-items:center; gap:12px; color:#5d5851; font-size:.6rem; }
+    .variant { display:grid; min-height:420px; place-items:center; }
+    .variant.light { background:#f4f1eb; }
+    .variant.dark { background:#080809; }
+    .variant img { width:145px; height:280px; object-fit:contain; }
+    .card { display:flex; aspect-ratio:91/55; padding:8%; flex-direction:column; justify-content:space-between; background:radial-gradient(circle at 16% 12%,rgba(200,117,50,.17),transparent 40%),#0b0b0c; }
+    .card strong { letter-spacing:.1em; }
+    .card span { color:var(--muted); font-size:.65rem; }
+    .site-head { min-height:380px; background:radial-gradient(circle at 80% 15%,rgba(200,117,50,.14),transparent 40%),#0b0b0c; }
+    .site-bar { display:flex; min-height:60px; padding:0 16px; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); font-size:.65rem; letter-spacing:.1em; }
+    .site-copy { padding:52px 22px; }
+    .site-copy strong { display:block; margin-top:18px; font-size:clamp(1.8rem,6vw,3rem); line-height:1.2; }
+    @media(min-width:720px){ section{padding:108px 0}.grid{grid-template-columns:repeat(3,1fr)}.scale,.variants,.mocks{grid-template-columns:repeat(2,1fr)} }
+  </style>
+</head>
+<body>
+  <header class="shell"><strong>SYSTEM / SOUND</strong><span>BRAND PHASE 02 / 06</span></header>
+  <main>
+    <section class="shell"><p class="kicker">FORMAL MARK REFINEMENT</p><h1>06を、正式ロゴの<br>新しい基準へ。</h1><p class="lead">02は比較参照、10は小型アイコン候補として保持し、06を白背景・黒背景・ロゴタイプ・名刺・サイトヘッダーへ展開します。</p></section>
+    <section class="shell"><p class="kicker">01 / SELECTION</p><h2>採用基準と保持候補</h2><div class="grid">
+      <article class="candidate selected"><b>06</b><small>FORMAL MARK</small><figure><img src="../design/logo/system-sound-formal-mark.svg" alt="Candidate 06"></figure><p>上下終端のバランスと太い下側カーブを正式ロゴへ採用。</p></article>
+      <article class="candidate"><b>02</b><small>REFERENCE</small><figure><img src="../design/logo/system-sound-candidate-02-reference.svg" alt="Candidate 02"></figure><p>細さと軽さの比較参照として保持。</p></article>
+      <article class="candidate"><b>10</b><small>SMALL ICON</small><figure><img src="../design/logo/system-sound-small-icon.svg" alt="Candidate 10"></figure><p>16px用の角張った小型アイコン候補。</p></article>
+    </div></section>
+    <section class="shell"><p class="kicker">02 / REDUCTION TEST</p><h2>64 / 32 / 16px</h2><div class="scale">
+      <article><p>06 / FORMAL</p><div class="sizes"><div><img width="64" src="../design/logo/system-sound-formal-mark.svg"><span>64px</span></div><div><img width="32" src="../design/logo/system-sound-formal-mark.svg"><span>32px</span></div><div><img width="16" src="../design/logo/system-sound-formal-mark.svg"><span>16px</span></div></div></article>
+      <article><p>10 / SMALL</p><div class="sizes"><div><img width="64" src="../design/logo/system-sound-small-icon.svg"><span>64px</span></div><div><img width="32" src="../design/logo/system-sound-small-icon.svg"><span>32px</span></div><div><img width="16" src="../design/logo/system-sound-small-icon.svg"><span>16px</span></div></div></article>
+    </div></section>
+    <section class="shell"><p class="kicker">03 / COLOR</p><h2>白背景／黒背景</h2><div class="variants"><div class="variant light"><img src="../design/logo/system-sound-formal-mark.svg" alt="白背景版"></div><div class="variant dark"><img src="../design/logo/system-sound-reversed.svg" alt="黒背景版"></div></div></section>
+    <section class="shell"><p class="kicker">04 / APPLICATIONS</p><h2>名刺表面とサイトヘッダー</h2><div class="mocks">
+      <article class="mock"><p>BUSINESS CARD / 91 × 55mm</p><div class="card"><strong>SYSTEM <em>/</em> SOUND</strong><div><strong>AI SOLUTION ENGINEER</strong><br><span>業務改善・AI導入・自動化支援</span></div><span>NAME / CONTACT / QR — PLACEHOLDER</span></div></article>
+      <article class="mock"><p>SITE HEADER / MOBILE</p><div class="site-head"><div class="site-bar"><strong>SYSTEM / SOUND</strong><span>MENU</span></div><div class="site-copy"><span>AI SOLUTION ENGINEER</span><strong>仕事の中にある<br>「毎回面倒」を改善します。</strong></div></div></article>
+    </div></section>
+  </main>
+</body>
+</html>
