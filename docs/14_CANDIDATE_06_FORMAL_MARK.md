@@ -1,7 +1,7 @@
 # Candidate 06 Formal Mark Refinement
 
 Date: 2026-07-17 JST
-Status: **Candidate 06 selected / owner-only preview**
+Status: **Candidate 06 shape selected / color treatment superseded by docs/16**
 
 ## 1. Decision
 
@@ -30,9 +30,9 @@ Status: **Candidate 06 selected / owner-only preview**
 - 下端：太いカーブと丸い内側終端で、全体の重心を支える
 - 上下を同じ形へそろえず、F字孔らしい方向差を残す
 
-### Integrated red terminal
+### Historical red-terminal study
 
-初回調整では下側終端全体を赤へ置換したため、接続していても録画ランプや通知バッジのように見えた。最終調整では赤の面積を下側カーブ先端の一部へ縮め、黒い本体から曲率に沿って切り替わる細い続きとして統合した。正式色はPhase 03でDeep Wine `#7A1F2B`に更新した。
+この節はPhase 03までの判断履歴である。Phase 04ではワインレッド終端の常設を取りやめ、Formal Markを黒または生成り一色へ戻した。現行の色と動きは `docs/16_HERO_MOTION_COMPARISON.md` を正とする。
 
 - 独立した円を置かない
 - 黒い終端の輪郭から外へはみ出さない
@@ -51,8 +51,8 @@ Status: **Candidate 06 selected / owner-only preview**
 
 ## 5. Color variants
 
-- 白背景：Stage Black `#0B0B0C`に近い黒面＋Deep Wine `#7A1F2B`
-- 黒背景：Soft Ivory `#F2EDE3`面＋Deep Wine `#7A1F2B`
+- 白背景：Stage Black `#0B0B0C`に近い黒一色
+- 黒背景：Soft Ivory `#F2EDE3`一色
 - 単色：終端を含む一つの黒面または白面
 - ロゴ本体にグラデーション、グロー、白い軌道線を含めない
 
