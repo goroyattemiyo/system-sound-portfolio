@@ -69,13 +69,14 @@
     .hero-mark svg { position: relative; width: 180px; }
     .signal-silhouette { opacity: 0; animation: appear .62s .1s forwards; }
     .signal-track { stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 1.4s .32s ease-out forwards; }
-    .signal-moving { opacity: 0; animation: appear .5s 1.4s forwards; }
-    .signal-static { display: none; }
+    .signal-terminal.animated { animation: terminal-release 10.5s 1.15s ease-in-out 1 both; }
+    .signal-moving { opacity: 0; }
     .mobile-note { max-width: 720px; margin-top: 28px; color: var(--muted); font-size: .85rem; line-height: 1.8; }
     footer { display: flex; padding: 34px 0 70px; flex-direction: column; gap: 8px; color: #77716b; font-size: .7rem; }
     footer strong { color: var(--ivory); letter-spacing: .12em; }
     @keyframes draw { to { stroke-dashoffset: 0; } }
     @keyframes appear { to { opacity: 1; } }
+    @keyframes terminal-release { 0%, 6% { opacity: 1; } 14%, 88% { opacity: 0; } 100% { opacity: 1; } }
     @media (min-width: 620px) {
       .issue-grid { grid-template-columns: repeat(2, 1fr); }
       .actions { display: flex; }
@@ -94,8 +95,8 @@
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .signal-silhouette { opacity: 1; }
       .signal-track { stroke-dashoffset: 0; }
+      .signal-terminal.animated { animation: none; opacity: 1; }
       .signal-moving { display: none; }
-      .signal-static { display: block; }
     }
   </style>
 </head>
@@ -105,7 +106,7 @@
     <section class="shell">
       <p class="kicker">LOGO + FIRST VIEW</p>
       <h1>実物に戻り、<br>信号を二層目へ。</h1>
-      <p class="lead">添付写真の黒い開口部を輪郭資料としてトレースしました。F字孔の面シルエットを先に完成させ、Frequencyは内側の細い軌道と赤い点だけで加えます。</p>
+      <p class="lead">添付写真の黒い開口部を輪郭資料としてトレースしました。赤は独立した円ではなく、下側の涙滴状終端そのものへ統合します。</p>
     </section>
 
     <section class="shell" aria-labelledby="issues-title">
@@ -113,7 +114,7 @@
       <h2 id="issues-title">先に解いた矛盾と不足</h2>
       <div class="issue-grid">
         <article class="issue"><b>線から面へ</b><p>従来の滑らかなS字線を廃止し、写真に写る開口部を黒い面として再構成しました。</p></article>
-        <article class="issue"><b>信号は二層目</b><p>中央のノッチと上下の終端を優先し、その内側だけに細い軌道と赤い点を置きます。</p></article>
+        <article class="issue"><b>赤は終端の一部</b><p>通知バッジのような円を廃止し、下側の終端を形状のまま赤へ置換します。</p></article>
         <article class="issue"><b>色コード</b><p>最新指示を正とし、Ivory #F2EDE3 / Maple #C87532 / Wood #7A4526 / Red #E33A2Fに統一します。</p></article>
         <article class="issue"><b>未決定</b><p>連絡先、写真方針、フォント配信、名刺の印刷条件は、実データ入手後に確定します。</p></article>
       </div>
@@ -144,10 +145,10 @@
       <div class="logo-stage">
         <svg viewBox="0 0 240 360" role="img" aria-label="推奨案 Instrument Signal">
           <path fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
-          <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/><circle cx="175" cy="30" r="5" fill="#E33A2F"/>
+          <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/><path fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
         </svg>
       </div>
-      <div class="decision"><p class="kicker">SELECTED / CONCEPT B</p><h2 id="selected-title">Instrument Signal</h2><p>実物の黒い開口部を主役にし、Frequencyは内側の細い軌道へ分離しました。正式ロゴと名刺はB、faviconだけCを使用します。</p><ul><li>静止ロゴ：赤い点は上端の軌道上に固定</li><li>Web：18秒で上端から下端へ移動</li><li>Reduced motion：移動を止め上端へ固定</li><li>正式ロゴ：B／favicon：C</li></ul></div>
+      <div class="decision"><p class="kicker">SELECTED / CONCEPT B</p><h2 id="selected-title">Instrument Signal</h2><p>下側の涙滴状終端を赤へ置き換え、独立した円は使いません。正式ロゴと名刺はB、faviconだけCを使用します。</p><ul><li>静止ロゴ：下側の終端そのものを赤へ置換</li><li>Web：下端から上端へ10.5秒で一度だけ移動</li><li>移動中の信号：小さな涙滴形</li><li>Reduced motion：赤い下端のまま静止</li></ul></div>
     </section>
 
     <section class="shell" aria-labelledby="hero-title">
@@ -164,8 +165,8 @@
           <svg viewBox="0 0 240 360" role="img" aria-label="F字孔に沿って信号点が移動するSignal F">
             <path class="signal-silhouette" fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
             <path class="signal-track" d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/>
-            <circle class="signal-static" cx="175" cy="30" r="5" fill="#E33A2F"/>
-            <circle class="signal-moving" r="5" fill="#E33A2F"><animateMotion begin="1.4s" dur="18s" repeatCount="indefinite" path="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333"/></circle>
+            <path class="signal-terminal animated" fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
+            <path class="signal-moving" d="M0-5C3-3 3 2 0 5C-3 2-3-3 0-5Z" fill="#E33A2F"><animateMotion begin="1.15s" dur="10.5s" repeatCount="1" rotate="auto" path="M84 333C111 318 131 283 136 253C141 220 141 191 142 171C143 145 142 113 146 84C149 56 158 35 175 30"/><animate attributeName="opacity" begin="1.15s" dur="10.5s" values="0;1;1;0" keyTimes="0;.06;.9;1" repeatCount="1"/></path>
           </svg>
         </div>
       </div>
