@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">SYSTEM / SOUND logo concept sheet</title>
+  <desc id="desc">Four rough logo concepts combining a contrabass F-hole and frequency or signal motifs.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E39A53"/>
+      <stop offset="0.52" stop-color="#C87532"/>
+      <stop offset="1" stop-color="#9B4F22"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="50%" cy="18%" r="76%">
+      <stop offset="0" stop-color="#5C4332" stop-opacity="0.42"/>
+      <stop offset="0.48" stop-color="#201A16" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B0B0C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .panel { fill:#111112; stroke:#2D2926; stroke-width:1.5; }
+      .label { fill:#F2EDE3; font-family:Inter,Arial,sans-serif; font-size:26px; font-weight:600; letter-spacing:1px; }
+      .sub { fill:#A9A39B; font-family:Inter,Arial,sans-serif; font-size:16px; letter-spacing:.4px; }
+      .tiny { fill:#837D75; font-family:Inter,Arial,sans-serif; font-size:13px; letter-spacing:.25px; }
+      .mark { fill:none; stroke:url(#wood); stroke-width:15; stroke-linecap:round; stroke-linejoin:round; }
+      .mark-thin { fill:none; stroke:url(#wood); stroke-width:9; stroke-linecap:round; stroke-linejoin:round; }
+      .ivory { fill:none; stroke:#F2EDE3; stroke-width:10; stroke-linecap:round; stroke-linejoin:round; }
+      .slash { stroke:#F2EDE3; stroke-width:8; stroke-linecap:round; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="860" fill="#0B0B0C"/>
+  <rect width="1200" height="860" fill="url(#spot)"/>
+
+  <text x="64" y="70" fill="#F2EDE3" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="3">SYSTEM / SOUND</text>
+  <text x="64" y="103" fill="#9A938A" font-family="Inter,Arial,sans-serif" font-size="17" letter-spacing="1.2">F-HOLE / FREQUENCY — ROUGH CONCEPTS</text>
+  <circle cx="1114" cy="66" r="7" fill="#E33A2F"/>
+
+  <!-- Panel A -->
+  <g transform="translate(55 145)">
+    <rect class="panel" width="520" height="300" rx="22"/>
+    <g transform="translate(70 44)" filter="url(#softShadow)">
+      <path class="mark" d="M130 18 C76 55 75 115 124 147 C168 176 164 223 112 260"/>
+      <circle cx="111" cy="67" r="13" fill="#C87532"/>
+      <circle cx="135" cy="211" r="13" fill="#C87532"/>
+      <path class="mark-thin" d="M91 111 L141 111 M108 166 L158 166"/>
+    </g>
+    <text class="label" x="280" y="92">A. Minimal Resonance</text>
+    <text class="sub" x="280" y="126">一筆のF字孔</text>
+    <text class="tiny" x="280" y="166">静か・音楽的・単色に強い</text>
+    <text class="tiny" x="280" y="192">名刺裏面／箔押し向け</text>
+    <text class="tiny" x="280" y="238">ITとの接続は言葉で補う</text>
+  </g>
+
+  <!-- Panel B -->
+  <g transform="translate(625 145)">
+    <rect class="panel" width="520" height="300" rx="22"/>
+    <g transform="translate(58 42)" filter="url(#softShadow)">
+      <path class="mark" d="M130 18 C76 55 75 115 124 147 C168 176 164 223 112 260"/>
+      <circle cx="111" cy="67" r="13" fill="#C87532"/>
+      <circle cx="135" cy="211" r="13" fill="#C87532"/>
+      <path class="mark-thin" d="M91 111 L141 111 M108 166 L158 166"/>
+      <path d="M112 260 C151 260 160 244 194 244 H235" fill="none" stroke="#C87532" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="246" cy="244" r="9" fill="#E33A2F"/>
+    </g>
+    <text class="label" x="292" y="92">B. Signal F</text>
+    <text class="sub" x="292" y="126">F字孔＋信号線＋赤い一点</text>
+    <text class="tiny" x="292" y="166">SYSTEM / SOUNDを最短で接続</text>
+    <text class="tiny" x="292" y="192">Webアニメーションへ展開可能</text>
+    <text x="292" y="240" fill="#E33A2F" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1">RECOMMENDED</text>
+  </g>
+
+  <!-- Panel C -->
+  <g transform="translate(55 485)">
+    <rect class="panel" width="520" height="300" rx="22"/>
+    <g transform="translate(58 47)" filter="url(#softShadow)">
+      <path class="mark-thin" d="M111 15 C68 52 70 105 108 132 C144 158 139 200 98 236"/>
+      <circle cx="95" cy="59" r="10" fill="#C87532"/>
+      <circle cx="116" cy="189" r="10" fill="#C87532"/>
+      <path class="mark-thin" d="M80 97 L122 97 M94 148 L136 148"/>
+      <g transform="translate(250 0) scale(-1 1)">
+        <path class="mark-thin" d="M111 15 C68 52 70 105 108 132 C144 158 139 200 98 236"/>
+        <circle cx="95" cy="59" r="10" fill="#C87532"/>
+        <circle cx="116" cy="189" r="10" fill="#C87532"/>
+        <path class="mark-thin" d="M80 97 L122 97 M94 148 L136 148"/>
+      </g>
+      <line class="slash" x1="175" y1="54" x2="137" y2="198"/>
+    </g>
+    <text class="label" x="300" y="92">C. Dual Resonance</text>
+    <text class="sub" x="300" y="126">左右の響きと中央のスラッシュ</text>
+    <text class="tiny" x="300" y="166">SYSTEMとSOUND／入力と出力</text>
+    <text class="tiny" x="300" y="192">大型背景グラフィック向け</text>
+    <text class="tiny" x="300" y="238">小サイズでは複雑になりやすい</text>
+  </g>
+
+  <!-- Panel D -->
+  <g transform="translate(625 485)">
+    <rect class="panel" width="520" height="300" rx="22"/>
+    <g transform="translate(72 58)" filter="url(#softShadow)">
+      <path class="ivory" d="M78 15 V210 M78 31 H176 M78 111 H148"/>
+      <path class="mark-thin" d="M154 18 C117 48 120 91 150 114 C179 136 175 174 143 205"/>
+      <circle cx="143" cy="55" r="9" fill="#C87532"/>
+      <circle cx="156" cy="167" r="9" fill="#C87532"/>
+      <line x1="190" y1="39" x2="145" y2="204" stroke="#E33A2F" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <text class="label" x="292" y="92">D. F / Slash</text>
+    <text class="sub" x="292" y="126">Fモノグラム＋ブランドの /</text>
+    <text class="tiny" x="292" y="166">favicon／SNSアイコン向け</text>
+    <text class="tiny" x="292" y="192">文字として認識しやすい</text>
+    <text class="tiny" x="292" y="238">最終形はB確定後に再設計</text>
+  </g>
+
+  <text x="60" y="830" fill="#756F68" font-family="Inter,Arial,sans-serif" font-size="13">Direction study only — curves, spacing and line weights require refinement before production.</text>
+</svg>
