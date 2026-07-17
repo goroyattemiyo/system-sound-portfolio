@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
   <title id="title">SYSTEM / SOUND reversed symbol</title>
-  <desc id="desc">Ivory silhouette for black backgrounds with a black signal track and red signal point.</desc>
+  <desc id="desc">Ivory silhouette for black backgrounds with a black signal track and integrated red lower terminal.</desc>
   <path fill="#F2EDE3" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
   <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#0B0B0C" stroke-width="2.4" stroke-linecap="round" opacity=".82"/>
-  <circle cx="175" cy="30" r="5" fill="#E33A2F"/>
+  <path fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
 </svg>
