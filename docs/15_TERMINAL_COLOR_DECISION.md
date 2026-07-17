@@ -1,7 +1,9 @@
 # Candidate 06 Terminal Color Decision
 
 Date: 2026-07-17 JST  
-Status: **A selected / owner-only preview**
+Status: **Superseded by Phase 04 / historical comparison only**
+
+> Phase 04で静止終端色の採用を取り消した。A/B/Cは色検証の履歴として保持するが、現行Formal Markへワインレッドを常設しない。現行仕様は `docs/16_HERO_MOTION_COMPARISON.md` を参照する。
 
 ## 1. Scope
 
