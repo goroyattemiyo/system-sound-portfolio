@@ -1,10 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SYSTEM / SOUND">
-  <rect width="64" height="64" rx="13" fill="#0B0B0C"/>
-  <g transform="translate(15 5) scale(.15)">
-    <g fill="none" stroke="#C87532" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M132 29C86 55 75 111 102 148C125 179 130 212 105 246C82 277 88 318 127 335"/>
-      <path d="M104 166L72 178L107 184"/><path d="M122 196L158 184L125 211"/>
-    </g>
-    <circle cx="103" cy="86" r="22" fill="#E33A2F"/><circle cx="116" cy="286" r="22" fill="#C87532"/>
+  <rect width="64" height="64" rx="13" fill="#C87532"/>
+  <g transform="translate(10 2) scale(.17)">
+    <path fill="#050505" d="M174 22C193 24 206 41 207 57C208 68 199 74 190 70C181 67 179 56 185 49L190 43L173 23C153 34 146 55 143 83L144 172L149 188L143 195C142 233 139 262 129 286C119 310 102 329 83 338C65 340 48 329 37 313C29 301 31 285 41 277C51 269 64 277 67 287C69 296 64 305 57 311L84 336C101 316 111 288 114 256L117 184L113 177L118 169L121 100C125 68 137 39 158 27C164 24 169 22 174 22Z"/>
+    <circle cx="174" cy="31" r="8" fill="#E33A2F"/>
   </g>
 </svg>
