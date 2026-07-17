@@ -50,7 +50,7 @@
     tbody tr:last-child > * { border-bottom: 0; }
     td.best { color: #dea05f; font-weight: 800; }
     .recommend { display: grid; gap: 30px; align-items: center; }
-    .logo-stage { position: relative; display: grid; min-height: 480px; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 22px; background: radial-gradient(circle at 64% 28%, rgba(200, 117, 50, .2), transparent 46%), #101011; }
+    .logo-stage { position: relative; display: grid; min-height: 480px; overflow: hidden; place-items: center; border: 1px solid var(--line); border-radius: 22px; background: radial-gradient(ellipse at 34% 42%, #dc914d 0, #a3552b 36%, #5b2d1b 72%, #17100e 100%); }
     .logo-stage svg { width: 180px; }
     .decision h2 { margin-bottom: 20px; font-family: Georgia, serif; font-weight: 400; }
     .decision p { color: var(--muted); line-height: 1.9; }
@@ -67,7 +67,8 @@
     .hero-mark { position: relative; display: grid; min-height: 320px; place-items: center; }
     .hero-mark::before { position: absolute; right: -30%; width: 82%; height: 105%; border-radius: 57% 24% 20% 58%; background: radial-gradient(ellipse at 30% 40%, #d48645, #864321 48%, #1e1310 78%); content: ""; opacity: .48; transform: rotate(9deg); }
     .hero-mark svg { position: relative; width: 180px; }
-    .signal-curve, .signal-notches { stroke-dasharray: 780; stroke-dashoffset: 780; animation: draw 1.4s ease-out forwards; }
+    .signal-silhouette { opacity: 0; animation: appear .62s .1s forwards; }
+    .signal-track { stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 1.4s .32s ease-out forwards; }
     .signal-moving { opacity: 0; animation: appear .5s 1.4s forwards; }
     .signal-static { display: none; }
     .mobile-note { max-width: 720px; margin-top: 28px; color: var(--muted); font-size: .85rem; line-height: 1.8; }
@@ -91,7 +92,8 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-      .signal-curve, .signal-notches { stroke-dashoffset: 0; }
+      .signal-silhouette { opacity: 1; }
+      .signal-track { stroke-dashoffset: 0; }
       .signal-moving { display: none; }
       .signal-static { display: block; }
     }
@@ -102,16 +104,16 @@
   <main>
     <section class="shell">
       <p class="kicker">LOGO + FIRST VIEW</p>
-      <h1>F字孔を残し、<br>信号を内側へ戻す。</h1>
-      <p class="lead">現行Signal Fの思想を継承しながら、S字や一般的なテックマークに見えないよう、F字孔固有の上下の丸みと中央の左右の尖りを再設計しました。</p>
+      <h1>実物に戻り、<br>信号を二層目へ。</h1>
+      <p class="lead">添付写真の黒い開口部を輪郭資料としてトレースしました。F字孔の面シルエットを先に完成させ、Frequencyは内側の細い軌道と赤い点だけで加えます。</p>
     </section>
 
     <section class="shell" aria-labelledby="issues-title">
       <p class="kicker">01 / CONFLICTS &amp; GAPS</p>
       <h2 id="issues-title">先に解いた矛盾と不足</h2>
       <div class="issue-grid">
-        <article class="issue"><b>形状</b><p>従来案は信号線が主張し、中央の切り欠きが横棒に見えていました。中央を向かい合う二つの尖りへ変更します。</p></article>
-        <article class="issue"><b>赤い点</b><p>外付けの終点から上端の丸い「目」へ戻します。静止時は固定、Web上だけ曲線に沿ってゆっくり移動します。</p></article>
+        <article class="issue"><b>線から面へ</b><p>従来の滑らかなS字線を廃止し、写真に写る開口部を黒い面として再構成しました。</p></article>
+        <article class="issue"><b>信号は二層目</b><p>中央のノッチと上下の終端を優先し、その内側だけに細い軌道と赤い点を置きます。</p></article>
         <article class="issue"><b>色コード</b><p>最新指示を正とし、Ivory #F2EDE3 / Maple #C87532 / Wood #7A4526 / Red #E33A2Fに統一します。</p></article>
         <article class="issue"><b>未決定</b><p>連絡先、写真方針、フォント配信、名刺の印刷条件は、実データ入手後に確定します。</p></article>
       </div>
@@ -121,34 +123,31 @@
       <p class="kicker">02 / THREE DIRECTIONS</p>
       <h2 id="concepts-title">F字孔ロゴ 3案</h2>
       <div class="concept-grid">
-        <article class="concept selected"><div class="concept-label"><span>A</span><b>RECOMMENDED</b></div><img src="../design/logo/system-sound-concept-a-resonant-signal.svg" alt="Concept A Resonant Signal"><h3>Resonant Signal</h3><p>上下の目と中央の切り欠きを保ち、赤い信号点を上端の目へ内包。</p></article>
-        <article class="concept"><div class="concept-label"><span>B</span></div><img src="../design/logo/system-sound-concept-b-classic-flow.svg" alt="Concept B Classic Flow"><h3>Classic Flow</h3><p>楽器としてのF字孔を最優先。音楽性は強いが、Frequencyは説明で補う必要があります。</p></article>
-        <article class="concept"><div class="concept-label"><span>C</span></div><img src="../design/logo/system-sound-concept-c-frequency-tail.svg" alt="Concept C Frequency Tail"><h3>Frequency Tail</h3><p>下端を短い信号トレースへ接続。意味は明快ですが、小サイズでは情報量が増えます。</p></article>
+        <article class="concept"><div class="concept-label"><span>A</span></div><img src="../design/logo/system-sound-concept-a-reference-trace.svg" alt="Concept A Reference Trace"><h3>Reference Trace</h3><p>添付写真の黒い開口部を忠実にトレース。比較と将来の調整基準にします。</p></article>
+        <article class="concept selected"><div class="concept-label"><span>B</span><b>RECOMMENDED</b></div><img src="../design/logo/system-sound-concept-b-instrument-signal.svg" alt="Concept B Instrument Signal"><h3>Instrument Signal</h3><p>実物の骨格を保ちながら輪郭を整理した正式ロゴ基準です。</p></article>
+        <article class="concept"><div class="concept-label"><span>C</span></div><img src="../design/logo/system-sound-concept-c-small-cut.svg" alt="Concept C Small Cut"><h3>Small Cut</h3><p>16pxでも中央の締まりとノッチが残るfavicon専用形です。</p></article>
       </div>
       <div class="table-wrap">
         <table><thead><tr><th>評価軸 / 5点</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody>
-          <tr><th>F字孔らしさ</th><td class="best">5</td><td>5</td><td>4</td></tr>
-          <tr><th>Frequencyとの接続</th><td class="best">4</td><td>3</td><td>5</td></tr>
-          <tr><th>小サイズ視認性</th><td class="best">5</td><td>4</td><td>3</td></tr>
-          <tr><th>白黒印刷</th><td class="best">5</td><td>5</td><td>4</td></tr>
-          <tr><th>Webアニメーション</th><td class="best">5</td><td>4</td><td>5</td></tr>
-          <tr><th>名刺適性</th><td class="best">5</td><td>5</td><td>4</td></tr>
-          <tr><th>合計 / 30</th><td class="best">29</td><td>26</td><td>25</td></tr>
+          <tr><th>実物への忠実度</th><td>5</td><td class="best">4</td><td>3</td></tr>
+          <tr><th>ロゴとしての均整</th><td>3</td><td class="best">5</td><td>4</td></tr>
+          <tr><th>小サイズ視認性</th><td>2</td><td class="best">4</td><td>5</td></tr>
+          <tr><th>白黒印刷</th><td>4</td><td class="best">5</td><td>5</td></tr>
+          <tr><th>Webアニメーション</th><td>4</td><td class="best">5</td><td>4</td></tr>
+          <tr><th>名刺適性</th><td>3</td><td class="best">5</td><td>4</td></tr>
+          <tr><th>合計 / 30</th><td>21</td><td class="best">28</td><td>25</td></tr>
         </tbody></table>
       </div>
     </section>
 
     <section class="shell recommend" aria-labelledby="selected-title">
       <div class="logo-stage">
-        <svg viewBox="0 0 240 360" role="img" aria-label="推奨案 Resonant Signal">
-          <g fill="none" stroke="#C87532" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M132 29C86 55 75 111 102 148C125 179 130 212 105 246C82 277 88 318 127 335"/>
-            <path d="M104 166L72 178L107 184M122 196L158 184L125 211"/>
-          </g>
-          <circle cx="103" cy="86" r="14" fill="#C87532"/><circle cx="116" cy="286" r="14" fill="#C87532"/><circle cx="103" cy="86" r="9" fill="#E33A2F"/>
+        <svg viewBox="0 0 240 360" role="img" aria-label="推奨案 Instrument Signal">
+          <path fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
+          <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/><circle cx="175" cy="30" r="5" fill="#E33A2F"/>
         </svg>
       </div>
-      <div class="decision"><p class="kicker">SELECTED / CONCEPT A</p><h2 id="selected-title">Resonant Signal</h2><p>F字孔らしさ、小サイズ、白黒印刷の安定性を優先しました。Frequencyは外付けの回路線ではなく、縦に流れる曲線と赤い点の移動で表現します。</p><ul><li>静止ロゴ：赤い点は上端の目に固定</li><li>Web：18秒で上端から下端へ移動</li><li>Reduced motion：移動を止め上端へ固定</li><li>最小推奨：デジタル24px／印刷8mm</li></ul></div>
+      <div class="decision"><p class="kicker">SELECTED / CONCEPT B</p><h2 id="selected-title">Instrument Signal</h2><p>実物の黒い開口部を主役にし、Frequencyは内側の細い軌道へ分離しました。正式ロゴと名刺はB、faviconだけCを使用します。</p><ul><li>静止ロゴ：赤い点は上端の軌道上に固定</li><li>Web：18秒で上端から下端へ移動</li><li>Reduced motion：移動を止め上端へ固定</li><li>正式ロゴ：B／favicon：C</li></ul></div>
     </section>
 
     <section class="shell" aria-labelledby="hero-title">
@@ -163,10 +162,10 @@
         </div>
         <div class="hero-mark">
           <svg viewBox="0 0 240 360" role="img" aria-label="F字孔に沿って信号点が移動するSignal F">
-            <g fill="none" stroke="#C87532" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path class="signal-curve" d="M132 29C86 55 75 111 102 148C125 179 130 212 105 246C82 277 88 318 127 335"/><path class="signal-notches" d="M104 166L72 178L107 184M122 196L158 184L125 211"/></g>
-            <circle cx="103" cy="86" r="14" fill="#C87532"/><circle cx="116" cy="286" r="14" fill="#C87532"/>
-            <circle class="signal-static" cx="103" cy="86" r="9" fill="#E33A2F"/>
-            <circle class="signal-moving" r="9" fill="#E33A2F"><animateMotion begin="1.4s" dur="18s" repeatCount="indefinite" path="M103 86C91 111 93 132 102 148C116 169 127 184 125 205C123 221 115 234 105 246C92 264 93 279 116 286"/></circle>
+            <path class="signal-silhouette" fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
+            <path class="signal-track" d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round"/>
+            <circle class="signal-static" cx="175" cy="30" r="5" fill="#E33A2F"/>
+            <circle class="signal-moving" r="5" fill="#E33A2F"><animateMotion begin="1.4s" dur="18s" repeatCount="indefinite" path="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333"/></circle>
           </svg>
         </div>
       </div>
