@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
+  <title id="title">SYSTEM / SOUND symbol</title>
+  <desc id="desc">Contrabass f-hole, frequency flow, and a single red signal point.</desc>
+  <g fill="none" stroke="#C87532" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M132 29C86 55 75 111 102 148C125 179 130 212 105 246C82 277 88 318 127 335"/>
+    <path d="M104 166L72 178L107 184"/>
+    <path d="M122 196L158 184L125 211"/>
+  </g>
+  <circle cx="103" cy="86" r="14" fill="#E33A2F"/>
+  <circle cx="116" cy="286" r="14" fill="#C87532"/>
+</svg>
