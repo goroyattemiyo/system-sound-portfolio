@@ -50,21 +50,25 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 11. [Phase 01 Logo / Hero Decision](docs/11_PHASE_01_LOGO_HERO_DECISION.md)
 12. [Photo-based Logo Trace Revision](docs/12_LOGO_TRACE_REVISION.md)
 13. [Brand Mark Reduction](docs/13_BRAND_MARK_REDUCTION.md)
+14. [Candidate 06 Formal Mark](docs/14_CANDIDATE_06_FORMAL_MARK.md)
 
 ## Design Drafts
 
 - [Initial F-hole logo concept sheet](design/logo/logo-concepts.svg)
 - [Initial responsive LP wireframe](wireframes/lp-wireframe.html)
 - [Selected formal logo symbol](design/logo/system-sound-symbol.svg)
-- [Formal Mark](design/logo/system-sound-formal-mark.svg)
+- [Candidate 06 Formal Mark](design/logo/system-sound-formal-mark.svg)
+- [Candidate 02 comparison reference](design/logo/system-sound-candidate-02-reference.svg)
+- [Candidate 10 Small Icon](design/logo/system-sound-small-icon.svg)
 - [Animated Hero Mark](design/logo/system-sound-animated-hero-mark.svg)
-- [Small Icon](design/logo/system-sound-small-icon.svg)
+- [Dark-background horizontal lockup](design/logo/system-sound-horizontal-reversed.svg)
 - [Historical A: reference trace](design/logo/system-sound-concept-a-reference-trace.svg)
 - [Historical B: trace simplification](design/logo/system-sound-concept-b-instrument-signal.svg)
 - [Historical C: small-size study](design/logo/system-sound-concept-c-small-cut.svg)
 - [Phase 01 logo / hero browser preview](wireframes/brand-phase-01.html)
+- [Phase 02 candidate 06 application preview](wireframes/brand-phase-02.html)
 
-ユーザー提供のコントラバス実物写真から得た骨格をブランド記号へ縮約しました。正式ロゴは黒いF字孔面＋統合された赤い下端だけの **Formal Mark**、favicon・SNSは **Small Icon** を使用します。白い軌道と一度だけの信号移動は **Animated Hero Mark** へ分離し、印刷物や静止ロゴには含めません。
+追加比較の結果、正式ロゴのベースは **候補06** へ変更しました。**02** は比較参照、**10** はfavicon・SNS用の小型アイコン候補として保持します。赤は独立した丸ではなく、06の下側カーブ外周へ細い面として統合します。白い軌道と一度だけの信号移動は **Animated Hero Mark** へ分離し、印刷物や静止ロゴには含めません。
 
 LPはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番を維持します。
 
@@ -116,4 +120,4 @@ AIを導入すること自体を目的にしません。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
 
-`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の正式ロゴ基準は `docs/13_BRAND_MARK_REDUCTION.md` を参照してください。写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の正式ロゴ基準は `docs/14_CANDIDATE_06_FORMAL_MARK.md` を参照してください。写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
