@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
   <title id="title">SYSTEM / SOUND vertical logo</title>
-  <desc id="desc">Instrument Signal f-hole silhouette above a centered SYSTEM / SOUND wordmark.</desc>
+  <desc id="desc">Formal Mark f-hole silhouette above a centered SYSTEM / SOUND wordmark.</desc>
   <g transform="translate(88 16)">
     <path fill="#050505" d="M175 20C191 21 204 34 208 52C211 64 203 72 193 71C184 70 179 64 181 55C182 49 186 45 190 42L174 22C158 27 149 42 145 62C140 85 142 130 143 173C143 181 145 184 149 188L144 194C143 225 141 252 132 280C124 304 106 326 84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336C99 319 109 299 113 267C117 234 116 210 118 184L114 177L118 169C119 145 119 116 123 91C129 56 145 30 161 24C166 22 171 20 175 20Z"/>
-    <path d="M175 30C158 35 149 56 146 84C142 113 143 145 142 171C141 191 141 220 136 253C131 283 111 318 84 333" fill="none" stroke="#F2EDE3" stroke-width="2.4" stroke-linecap="round" opacity=".82"/>
     <path fill="#E33A2F" d="M84 338C72 343 55 335 43 323C31 311 27 293 34 282C40 272 53 269 62 278C70 286 68 300 58 311L84 336Z"/>
   </g>
   <text x="210" y="446" text-anchor="middle" fill="#0B0B0C" font-family="Inter,Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="5">SYSTEM</text>
