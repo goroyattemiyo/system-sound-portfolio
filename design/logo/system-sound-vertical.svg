@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">SYSTEM / SOUND vertical logo</title>
+  <desc id="desc">Resonant Signal symbol above a centered SYSTEM / SOUND wordmark.</desc>
+  <g transform="translate(88 16)">
+    <g fill="none" stroke="#C87532" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M132 29C86 55 75 111 102 148C125 179 130 212 105 246C82 277 88 318 127 335"/>
+      <path d="M104 166L72 178L107 184"/><path d="M122 196L158 184L125 211"/>
+    </g>
+    <circle cx="103" cy="86" r="14" fill="#E33A2F"/><circle cx="116" cy="286" r="14" fill="#C87532"/>
+  </g>
+  <text x="210" y="446" text-anchor="middle" fill="#0B0B0C" font-family="Inter,Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="5">SYSTEM</text>
+  <text x="210" y="494" text-anchor="middle" fill="#C87532" font-family="Inter,Arial,sans-serif" font-size="34">/</text>
+  <text x="210" y="542" text-anchor="middle" fill="#0B0B0C" font-family="Inter,Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="5">SOUND</text>
+</svg>
