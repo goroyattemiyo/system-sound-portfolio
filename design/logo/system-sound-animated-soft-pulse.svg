@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
+  <title id="title">SYSTEM / SOUND Animated Hero Mark — Soft Pulse</title>
+  <desc id="desc">A single black Formal Mark. Its lower terminal reflects briefly before a wine-red highlight travels upward.</desc>
+  <style>
+    .origin,.wine,.bright{opacity:0}.origin{animation:origin 10s .8s linear infinite}.wine{stroke-dasharray:.09 1;animation:wine 10s .8s linear infinite}.bright{stroke-dasharray:.045 1;animation:bright 10s .8s linear infinite}
+    @keyframes origin{0%{opacity:0}2.5%{opacity:.26}5%{opacity:.38}8%,100%{opacity:0}}
+    @keyframes wine{0%,3%{opacity:0;stroke-dashoffset:0}6%{opacity:.52}16%{opacity:.38}20%{opacity:0;stroke-dashoffset:-.91}100%{opacity:0;stroke-dashoffset:-.91}}
+    @keyframes bright{0%,5%{opacity:0;stroke-dashoffset:-.018}8%{opacity:.3}17%{opacity:.18}20%{opacity:0;stroke-dashoffset:-.928}100%{opacity:0;stroke-dashoffset:-.928}}
+    @media(prefers-reduced-motion:reduce){.origin,.wine,.bright{display:none}}
+  </style>
+  <path fill="#050505" d="M115 22C130 19 145 26 153 41C161 57 159 77 156 95C152 117 144 140 138 157C135 166 135 174 145 180L136 182C130 183 126 189 124 198C116 220 109 241 105 263C101 284 104 304 114 316C123 326 134 326 142 318C136 315 131 309 132 301C132 291 140 283 150 283C161 283 168 293 167 306C168 323 154 337 136 342C113 347 91 335 80 315C69 296 70 270 75 244C79 224 83 206 85 195C86 187 84 182 78 178L89 175C96 172 101 164 106 154C119 128 130 102 137 78C142 61 139 45 130 43C122 41 116 46 116 54C116 61 121 65 128 64C127 71 122 77 114 80C102 84 90 77 87 66C82 52 88 37 100 28C105 25 110 23 115 22Z"/>
+  <path class="origin" fill="#7A1F2B" d="M145 325C141 331 137 337 132 341C142 341 154 335 161 325C155 327 150 327 145 325Z"/>
+  <path class="wine" d="M136 334C123 338 109 333 101 317C88 291 90 260 96 232C102 207 106 187 113 168C121 146 133 118 140 88C146 63 143 43 120 31" pathLength="1" fill="none" stroke="#7A1F2B" stroke-width="3" stroke-linecap="round"/>
+  <path class="bright" d="M136 334C123 338 109 333 101 317C88 291 90 260 96 232C102 207 106 187 113 168C121 146 133 118 140 88C146 63 143 43 120 31" pathLength="1" fill="none" stroke="#A64050" stroke-width="1.25" stroke-linecap="round"/>
+</svg>
