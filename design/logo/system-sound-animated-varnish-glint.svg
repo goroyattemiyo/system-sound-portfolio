@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
+  <title id="title">SYSTEM / SOUND Animated Hero Mark — Varnish Glint</title>
+  <desc id="desc">A single black Formal Mark. Fine wine-red and ivory reflections travel upward like a varnished-surface glint.</desc>
+  <style>
+    .wine,.bright,.ivory{opacity:0}.wine{stroke-dasharray:.09 1;animation:wine 10s .8s linear infinite}.bright{stroke-dasharray:.045 1;animation:bright 10s .8s linear infinite}.ivory{stroke-dasharray:.026 1;animation:ivory 10s .92s linear infinite}
+    @keyframes wine{0%{opacity:0;stroke-dashoffset:0}3%{opacity:.48}15%{opacity:.36}19%{opacity:0;stroke-dashoffset:-.91}100%{opacity:0;stroke-dashoffset:-.91}}
+    @keyframes bright{0%,2%{opacity:0;stroke-dashoffset:-.014}5%{opacity:.28}15%{opacity:.18}19%{opacity:0;stroke-dashoffset:-.924}100%{opacity:0;stroke-dashoffset:-.924}}
+    @keyframes ivory{0%,3%{opacity:0;stroke-dashoffset:-.032}6%{opacity:.2}14%{opacity:.12}18%{opacity:0;stroke-dashoffset:-.942}100%{opacity:0;stroke-dashoffset:-.942}}
+    @media(prefers-reduced-motion:reduce){.wine,.bright,.ivory{display:none}}
+  </style>
+  <path fill="#050505" d="M115 22C130 19 145 26 153 41C161 57 159 77 156 95C152 117 144 140 138 157C135 166 135 174 145 180L136 182C130 183 126 189 124 198C116 220 109 241 105 263C101 284 104 304 114 316C123 326 134 326 142 318C136 315 131 309 132 301C132 291 140 283 150 283C161 283 168 293 167 306C168 323 154 337 136 342C113 347 91 335 80 315C69 296 70 270 75 244C79 224 83 206 85 195C86 187 84 182 78 178L89 175C96 172 101 164 106 154C119 128 130 102 137 78C142 61 139 45 130 43C122 41 116 46 116 54C116 61 121 65 128 64C127 71 122 77 114 80C102 84 90 77 87 66C82 52 88 37 100 28C105 25 110 23 115 22Z"/>
+  <path class="wine" d="M136 334C123 338 109 333 101 317C88 291 90 260 96 232C102 207 106 187 113 168C121 146 133 118 140 88C146 63 143 43 120 31" pathLength="1" fill="none" stroke="#7A1F2B" stroke-width="3" stroke-linecap="round"/>
+  <path class="bright" d="M136 334C123 338 109 333 101 317C88 291 90 260 96 232C102 207 106 187 113 168C121 146 133 118 140 88C146 63 143 43 120 31" pathLength="1" fill="none" stroke="#A64050" stroke-width="1.25" stroke-linecap="round"/>
+  <path class="ivory" d="M136 334C123 338 109 333 101 317C88 291 90 260 96 232C102 207 106 187 113 168C121 146 133 118 140 88C146 63 143 43 120 31" pathLength="1" fill="none" stroke="#F2EDE3" stroke-width=".8" stroke-linecap="round"/>
+</svg>
