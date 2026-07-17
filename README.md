@@ -31,7 +31,7 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 - 艶のあるコントラバスの明るい橙褐色の木肌
 - 小規模な防音室で、約20人が近い距離で演奏を聴くような親密さ
 - 狭い舞台に差し込む柔らかなスポットライト
-- ごく小さな鮮やかな赤を、視線を締めるアクセントとして使用
+- ロゴ終端にはごく小さな深いワインレッドを統合し、鮮やかな赤はUIの限定アクセントとして使用
 - F字孔の `F` と Frequency の `F` を重ねたシンボル
 - ネオンやサイバーパンクには寄せない
 
@@ -51,6 +51,7 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 12. [Photo-based Logo Trace Revision](docs/12_LOGO_TRACE_REVISION.md)
 13. [Brand Mark Reduction](docs/13_BRAND_MARK_REDUCTION.md)
 14. [Candidate 06 Formal Mark](docs/14_CANDIDATE_06_FORMAL_MARK.md)
+15. [Candidate 06 Terminal Color Decision](docs/15_TERMINAL_COLOR_DECISION.md)
 
 ## Design Drafts
 
@@ -67,8 +68,12 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 - [Historical C: small-size study](design/logo/system-sound-concept-c-small-cut.svg)
 - [Phase 01 logo / hero browser preview](wireframes/brand-phase-01.html)
 - [Phase 02 candidate 06 application preview](wireframes/brand-phase-02.html)
+- [Phase 03 terminal-color comparison preview](wireframes/brand-phase-03.html)
+- [Terminal A / Deep Wine](design/logo/system-sound-terminal-a.svg)
+- [Terminal B / Burgundy](design/logo/system-sound-terminal-b.svg)
+- [Terminal C / Mature Red](design/logo/system-sound-terminal-c.svg)
 
-追加比較の結果、正式ロゴのベースは **候補06** へ変更しました。**02** は比較参照、**10** はfavicon・SNS用の小型アイコン候補として保持します。赤は独立した丸ではなく、06の下側カーブ外周へ細い面として統合します。白い軌道と一度だけの信号移動は **Animated Hero Mark** へ分離し、印刷物や静止ロゴには含めません。
+追加比較の結果、正式ロゴのベースは **候補06**、統合された終端色は **A / Deep Wine `#7A1F2B`** としました。**02** は比較参照、**10** はfavicon・SNS用の小型アイコン候補として保持します。Formal Mark、名刺、ヘッダー、小型アイコンは常に静止します。**Animated Hero Mark** だけ、終端付近から弱い反射光が内側を上へ一度流れ、`prefers-reduced-motion`では非表示になります。
 
 LPはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番を維持します。
 
@@ -120,4 +125,4 @@ AIを導入すること自体を目的にしません。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
 
-`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の正式ロゴ基準は `docs/14_CANDIDATE_06_FORMAL_MARK.md` を参照してください。写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。現行の形状基準は `docs/14_CANDIDATE_06_FORMAL_MARK.md`、終端色とヒーロー演出は `docs/15_TERMINAL_COLOR_DECISION.md` を参照してください。写真トレース段階は `docs/12_LOGO_TRACE_REVISION.md` に判断履歴として残し、参照写真そのものはリポジトリへ含めません。
