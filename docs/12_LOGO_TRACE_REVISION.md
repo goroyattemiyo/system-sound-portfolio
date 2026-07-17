@@ -1,7 +1,7 @@
 # Logo Trace Revision — Photo-based F-hole
 
 Date: 2026-07-17 JST  
-Status: **Concept B selected for the formal logo / Concept C selected for favicon**
+Status: **Superseded by the brand-mark reduction in `13_BRAND_MARK_REDUCTION.md`**
 
 ## 1. Revision request
 
@@ -72,3 +72,7 @@ FrequencyをF字孔へ変形として押し付けず、Bの黒い面の内側に
 - 一度だけの信号移動後に、赤い終端へ自然に戻るか
 - Cが16pxで中央ノッチを維持するか
 - 名刺8mm、白黒印刷、黒背景反転版で形が潰れないか
+
+## 8. Next-phase correction
+
+この段階ではBの内部に白いSignal trackを含めていたが、正式ロゴとしては説明的に見えるため次フェーズで分離した。トレース検証とシルエットの骨格は保持し、正式ロゴは黒い面＋統合された赤い下端だけのFormal Markへ縮約した。白い軌道と信号移動はAnimated Hero Markへ限定する。
