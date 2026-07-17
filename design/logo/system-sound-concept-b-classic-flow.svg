@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
+  <title id="title">Concept B — Classic Flow</title>
+  <desc id="desc">A more traditional f-hole silhouette with pronounced eyes, opposing notches, and a red lower eye.</desc>
+  <rect width="240" height="360" rx="24" fill="#0B0B0C"/>
+  <g fill="none" stroke="#C87532" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M133 31C91 49 78 95 94 132C107 163 135 176 130 213C126 245 93 264 95 298C96 317 108 330 130 337"/>
+    <path d="M107 158L69 171L108 179"/>
+    <path d="M126 199L169 184L128 216"/>
+  </g>
+  <circle cx="95" cy="91" r="15" fill="#C87532"/>
+  <circle cx="105" cy="292" r="15" fill="#E33A2F"/>
+</svg>
