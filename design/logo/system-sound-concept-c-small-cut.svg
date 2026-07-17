@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title desc">
+  <title id="title">Concept C — Small Cut</title>
+  <desc id="desc">A compact f-hole silhouette for favicon use, preserving the two terminals and opposing central notches.</desc>
+  <rect width="240" height="360" rx="24" fill="#C87532"/>
+  <path fill="#050505" d="M174 22C193 24 206 41 207 57C208 68 199 74 190 70C181 67 179 56 185 49L190 43L173 23C153 34 146 55 143 83L144 172L149 188L143 195C142 233 139 262 129 286C119 310 102 329 83 338C65 340 48 329 37 313C29 301 31 285 41 277C51 269 64 277 67 287C69 296 64 305 57 311L84 336C101 316 111 288 114 256L117 184L113 177L118 169L121 100C125 68 137 39 158 27C164 24 169 22 174 22Z"/>
+  <circle cx="174" cy="31" r="7" fill="#E33A2F"/>
+</svg>
