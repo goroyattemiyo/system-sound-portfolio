@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SYSTEM / SOUND — Animated Hero Motion Comparison</title>
+  <style>
+    :root{--stage:#0b0b0c;--panel:#141313;--ivory:#f2ede3;--muted:#aaa298;--wood:#c87532;--wine:#7a1f2b;--line:rgba(242,237,227,.13)}
+    *{box-sizing:border-box}body{margin:0;background:var(--stage);color:var(--ivory);font-family:Inter,"Noto Sans JP",sans-serif}main{width:min(calc(100% - 32px),1280px);margin:auto;padding:32px 0 80px}.top{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line);font:11px ui-monospace,monospace;letter-spacing:.12em}.top span{color:#777068}.intro{display:grid;gap:20px;padding:56px 0 48px}.intro h1{margin:0;font-size:clamp(42px,7vw,84px);line-height:1.08;letter-spacing:-.055em}.intro p{max-width:600px;margin:0;color:var(--muted);line-height:1.8}.controls{display:flex;margin-bottom:18px;align-items:center;justify-content:space-between;gap:16px}.controls h2{margin:0;font:32px Georgia,serif}.controls button{min-height:42px;padding:0 18px;border:1px solid rgba(242,237,227,.36);border-radius:99px;background:transparent;color:var(--ivory);cursor:pointer}.grid{display:grid;gap:14px}.card{padding:14px;border:1px solid var(--line);border-radius:22px;background:var(--panel)}.card.selected{border-color:rgba(200,117,50,.8)}.meta{min-height:110px;padding:7px}.meta b{font:32px Georgia,serif}.meta span{float:right;color:var(--wood);font:10px ui-monospace,monospace;letter-spacing:.1em}.meta h3{margin:10px 0 6px;font:24px Georgia,serif}.meta p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.stage{position:relative;display:grid;min-height:430px;overflow:hidden;place-items:center;border-radius:14px;background:radial-gradient(ellipse at 35% 40%,#d88947 0,#9e512b 38%,#552a1b 70%,#18100e 100%)}.stage::after{position:absolute;inset:0;background:linear-gradient(105deg,transparent 28%,rgba(255,223,185,.07) 43%,transparent 57%);content:""}.stage img{position:relative;z-index:2;width:150px}.timeline{display:grid;min-height:44px;margin-top:8px;grid-template-columns:18% 82%;align-items:center;border:1px solid var(--line);border-radius:10px;background:#09090a;font:9px ui-monospace,monospace;text-align:center}.timeline span{height:100%;padding-top:16px;background:rgba(122,31,43,.48);color:#d7a9af}.timeline b{color:#777068}.decision{margin-top:20px;padding:24px;border-left:2px solid var(--wood);background:#111}.decision h2{margin:0 0 10px;font:36px Georgia,serif}.decision p{max-width:850px;margin:0;color:var(--muted);line-height:1.8}@media(min-width:760px){.intro{grid-template-columns:1.25fr .75fr;align-items:end}.grid{grid-template-columns:repeat(3,1fr)}}@media(prefers-reduced-motion:reduce){.controls button{display:none}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="top"><b>SYSTEM / SOUND</b><span>PHASE 04 / OWNER-ONLY PREVIEW</span></div>
+  <section class="intro"><h1>色を置かず、<br>反射だけを通す。</h1><p>Formal Markは黒または生成り一色で静止。ワインレッドは10秒ごとに約1.8秒だけ、下端から上端へ通過する。</p></section>
+  <div class="controls"><h2>Live motion comparison</h2><button id="replay" type="button">3案をもう一度見る</button></div>
+  <section class="grid" aria-label="Heroアニメーション3案">
+    <article class="card selected"><div class="meta"><b>01</b><span>FIRST CHOICE</span><h3>Subtle Sweep</h3><p>細いワインレッドの反射が一度だけ走る。</p></div><div class="stage"><img data-src="../design/logo/system-sound-animated-hero-mark.svg" src="../design/logo/system-sound-animated-hero-mark.svg" alt="Subtle Sweepアニメーション"></div><div class="timeline"><span>MOTION 1.8s</span><b>STILL 8.2s</b></div></article>
+    <article class="card"><div class="meta"><b>02</b><span>COMPARISON</span><h3>Soft Pulse</h3><p>下端の短い反射から光が上へ抜ける。</p></div><div class="stage"><img data-src="../design/logo/system-sound-animated-soft-pulse.svg" src="../design/logo/system-sound-animated-soft-pulse.svg" alt="Soft Pulseアニメーション"></div><div class="timeline"><span>MOTION 1.8s</span><b>STILL 8.2s</b></div></article>
+    <article class="card"><div class="meta"><b>03</b><span>COMPARISON</span><h3>Varnish Glint</h3><p>ワインと生成りの極細反射がニス面のように走る。</p></div><div class="stage"><img data-src="../design/logo/system-sound-animated-varnish-glint.svg" src="../design/logo/system-sound-animated-varnish-glint.svg" alt="Varnish Glintアニメーション"></div><div class="timeline"><span>MOTION 1.8s</span><b>STILL 8.2s</b></div></article>
+  </section>
+  <section class="decision"><h2>Subtle Sweepを第一候補に</h2><p>Wineと短い明部だけで成立し、単色Formal Markの輪郭を最も邪魔しない。独立した点、ぼかし、グロー、往復運動を使わない。</p></section>
+</main>
+<script>
+  document.querySelector("#replay").addEventListener("click",()=>document.querySelectorAll("img[data-src]").forEach((image)=>{image.src=image.dataset.src+"?run="+Date.now()}));
+</script>
+</body>
+</html>
