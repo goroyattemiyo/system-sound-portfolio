@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SYSTEM / SOUND portfolio LP structural wireframe">
+  <title>SYSTEM / SOUND — LP Wireframe</title>
+  <style>
+    :root {
+      --stage: #0b0b0c;
+      --panel: #151413;
+      --panel-soft: #1d1a18;
+      --line: #34302c;
+      --ivory: #f2ede3;
+      --muted: #a9a198;
+      --wood: #c87532;
+      --wood-soft: #8b522b;
+      --red: #e33a2f;
+      --max: 1180px;
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--stage);
+      color: var(--ivory);
+      font-family: Inter, "Noto Sans JP", system-ui, -apple-system, sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    :focus-visible {
+      outline: 3px solid var(--ivory);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 88px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 26px;
+      font-size: clamp(2.5rem, 7vw, 5.8rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    h2 {
+      max-width: 720px;
+      margin-bottom: 22px;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: #d1cbc3;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .wire-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .wire-label::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      content: "";
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(52, 48, 44, .85);
+      background: rgba(11, 11, 12, .92);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 70px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-decoration: none;
+    }
+
+    .brand-mark { width: 27px; height: 38px; }
+
+    .nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: .83rem;
+    }
+
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--ivory); }
+
+    .nav .contact-link::after {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin-left: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      vertical-align: middle;
+      content: "";
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: none;
+      color: var(--ivory);
+      font: inherit;
+      letter-spacing: .08em;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100svh - 70px);
+      padding: 94px 0 70px;
+    }
+
+    .hero::before {
+      position: absolute;
+      top: -25%;
+      right: -12%;
+      width: 70vw;
+      height: 90vw;
+      border-radius: 50%;
+      background: radial-gradient(circle at 45% 40%, rgba(200, 117, 50, .22), rgba(200, 117, 50, .05) 34%, transparent 66%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
+      gap: 48px;
+      align-items: center;
+      min-height: 68vh;
+    }
+
+    .hero-copy { position: relative; z-index: 2; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .button-primary {
+      border-color: var(--ivory);
+      background: var(--ivory);
+      color: var(--stage);
+    }
+
+    .button-secondary { background: rgba(21, 20, 19, .72); }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      min-height: 530px;
+      place-items: center;
+      border: 1px dashed #3c3733;
+      border-radius: 50% 50% 42% 58% / 35% 38% 62% 65%;
+      background:
+        linear-gradient(112deg, transparent 0 42%, rgba(255,255,255,.04) 43% 44%, transparent 45%),
+        radial-gradient(circle at 49% 32%, rgba(227, 154, 83, .2), rgba(155, 79, 34, .06) 36%, transparent 65%);
+    }
+
+    .hero-visual::after {
+      position: absolute;
+      bottom: 8%;
+      left: 18%;
+      width: 64%;
+      border-top: 1px dashed #51483f;
+      content: "WIREFRAME VISUAL AREA";
+      color: #766f68;
+      font-size: .66rem;
+      letter-spacing: .14em;
+      text-align: center;
+      padding-top: 12px;
+    }
+
+    .signal-logo {
+      width: min(63%, 260px);
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,.42));
+    }
+
+    .task-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+      margin-top: 38px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: #d7d0c8;
+      font-size: clamp(.92rem, 2vw, 1.1rem);
+    }
+
+    .task-flow span { position: relative; }
+    .task-flow span:not(:last-child)::after {
+      position: absolute;
+      right: -18px;
+      color: var(--wood);
+      content: "→";
+    }
+
+    .task-flow .target::before {
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+      left: 0;
+      height: 2px;
+      background: var(--red);
+      content: "";
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 42px;
+    }
+
+    .solution-card {
+      min-height: 190px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .number {
+      color: var(--wood);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: .76rem;
+    }
+
+    .solution-card p { margin-bottom: 0; color: var(--muted); }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .work-card {
+      overflow: hidden;
+      min-height: 420px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .work-card.featured { grid-column: 1 / -1; min-height: 500px; }
+
+    .placeholder {
+      display: grid;
+      min-height: 230px;
+      place-items: center;
+      border-bottom: 1px solid var(--line);
+      background:
+        repeating-linear-gradient(135deg, transparent 0 18px, rgba(255,255,255,.018) 19px 20px),
+        linear-gradient(135deg, #201a16, #121212);
+      color: #766f68;
+      font-size: .72rem;
+      letter-spacing: .13em;
+      text-align: center;
+    }
+
+    .featured .placeholder { min-height: 300px; }
+
+    .work-body { padding: 28px; }
+
+    .status {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--wood);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: .7rem;
+      letter-spacing: .09em;
+    }
+
+    .work-body p { color: var(--muted); }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+      color: #b8b0a8;
+      font-size: .8rem;
+    }
+
+    .before-after div {
+      padding: 12px;
+      border: 1px dashed #46403a;
+      border-radius: 12px;
+    }
+
+    .before-after b { color: var(--red); }
+
+    .process-line {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .process-line::before {
+      position: absolute;
+      top: 22px;
+      right: 7%;
+      left: 7%;
+      border-top: 1px solid var(--wood-soft);
+      content: "";
+    }
+
+    .process-step { position: relative; z-index: 1; }
+
+    .step-dot {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      place-items: center;
+      border: 1px solid var(--wood-soft);
+      border-radius: 50%;
+      background: var(--stage);
+      color: var(--wood);
+      font-size: .8rem;
+    }
+
+    .process-step:first-child .step-dot::after {
+      position: absolute;
+      top: 3px;
+      left: 33px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      content: "";
+    }
+
+    .process-step p { color: var(--muted); font-size: .85rem; }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 42px;
+    }
+
+    .capability {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid #403a35;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .7rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .about-side {
+      position: relative;
+      display: flex;
+      min-height: 440px;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .about-side::before {
+      position: absolute;
+      inset: 20px;
+      display: grid;
+      place-items: center;
+      border: 1px dashed #46403a;
+      color: #766f68;
+      font-size: .72rem;
+      letter-spacing: .12em;
+      content: "PHOTO / VISUAL";
+    }
+
+    .about-side > * { position: relative; z-index: 1; }
+
+    .about-side.engineer { background: linear-gradient(160deg, #191919, #111); }
+    .about-side.musician { background: linear-gradient(160deg, #2c1e16, #111); }
+
+    .about-story {
+      max-width: 760px;
+      margin: 38px auto 0;
+      color: #d0c9c0;
+      text-align: center;
+    }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      min-height: 620px;
+      display: grid;
+      align-items: center;
+    }
+
+    .contact::before {
+      position: absolute;
+      top: -45%;
+      left: -10%;
+      width: 75vw;
+      height: 75vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,117,50,.18), transparent 66%);
+      content: "";
+    }
+
+    .contact-inner { position: relative; z-index: 1; }
+
+    .contact-examples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 720px;
+      margin: 32px 0;
+    }
+
+    .contact-examples div {
+      padding: 14px 16px;
+      border-left: 2px solid var(--red);
+      background: rgba(21,20,19,.72);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    footer {
+      padding: 36px 0 100px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .mobile-cta {
+      position: fixed;
+      z-index: 30;
+      right: 16px;
+      bottom: 16px;
+      display: none;
+      min-height: 46px;
+      align-items: center;
+      padding: 0 18px;
+      border: 1px solid var(--ivory);
+      border-radius: 999px;
+      background: var(--ivory);
+      color: var(--stage);
+      font-size: .85rem;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 32px rgba(0,0,0,.42);
+    }
+
+    @media (max-width: 860px) {
+      .nav { display: none; }
+      .menu-button { display: block; }
+      .hero { padding-top: 62px; }
+      .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+      .hero-visual { min-height: 400px; order: 2; }
+      .solutions-grid,
+      .works-grid,
+      .capability-grid,
+      .about-grid,
+      .contact-examples { grid-template-columns: 1fr; }
+      .work-card.featured { grid-column: auto; }
+      .process-line { grid-template-columns: 1fr; }
+      .process-line::before {
+        top: 24px;
+        right: auto;
+        bottom: 24px;
+        left: 22px;
+        border-top: 0;
+        border-left: 1px solid var(--wood-soft);
+      }
+      .process-step { display: grid; grid-template-columns: 55px 1fr; column-gap: 14px; }
+      .process-step h3 { margin-top: 8px; }
+      .process-step p { grid-column: 2; }
+      .mobile-cta { display: inline-flex; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .section { padding: 68px 0; }
+      .hero { min-height: auto; }
+      .hero-grid { gap: 36px; }
+      .hero-visual { min-height: 330px; }
+      .actions { display: grid; }
+      .button { width: 100%; }
+      .task-flow { display: grid; grid-template-columns: repeat(2, 1fr); }
+      .task-flow span:not(:last-child)::after { display: none; }
+      .solution-card { min-height: auto; padding: 23px; }
+      .work-card, .work-card.featured { min-height: auto; }
+      .placeholder, .featured .placeholder { min-height: 210px; }
+      .before-after { grid-template-columns: 1fr; }
+      .before-after b { text-align: center; }
+      .about-side { min-height: 350px; }
+      .footer-inner { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SYSTEM / SOUND home">
+        <svg class="brand-mark" viewBox="0 0 40 58" aria-hidden="true">
+          <path d="M23 3C6 15 8 28 22 36c12 7 10 15-3 20" fill="none" stroke="#c87532" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="17" cy="16" r="3.5" fill="#c87532"/>
+          <circle cx="24" cy="44" r="3.5" fill="#c87532"/>
+          <path d="M19 56h12" stroke="#c87532" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="35" cy="56" r="2.5" fill="#e33a2f"/>
+        </svg>
+        <span>SYSTEM / SOUND</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#solutions">Solutions</a>
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a class="contact-link" href="#contact">Contact</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Open menu">MENU</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="wire-label">Hero wireframe</div>
+          <p class="eyebrow">AI Solution Engineer / Contrabass Player</p>
+          <h1>仕事の中にある<br>「毎回面倒」を、<br>AIと小さな仕組みで改善します。</h1>
+          <p class="lead">Excel、情報検索、書類作成、SNS運用、小さな業務アプリ。現在のやり方を聞き、現場で無理なく使える形まで設計します。</p>
+          <div class="actions">
+            <a class="button button-primary" href="#solutions">できることを見る</a>
+            <a class="button button-secondary" href="#contact">相談する</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Signal F logo visual placeholder">
+          <svg class="signal-logo" viewBox="0 0 270 360" role="img" aria-label="F字孔と信号線を組み合わせたロゴラフ">
+            <path d="M145 26C55 88 65 177 136 222c59 37 52 86-19 128" fill="none" stroke="#c87532" stroke-width="18" stroke-linecap="round"/>
+            <circle cx="113" cy="105" r="16" fill="#c87532"/>
+            <circle cx="153" cy="287" r="16" fill="#c87532"/>
+            <path d="M86 164h74M117 230h72" fill="none" stroke="#c87532" stroke-width="10" stroke-linecap="round"/>
+            <path d="M117 350c39 0 46-15 82-15h35" fill="none" stroke="#c87532" stroke-width="10" stroke-linecap="round"/>
+            <circle cx="250" cy="335" r="10" fill="#e33a2f"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="wire-label">Positioning</div>
+        <p class="eyebrow">AI is a tool</p>
+        <h2>AIを入れることが、目的ではありません。</h2>
+        <p class="lead">現在の作業を見て、AI、Excel、GAS、Webアプリ、APIなどから、必要な方法を選びます。</p>
+        <div class="task-flow" aria-label="Typical recurring work">
+          <span>探す</span>
+          <span class="target">転記する</span>
+          <span>並べる</span>
+          <span>作る</span>
+          <span>確認する</span>
+          <span>投稿する</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="wire-label">Solutions</div>
+        <p class="eyebrow">What can be discussed</p>
+        <h2>身近な作業から相談できます。</h2>
+        <div class="solutions-grid">
+          <article class="solution-card"><span class="number">01</span><h3>情報を探しやすくする</h3><p>Excelや資料に散らばった情報を、まとめて検索できるようにします。</p></article>
+          <article class="solution-card"><span class="number">02</span><h3>書類作成を楽にする</h3><p>今ある様式を確認し、入力や差し込みを無理のない方法で効率化します。</p></article>
+          <article class="solution-card"><span class="number">03</span><h3>定型作業を自動化する</h3><p>転記、集計、保存、通知など、繰り返す作業を仕組みにします。</p></article>
+          <article class="solution-card"><span class="number">04</span><h3>SNS運用を仕組み化する</h3><p>投稿作成、予約、履歴、分析を一つの流れへまとめます。</p></article>
+          <article class="solution-card"><span class="number">05</span><h3>小さな業務アプリを作る</h3><p>既製品が合わない作業を、ブラウザで使える専用ツールへ変えます。</p></article>
+          <article class="solution-card"><span class="number">06</span><h3>AI活用の相談に乗る</h3><p>AIを使う部分と使わない部分を整理し、現場に合う方法を考えます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <div class="wire-label">Featured works</div>
+        <p class="eyebrow">Before / After</p>
+        <h2>作ったものではなく、変えた作業。</h2>
+        <p class="lead">技術名ではなく、以前の面倒と、変わった流れから事例を紹介します。</p>
+
+        <div class="works-grid">
+          <article class="work-card featured">
+            <div class="placeholder">MAIN SCREENSHOT / SHORT LOOP VIDEO</div>
+            <div class="work-body">
+              <span class="status">OPERATING + VALIDATION</span>
+              <h3>AIとの会話から、Threads投稿・履歴・分析までを一つの運用へ。</h3>
+              <p>予約投稿だけでなく、画像、履歴検索、エラー復旧、分析、トークン管理までを統合した事例。</p>
+              <div class="before-after"><div>複数の作業と管理場所</div><b>→</b><div>会話から一つの運用へ</div></div>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="placeholder">LIVE DEMO IMAGE</div>
+            <div class="work-body">
+              <span class="status">PUBLIC DEMO</span>
+              <h3>LINEスタンプ用の画像加工を、ブラウザだけで完結。</h3>
+              <p>分割、背景除去、選択、ZIP生成までを一つの画面へまとめた小さな便利ツール。</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="placeholder">MVP SEARCH FLOW</div>
+            <div class="work-body">
+              <span class="status">MVP</span>
+              <h3>商品選定に時間がかかる問題を、検索と比較の流れから改善。</h3>
+              <p>個人事業主にも伝わりやすい、明確な課題から始まる小規模Webアプリ。</p>
+            </div>
+          </article>
+
+          <article class="work-card featured">
+            <div class="placeholder">AUDIO WORKFLOW / UI</div>
+            <div class="work-body">
+              <span class="status">IN DEVELOPMENT</span>
+              <h3>AI音声を「生成する」から、制作工程として扱える形へ。</h3>
+              <p>声の設計、長文分割、生成、保存、動画化までの制作フローを整えたSYSTEM / SOUNDの象徴事例。</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="placeholder">PRIVATE CASE CONCEPT</div>
+            <div class="work-body">
+              <span class="status">PRIVATE CASE</span>
+              <h3>ラック図面作成を、Excelの図形操作からドラッグ＆ドロップへ。</h3>
+              <p>匿名再現デモ完成後、LP上位へ移動する主力の業務改善事例。</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="placeholder">PRIVATE CASE CONCEPT</div>
+            <div class="work-body">
+              <span class="status">PRIVATE CASE</span>
+              <h3>増え続けるExcelの“虎の巻”を、まとめて探せるように。</h3>
+              <p>架空データで再現し、情報検索とナレッジ活用の事例として見せる。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="wire-label">Process</div>
+        <p class="eyebrow">Close collaboration</p>
+        <h2>小さく聞いて、小さく試して、一緒に整える。</h2>
+        <div class="process-line">
+          <article class="process-step"><div class="step-dot">01</div><h3>聞く</h3><p>今の作業と、本当に困っている部分を確認します。</p></article>
+          <article class="process-step"><div class="step-dot">02</div><h3>整理する</h3><p>自動化すべき部分と、人が判断すべき部分を分けます。</p></article>
+          <article class="process-step"><div class="step-dot">03</div><h3>試作する</h3><p>限定したデータや作業で、小さく動くものを作ります。</p></article>
+          <article class="process-step"><div class="step-dot">04</div><h3>確認する</h3><p>実際の操作、例外、使いにくさを一緒に確認します。</p></article>
+          <article class="process-step"><div class="step-dot">05</div><h3>改善する</h3><p>運用方法や説明まで整え、使い続けられる形にします。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="wire-label">Capabilities</div>
+        <p class="eyebrow">Tools behind the work</p>
+        <h2>方法は、課題に合わせて選びます。</h2>
+        <div class="capability-grid">
+          <article class="capability"><h3>AI活用</h3><p class="note">文章、検索、音声、画像、エージェント。</p><div class="tags"><span class="tag">ChatGPT</span><span class="tag">RAG</span><span class="tag">TTS</span></div></article>
+          <article class="capability"><h3>自動化・連携</h3><p class="note">繰り返す作業とサービスをつなぐ。</p><div class="tags"><span class="tag">API</span><span class="tag">GAS</span><span class="tag">Actions</span></div></article>
+          <article class="capability"><h3>アプリ開発</h3><p class="note">現場に合わせた小さなWebツール。</p><div class="tags"><span class="tag">Web</span><span class="tag">Python</span><span class="tag">Flutter</span></div></article>
+          <article class="capability"><h3>運用設計</h3><p class="note">安全、ログ、テスト、引き継ぎまで考える。</p><div class="tags"><span class="tag">GitHub</span><span class="tag">Docs</span><span class="tag">Testing</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="wire-label">About</div>
+        <p class="eyebrow">SYSTEM / SOUND</p>
+        <h2>仕組みを組み立てることと、音を組み立てること。</h2>
+        <div class="about-grid">
+          <article class="about-side engineer"><p class="eyebrow">SYSTEM</p><h3>AI Solution Engineer</h3></article>
+          <article class="about-side musician"><p class="eyebrow">SOUND</p><h3>Contrabass / Electric Bass</h3></article>
+        </div>
+        <p class="about-story">複雑なものを整理し、不要なものを減らし、人が扱いやすく、心地よく動く状態をつくる。システムと音楽の間にある共通点を、このブランドの個性として伝えます。</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <div class="wire-label">Contact</div>
+        <p class="eyebrow">One light on</p>
+        <h2>その作業、少し楽にできるかもしれません。</h2>
+        <p class="lead">依頼内容が固まっていなくても問題ありません。まずは「毎回これが面倒」という話から。</p>
+        <div class="contact-examples">
+          <div>Excelが増えすぎて探せない</div>
+          <div>同じ内容を何度も入力している</div>
+          <div>AIで何ができるかだけ聞きたい</div>
+          <div>SNS投稿を続けられる形にしたい</div>
+        </div>
+        <a class="button button-primary" href="#">相談内容を送る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>SYSTEM / SOUND</strong><br>GORO NAGAYA</div>
+      <div>AI Solution Engineer / Contrabass Player<br>Structural wireframe — not final design</div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#contact">相談する</a>
+</body>
+</html>
