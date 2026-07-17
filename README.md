@@ -43,6 +43,18 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 4. [Business Card Specification](docs/04_BUSINESS_CARD_SPEC.md)
 5. [Content Inventory](docs/05_CONTENT_INVENTORY.md)
 6. [Implementation Plan](docs/06_IMPLEMENTATION_PLAN.md)
+7. [Featured Cases Plan](docs/07_FEATURED_CASES_PLAN.md)
+
+## Selected Featured Cases
+
+1. Rack Diagram Web App
+2. Internal Knowledge Search
+3. Threads Operations System
+4. Rakuten Select Assist
+5. IrodoriTTS Studio
+6. LINE Stamp Maker
+
+匿名業務事例の再現版が完成するまでは、公開デモのある事例を先に掲載します。詳細は [Featured Cases Plan](docs/07_FEATURED_CASES_PLAN.md) を参照してください。
 
 ## Primary Audience
 
@@ -63,8 +75,10 @@ AIを導入すること自体を目的にしません。
 - [x] ブランドの方向性を整理
 - [x] リポジトリ作成
 - [x] 初期設計ドキュメント作成
-- [ ] GitHub・noteの実績棚卸し
-- [ ] 掲載事例の選定
+- [x] GitHub・noteの実績棚卸し
+- [x] 掲載事例の選定
+- [ ] 代表事例の画像・動画素材作成
+- [ ] 匿名業務デモの仕様確定
 - [ ] ロゴのラフ制作
 - [ ] LPワイヤーフレーム制作
 - [ ] ビジュアルデザイン
@@ -74,3 +88,5 @@ AIを導入すること自体を目的にしません。
 ## Notes
 
 公開前に、勤務先や顧客に関する機密情報、実データ、認証情報、APIキーが含まれていないことを必ず確認します。
+
+開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
