@@ -46,15 +46,19 @@ AIソリューションエンジニアとコントラバス奏者という二つ
 7. [Featured Cases Plan](docs/07_FEATURED_CASES_PLAN.md)
 8. [Logo Concepts](docs/08_LOGO_CONCEPTS.md)
 9. [LP Wireframe](docs/09_LP_WIREFRAME.md)
+10. [Design System](docs/10_DESIGN_SYSTEM.md)
+11. [Phase 01 Logo / Hero Decision](docs/11_PHASE_01_LOGO_HERO_DECISION.md)
 
 ## Design Drafts
 
-- [F-hole logo concept sheet](design/logo/logo-concepts.svg)
-- [Responsive LP wireframe prototype](wireframes/lp-wireframe.html)
+- [Initial F-hole logo concept sheet](design/logo/logo-concepts.svg)
+- [Initial responsive LP wireframe](wireframes/lp-wireframe.html)
+- [Selected Phase 01 logo symbol](design/logo/system-sound-symbol.svg)
+- [Phase 01 logo / hero browser preview](wireframes/brand-phase-01.html)
 
-ロゴラフは4方向を比較し、現時点ではF字孔の下端を信号線へつなぎ、小さな赤い点を置く **Signal F** を第一推奨としています。
+Phase 01では従来のSignal Fを再検討し、F字孔固有の上下の目と中央の切り欠きを残した **Resonant Signal** を正式ロゴ案として選定しました。Frequencyは外付けの線ではなく、F字孔の流れとWeb上の赤い点の移動で表現します。
 
-LPワイヤーフレームはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番にしています。
+LPはスマートフォンを正本とし、名刺のQRコードから訪れた人が30〜60秒で「何を相談できる人か」を理解できる順番を維持します。
 
 ## Selected Featured Cases
 
@@ -92,8 +96,9 @@ AIを導入すること自体を目的にしません。
 - [ ] 匿名業務デモの仕様確定
 - [x] ロゴのラフ制作
 - [x] LPワイヤーフレーム制作
-- [ ] ロゴ方向性の選定・清書
-- [ ] ビジュアルデザイン
+- [x] ロゴ方向性の選定・SVG清書
+- [x] ファーストビューのビジュアル方向性
+- [ ] LP全体のビジュアルデザイン
 - [ ] Astroによる実装
 - [ ] 名刺入稿データ制作
 
@@ -103,4 +108,4 @@ AIを導入すること自体を目的にしません。
 
 開発中、MVP、販売前検証中の作品は、完成品と誤認されないよう現在の状態を明記します。
 
-`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は方向性確認用です。最終ロゴ、最終ビジュアル、Astro実装ではありません。
+`design/logo/logo-concepts.svg` と `wireframes/lp-wireframe.html` は初期ラフです。Phase 01の選定結果、変更理由、未決定事項は `docs/11_PHASE_01_LOGO_HERO_DECISION.md` を正として参照してください。
