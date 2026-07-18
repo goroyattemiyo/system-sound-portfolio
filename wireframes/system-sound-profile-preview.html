@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SYSTEM / SOUND｜AIと小さな仕組みで、仕事の中にある『毎回面倒』を改善します。">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>SYSTEM / SOUND｜永谷 悟郎</title>
+  <style>
+    :root{--stage:#0b0b0c;--soft:#141416;--ivory:#f2ede3;--muted:#aaa39a;--line:rgba(242,237,227,.15);--wood:#c88a4a;--wine:#7a1f2b;--shell:min(1120px,calc(100vw - 40px))}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--stage);color:var(--ivory);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}a{color:inherit}img{display:block;max-width:100%}.shell{width:var(--shell);margin:auto}.kicker{margin:0 0 12px;color:var(--wood);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase}.muted{color:var(--muted)}
+    header{position:fixed;z-index:20;inset:0 0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100vw - 1120px)/2));background:rgba(11,11,12,.78);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.08em}.brand img{width:24px;height:42px;object-fit:contain;filter:brightness(0) invert(1)}nav{display:flex;gap:24px}nav a{text-decoration:none;color:var(--muted);font-size:.82rem}nav a:hover{color:var(--ivory)}
+    .hero{min-height:100svh;display:grid;place-items:center;padding:120px 0 72px;overflow:hidden;background:radial-gradient(circle at 70% 45%,rgba(110,61,36,.18),transparent 35%),linear-gradient(180deg,#0b0b0c,#111113)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}.hero h1{margin:0;font-size:clamp(2.8rem,7vw,6.5rem);line-height:1.03;letter-spacing:-.04em}.hero h1 span{display:block;color:var(--wood)}.hero-copy{max-width:680px;margin:26px 0;color:#d7d0c6;font-size:clamp(1rem,1.5vw,1.18rem)}.actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--ivory);text-decoration:none;font-weight:700;letter-spacing:.04em}.button.primary{background:var(--ivory);color:var(--stage)}.button:hover{transform:translateY(-1px)}
+    .mark-stage{position:relative;display:grid;place-items:center;min-height:620px}.mark{position:relative;width:min(270px,62vw);aspect-ratio:237.806/827.353}.mark>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:brightness(0) saturate(100%) invert(94%) sepia(10%) saturate(235%) hue-rotate(349deg) brightness(102%) contrast(91%)}.mark::after{content:"";position:absolute;inset:-12%;background:linear-gradient(105deg,transparent 36%,rgba(122,31,43,0) 43%,rgba(166,64,80,.78) 50%,rgba(122,31,43,0) 57%,transparent 64%);mix-blend-mode:screen;clip-path:polygon(34% 0,69% 0,69% 100%,34% 100%);transform:translateY(125%);animation:sweep 10s ease-in-out infinite}.orbit{position:absolute;left:50%;top:50%;width:160px;height:58px;translate:-50% -50%;border:1px solid rgba(242,237,227,.22);border-radius:50%;transform:rotate(-12deg);animation:orbit 10s linear infinite}.orbit::before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--wine);left:50%;top:-5px;box-shadow:0 0 0 4px rgba(122,31,43,.12)}.frequency{position:absolute;inset:15% -20%;opacity:.16;background:repeating-radial-gradient(ellipse at center,transparent 0 24px,rgba(242,237,227,.25) 25px 26px,transparent 27px 48px);animation:breathe 6s ease-in-out infinite}
+    @keyframes sweep{0%,79%,100%{transform:translateY(125%);opacity:0}82%{opacity:.25}88%{opacity:1}95%{transform:translateY(-125%);opacity:.15}}@keyframes orbit{to{transform:rotate(348deg)}}@keyframes breathe{50%{transform:scale(1.025);opacity:.23}}
+    section{padding:110px 0;border-top:1px solid var(--line)}h2{margin:0 0 24px;font-size:clamp(2rem,4.4vw,4.4rem);line-height:1.18;letter-spacing:-.035em}.story-grid,.about-grid,.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.story-visual{position:sticky;top:120px;display:grid;place-items:center;min-height:460px;border:1px solid var(--line);background:radial-gradient(circle,rgba(122,31,43,.11),transparent 58%)}.story-visual .mark{width:150px}.story-visual .orbit{width:120px;height:42px}.story p,.about p{color:#d7d0c6}.lead{font-size:clamp(1.1rem,2vw,1.45rem);color:var(--ivory)!important}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}.card{padding:26px;border:1px solid var(--line);background:var(--soft)}.card b{display:block;margin-bottom:8px;color:var(--wood)}
+    dl{margin:36px 0 0}.fact{display:grid;grid-template-columns:130px 1fr;padding:15px 0;border-top:1px solid var(--line)}dt{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}dd{margin:0}.contact-box{padding:36px;border:1px solid var(--line);background:var(--soft)}.contact-list{display:grid;gap:10px;margin:26px 0}.line-button{background:#06c755;border-color:#06c755;color:#07170c}.notice{font-size:.85rem;color:var(--muted)}footer{padding:32px 0;color:var(--muted);border-top:1px solid var(--line)}
+    @media(max-width:820px){nav{display:none}.hero-grid,.story-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:110px}.mark-stage{min-height:460px;order:-1}.mark{width:180px}.story-visual{position:relative;top:auto;min-height:350px}.cards{grid-template-columns:1fr}.fact{grid-template-columns:1fr;gap:4px}section{padding:78px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mark::after,.orbit,.frequency{animation:none}.mark::after{display:none}}
+  </style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><img src="../design/logo/system-sound-formal-mark.svg" alt=""><span>SYSTEM / SOUND</span></a>
+  <nav aria-label="主要メニュー"><a href="#story">STORY</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="kicker">AI Solution Engineering / Music</p>
+        <h1>面倒を、<span>仕組みに変える。</span></h1>
+        <p class="hero-copy">仕事の中にある「毎回面倒」を、AIと小さな仕組みで改善する。現場で無理なく使い続けられる設計を、一緒に考えます。</p>
+        <div class="actions"><a class="button primary" href="#contact">相談・連絡する</a><a class="button" href="#story">ロゴの物語を見る</a></div>
+      </div>
+      <div class="mark-stage" aria-label="SYSTEM / SOUNDのF字孔シンボル">
+        <div class="frequency" aria-hidden="true"></div>
+        <div class="mark"><img src="../design/logo/system-sound-formal-mark.svg" alt=""><span class="orbit" aria-hidden="true"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="story">
+    <div class="shell story-grid">
+      <div class="story-visual" aria-hidden="true"><div class="frequency"></div><div class="mark"><img src="../design/logo/system-sound-formal-mark.svg" alt=""><span class="orbit"></span></div></div>
+      <div>
+        <p class="kicker">Logo Story / Frequency</p>
+        <h2>音楽のように、<br>改善を進める。</h2>
+        <p class="lead">このロゴの原型は、コントラバスのF字孔です。楽器の内部で育った振動を、響きとして空気へ伝える出口。その形に、Frequencyの「F」と、仕事の流れを整えるSYSTEMの考え方を重ねています。</p>
+        <p>音楽は、周期的な振動と変化の重なりで進んでいきます。仕事の中にも、毎日、毎週、毎月くり返される流れがあります。</p>
+        <p>その反復に、AIと小さな仕組みで変化を与える。すると、止まっていた流れが整い、少しずつ前へ進みはじめます。</p>
+        <p>曲が時間の中で展開していくように、業務改善もまた、周期的な変化を積み重ねながら進んでいく。それがSYSTEM / SOUNDの考え方です。</p>
+        <div class="cards"><div class="card"><b>F-hole</b>内部の振動を、外へ届く響きに変える。</div><div class="card"><b>Frequency</b>くり返しを見つけ、周期を整える。</div><div class="card"><b>System</b>小さな変化を、続く仕組みにする。</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="shell about-grid">
+      <div><p class="kicker">About</p><h2>論理と感覚の、<br>両方から設計する。</h2></div>
+      <div>
+        <p class="lead">永谷 悟郎（ながや ごろう）</p>
+        <p>AIソリューションエンジニアとして、業務改善、小規模自動化、AI活用の設計・制作に取り組んでいます。コントラバスとエレキベースの演奏活動も続けています。</p>
+        <dl>
+          <div class="fact"><dt>Work</dt><dd>AIソリューションエンジニア</dd></div>
+          <div class="fact"><dt>Music</dt><dd>Contrabass &amp; Electric Bass Player</dd></div>
+          <div class="fact"><dt>Education</dt><dd>国立音楽大学卒業</dd></div>
+          <div class="fact"><dt>License</dt><dd>中学校・高等学校教諭免許状（音楽）</dd></div>
+          <div class="fact"><dt>Base</dt><dd>静岡県藤枝市</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="shell contact-grid">
+      <div><p class="kicker">Contact</p><h2>仕事も、音楽も。<br>まずはLINEから。</h2><p class="muted">AI・業務改善のご相談、学校・吹奏楽・地域音楽活動に関するご連絡を承ります。</p></div>
+      <div class="contact-box">
+        <strong>永谷 悟郎 / ながや ごろう</strong>
+        <div class="contact-list">
+          <span>〒426-0063</span>
+          <span>静岡県藤枝市青南町4-5-7</span>
+          <a href="tel:09042635824">TEL：090-4263-5824</a>
+        </div>
+        <div class="actions"><a class="button line-button" href="https://line.me/ti/p/LNkfYpe0I3" target="_blank" rel="noopener">LINEで連絡する</a></div>
+        <p class="notice">LINE QRコード画像は、公開版のアセット整理時にこの欄へ追加します。</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="shell">© <span id="year"></span> SYSTEM / SOUND — Goro Nagaya</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
