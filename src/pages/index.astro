@@ -1,0 +1,227 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import logoSrc from '../../design/logo/system-sound-fhole-traced.svg';
+import lineQrSrc from '../../images/contact/line-qr.jpg';
+
+const featuredWorks = [
+  {
+    number: '01',
+    status: 'Operational prototype',
+    category: 'AI Operations / SNS / Automation',
+    title: 'AIとの会話から、Threads投稿・履歴・分析までを一つの運用へ。',
+    copy: '投稿予約だけでなく、画像、ツリー投稿、履歴検索、エラー復旧、分析、トークン管理までをつないだSNS運用システムです。',
+    flow: ['AI Chat', 'GitHub', 'Actions', 'Threads', 'Insights'],
+  },
+  {
+    number: '02',
+    status: 'Public demo available',
+    category: 'Small Tool / Image Processing / Privacy',
+    title: '40枚の画像加工を、ブラウザだけで一つのZIPへ。',
+    copy: '画像分割、背景除去、枚数選択、ファイル名調整、LINE申請用ZIP生成を、外部送信なしで完結するツールです。',
+    flow: ['1 Image', 'Split', 'Remove BG', 'Select', 'ZIP'],
+  },
+  {
+    number: '03',
+    status: 'MVP in development',
+    category: 'Decision Support / Web App / API',
+    title: '迷い続ける商品選びを、比較できる選定フローへ。',
+    copy: '価格やレビューを行き来する商品選定を、検索・比較・スコアリングで支援する個人事業主向けWebアプリです。',
+    flow: ['Search', 'Compare', 'Score', 'Decide'],
+  },
+  {
+    number: '04',
+    status: 'Work in progress',
+    category: 'AI Audio / Creative Workflow / UI',
+    title: 'AI音声生成を、“一回試す”から“制作を続けられる流れ”へ。',
+    copy: '声の設計、長文台本の分割生成、保存、試聴、SNS用動画変換をつないだ、AI音声制作の補助環境です。',
+    flow: ['Voice Design', 'Script', 'Generate', 'Edit', 'Publish'],
+  },
+];
+
+const processSteps = [
+  ['01', 'Listen', '今の作業を聞く', '何を使っているかより、どこで止まり、何を毎回くり返しているかを整理します。'],
+  ['02', 'Design', '小さく設計する', '最初から大規模化せず、現場で試せる最小単位へ分けます。'],
+  ['03', 'Build', '実際に動かす', 'AI、Web、GitHub、スプレッドシートなど、必要なものだけを組み合わせます。'],
+  ['04', 'Improve', '使いながら整える', '一度作って終わりではなく、実際の使い方に合わせて調整します。'],
+];
+---
+
+<BaseLayout
+  title="SYSTEM / SOUND｜永谷 悟郎"
+  description="AIと小さな仕組みで、仕事の中にある『毎回面倒』を改善します。"
+>
+  <header>
+    <a class="brand" href="#top">
+      <img src={logoSrc.src} alt="" />
+      <span>SYSTEM / SOUND</span>
+    </a>
+    <nav aria-label="主要メニュー">
+      <a href="#story">STORY</a>
+      <a href="#works">WORKS</a>
+      <a href="#process">PROCESS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="kicker">AI Solution Engineering / Music</p>
+          <h1>面倒を、<span>仕組みに変える。</span></h1>
+          <p class="hero-copy">仕事の中にある「毎回面倒」を、AIと小さな仕組みで改善する。現場で無理なく使い続けられる設計を、一緒に考えます。</p>
+          <div class="actions">
+            <a class="button primary" href="#contact">相談・連絡する</a>
+            <a class="button" href="#works">事例を見る</a>
+          </div>
+        </div>
+        <div class="mark-stage" aria-label="SYSTEM / SOUNDのF字孔シンボル">
+          <div class="frequency" aria-hidden="true"></div>
+          <div class="mark" style={`--mark-mask:url("${logoSrc.src}")`}>
+            <span class="orbit-track orbit-track-back" aria-hidden="true"></span>
+            <img src={logoSrc.src} alt="" />
+            <span class="spark-mask" aria-hidden="true"></span>
+            <span class="orbit-track orbit-track-front" aria-hidden="true"></span>
+            <span class="orbit-glint" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="shell story-grid">
+        <div class="story-visual" aria-hidden="true">
+          <div class="frequency"></div>
+          <div class="mark small" style={`--mark-mask:url("${logoSrc.src}")`}>
+            <span class="orbit-track orbit-track-back"></span>
+            <img src={logoSrc.src} alt="" />
+            <span class="spark-mask"></span>
+            <span class="orbit-track orbit-track-front"></span>
+            <span class="orbit-glint"></span>
+          </div>
+        </div>
+        <div>
+          <p class="kicker">Logo Story / Frequency</p>
+          <h2>音楽のように、<br />改善を進める。</h2>
+          <p class="lead">このロゴの原型は、コントラバスのF字孔です。楽器の内部で育った振動を、響きとして空気へ伝える出口。その形に、Frequencyの「F」と、仕事の流れを整えるSYSTEMの考え方を重ねています。</p>
+          <p>音楽は、周期的な振動と変化の重なりで進んでいきます。仕事の中にも、毎日、毎週、毎月くり返される流れがあります。</p>
+          <p>その反復に、AIと小さな仕組みで変化を与える。すると、止まっていた流れが整い、少しずつ前へ進みはじめます。</p>
+          <p>曲が時間の中で展開していくように、業務改善もまた、周期的な変化を積み重ねながら進んでいく。それがSYSTEM / SOUNDの考え方です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="works-section">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="kicker">Featured Works</p>
+          <h2>作ったものではなく、<br />変えた流れを見る。</h2>
+          <p class="lead">公開準備中のものを含め、現在取り組んでいる代表事例です。状態を明記し、完成済みと検証中を分けて掲載しています。</p>
+        </div>
+        <div class="works-grid">
+          {featuredWorks.map((work) => (
+            <article class="work-card">
+              <div class="work-meta"><span>{work.number}</span><span>{work.status}</span></div>
+              <p class="work-category">{work.category}</p>
+              <h3>{work.title}</h3>
+              <p>{work.copy}</p>
+              <div class="flow" aria-label="処理の流れ">
+                {work.flow.map((item, index) => (
+                  <><span>{item}</span>{index < work.flow.length - 1 && <i aria-hidden="true">→</i>}</>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="private-cases">
+          <p class="kicker">Anonymous Business Cases</p>
+          <div class="private-grid">
+            <article><span>Planning</span><h3>ラック図面作成を、Excelの図形操作からドラッグ＆ドロップへ。</h3><p>匿名再現版とダミーデータを準備してから公開します。</p></article>
+            <article><span>Planning</span><h3>増え続けるExcelの“虎の巻”を、まとめて探せるように。</h3><p>実データを使用せず、架空情報による検索デモとして公開予定です。</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process-section">
+      <div class="shell">
+        <div class="section-heading compact">
+          <p class="kicker">Process</p>
+          <h2>大きなシステムより、<br />続けられる小さな改善を。</h2>
+        </div>
+        <div class="process-grid">
+          {processSteps.map(([number, en, title, copy]) => (
+            <article class="process-card">
+              <div><span>{number}</span><small>{en}</small></div>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="shell two-column">
+        <div>
+          <p class="kicker">About</p>
+          <h2>論理と感覚の、<br />両方から設計する。</h2>
+        </div>
+        <div>
+          <p class="lead">永谷 悟郎（ながや ごろう）</p>
+          <p>AIソリューションエンジニアとして、業務改善、小規模自動化、AI活用の設計・制作に取り組んでいます。コントラバスとエレキベースの演奏活動も続けています。</p>
+          <dl>
+            <div class="fact"><dt>Work</dt><dd>AIソリューションエンジニア</dd></div>
+            <div class="fact"><dt>Music</dt><dd>Contrabass &amp; Electric Bass Player</dd></div>
+            <div class="fact"><dt>Education</dt><dd>国立音楽大学卒業</dd></div>
+            <div class="fact"><dt>License</dt><dd>中学校・高等学校教諭免許状（音楽）</dd></div>
+            <div class="fact"><dt>Base</dt><dd>静岡県藤枝市</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell two-column">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>仕事も、音楽も。<br />まずはLINEから。</h2>
+          <p class="muted">AI・業務改善のご相談、学校・吹奏楽・地域音楽活動に関するご連絡を承ります。</p>
+        </div>
+        <div class="contact-box">
+          <strong>永谷 悟郎 / ながや ごろう</strong>
+          <div class="contact-list">
+            <span>静岡県藤枝市</span>
+            <span>ご連絡はLINEからお願いします。</span>
+          </div>
+          <a class="qr-link" href="https://line.me/ti/p/LNkfYpe0I3" target="_blank" rel="noopener noreferrer" aria-label="LINEで連絡する">
+            <img class="line-qr" src={lineQrSrc.src} alt="永谷悟郎のLINE QRコード" width="220" height="220" loading="lazy" />
+          </a>
+          <a class="button line" href="https://line.me/ti/p/LNkfYpe0I3" target="_blank" rel="noopener noreferrer">LINEで連絡する</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell">© SYSTEM / SOUND — Goro Nagaya</div></footer>
+</BaseLayout>
+
+<style>
+  header{position:fixed;z-index:20;inset:0 0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100vw - 1120px)/2));background:rgba(11,11,12,.78);border-bottom:1px solid var(--color-line);backdrop-filter:blur(14px)}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.08em}.brand img{width:24px;height:42px;object-fit:contain}nav{display:flex;gap:20px}nav a{text-decoration:none;color:var(--color-muted);font-size:.76rem}
+  .hero{min-height:100svh;display:grid;place-items:center;padding:120px 0 72px;overflow:hidden;background:radial-gradient(circle at 70% 45%,rgba(110,61,36,.18),transparent 35%),linear-gradient(180deg,#0b0b0c,#111113)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}.hero h1{margin:0;font-size:clamp(2.8rem,7vw,6.5rem);line-height:1.03}.hero h1 span{display:block;color:var(--color-wood)}.hero-copy{max-width:680px;margin:26px 0;color:#d7d0c6;font-size:clamp(1rem,1.5vw,1.18rem)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--color-ivory);text-decoration:none;font-weight:700}.button.primary{background:var(--color-ivory);color:var(--color-stage)}.button.line{background:#06c755;border-color:#06c755;color:#07170c}
+  .mark-stage{position:relative;display:grid;place-items:center;min-height:620px}.mark{position:relative;width:min(270px,62vw);aspect-ratio:237.806/827.353;isolation:isolate}.mark img{position:absolute;z-index:2;inset:0;width:100%;height:100%;object-fit:contain}.spark-mask{position:absolute;z-index:3;inset:0;pointer-events:none;background:linear-gradient(164deg,transparent 0 39%,rgba(122,31,43,0) 43%,rgba(157,58,72,.24) 47%,rgba(199,116,124,.76) 50%,rgba(157,58,72,.2) 53%,rgba(122,31,43,0) 57%,transparent 61%);background-size:100% 34%;background-repeat:no-repeat;background-position:50% 135%;-webkit-mask-image:var(--mark-mask);mask-image:var(--mark-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;mix-blend-mode:screen;opacity:0;animation:surface-reflection 10s ease-in-out infinite}.orbit-track,.orbit-glint{position:absolute;left:50%;top:51%;width:54%;height:5.7%;translate:-50% -50%;border-radius:50%;transform:rotate(-10deg)}.orbit-track{border:1px solid transparent}.orbit-track-back{z-index:1;border-color:rgba(242,237,227,.1)}.orbit-track-front{z-index:4;border-color:rgba(242,237,227,.27);clip-path:inset(50% 0 0 0)}.orbit-glint{z-index:5;border:0;animation:notch-orbit 10s linear infinite}.orbit-glint::before{content:"";position:absolute;left:50%;top:-1px;width:22%;height:2px;translate:-50% 0;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(133,42,55,.25),rgba(183,78,91,.92),rgba(133,42,55,.2),transparent)}.frequency{position:absolute;inset:15% -20%;opacity:.16;background:repeating-radial-gradient(ellipse at center,transparent 0 24px,rgba(242,237,227,.25) 25px 26px,transparent 27px 48px);animation:breathe 6s ease-in-out infinite}
+  .story-grid,.two-column{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.story-visual{position:sticky;top:120px;display:grid;place-items:center;min-height:460px;border:1px solid var(--color-line);background:radial-gradient(circle,rgba(122,31,43,.11),transparent 58%)}.mark.small{width:150px}.lead{font-size:clamp(1.1rem,2vw,1.45rem);color:var(--color-ivory)}
+  .works-section{background:linear-gradient(180deg,var(--color-stage),#101012)}.section-heading{max-width:760px;margin-bottom:52px}.section-heading.compact{max-width:650px}.works-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.work-card{min-height:360px;padding:28px;border:1px solid var(--color-line);background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.005));display:flex;flex-direction:column}.work-meta{display:flex;justify-content:space-between;gap:16px;color:var(--color-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.work-meta span:last-child{color:var(--color-wood);text-align:right}.work-category{margin:42px 0 12px;color:var(--color-muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}.work-card h3,.private-grid h3,.process-card h3{font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.45;margin:0 0 16px}.flow{margin-top:auto;padding-top:24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;color:var(--color-muted);font-size:.72rem}.flow span{padding:6px 8px;border:1px solid var(--color-line)}.flow i{font-style:normal;color:var(--color-wine)}.private-cases{margin-top:64px;padding-top:32px;border-top:1px solid var(--color-line)}.private-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.private-grid article{padding:24px;border-left:2px solid var(--color-wine);background:var(--color-panel)}.private-grid article>span{font-size:.72rem;color:var(--color-wood);text-transform:uppercase;letter-spacing:.1em}
+  .process-section{background:#0d0d0f}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--color-line);border-left:1px solid var(--color-line)}.process-card{min-height:290px;padding:28px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line)}.process-card>div{display:flex;justify-content:space-between;margin-bottom:54px}.process-card span{font-size:1.4rem;color:var(--color-wood)}.process-card small{color:var(--color-muted);text-transform:uppercase;letter-spacing:.12em}
+  dl{margin:36px 0 0}.fact{display:grid;grid-template-columns:130px 1fr;padding:15px 0;border-top:1px solid var(--color-line)}dt{color:var(--color-muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}dd{margin:0}.contact-box{padding:36px;border:1px solid var(--color-line);background:var(--color-panel)}.contact-list{display:grid;gap:10px;margin:26px 0}.qr-link{display:block;width:min(220px,100%);margin:0 0 20px}.line-qr{width:100%;height:auto;border-radius:8px;background:#fff;padding:8px}footer{padding:32px 0;color:var(--color-muted);border-top:1px solid var(--color-line)}
+  @keyframes surface-reflection{0%,79%,100%{background-position:50% 135%;opacity:0}82%{opacity:.18}87%{opacity:.92}95%{background-position:50% -35%;opacity:.08}}
+  @keyframes notch-orbit{0%{transform:rotate(-10deg);opacity:0}3%{opacity:0}48%{transform:rotate(170deg);opacity:0}50%{opacity:.18}56%{opacity:.9}94%{opacity:.72}98%{transform:rotate(350deg);opacity:0}100%{transform:rotate(350deg);opacity:0}}
+  @keyframes breathe{50%{transform:scale(1.025);opacity:.23}}
+  @media(max-width:900px){nav{display:none}.hero-grid,.story-grid,.two-column{grid-template-columns:1fr}.mark-stage{min-height:460px;order:-1}.mark{width:180px}.story-visual{position:relative;top:auto;min-height:350px}.fact{grid-template-columns:1fr;gap:4px}.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.works-grid,.private-grid,.process-grid{grid-template-columns:1fr}.work-card{min-height:330px}.process-card{min-height:auto}.process-card>div{margin-bottom:32px}}
+  @media(prefers-reduced-motion:reduce){.spark-mask,.orbit-glint,.frequency{animation:none}.spark-mask,.orbit-glint{display:none}}
+</style>

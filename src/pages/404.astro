@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const homeUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="ページが見つかりません｜SYSTEM / SOUND"
+  description="お探しのページは見つかりませんでした。"
+>
+  <main class="not-found">
+    <div class="shell">
+      <p class="kicker">404 / Page not found</p>
+      <h1>ページが見つかりません。</h1>
+      <p>URLが変更されたか、ページが削除された可能性があります。</p>
+      <a class="button" href={homeUrl}>トップへ戻る</a>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found{min-height:100svh;display:grid;place-items:center;padding:96px 0;background:radial-gradient(circle at 70% 35%,rgba(110,61,36,.18),transparent 34%),var(--color-stage)}
+  .not-found .shell{max-width:760px;text-align:center}
+  h1{font-size:clamp(2.4rem,7vw,5.2rem);margin:.4em 0 .25em}
+  p{color:var(--color-muted)}
+  .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:24px;padding:0 22px;border:1px solid var(--color-ivory);color:var(--color-stage);background:var(--color-ivory);text-decoration:none;font-weight:700}
+</style>
