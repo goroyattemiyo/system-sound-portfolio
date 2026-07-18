@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="SYSTEM / SOUND OGP image">
+  <defs>
+    <radialGradient id="wood" cx="72%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#6b351c" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#0b0b0c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0b0c"/>
+  <rect width="1200" height="630" fill="url(#wood)"/>
+  <path fill="#FBCF88" d="M928 86c70 0 112 48 112 111 0 60-28 121-61 181-23 42-34 80 20 111l-43 12c-31 9-47 39-56 80-20 73-31 130 14 165 24 19 53 12 65-12-19-11-31-31-31-53 0-42 31-72 72-72 44 0 73 34 73 82 0 82-68 143-153 143-111 0-183-82-183-194 0-93 37-181 65-253 20-52 23-82-20-107l52-22c41-18 71-57 94-109 28-63 54-112 54-155 0-29-17-49-43-49-28 0-44 20-44 43 0 23 19 38 47 31-9 39-39 61-79 61-61 0-104-46-104-108 0-92 72-170 180-170Z" opacity=".92" transform="translate(-110 0) scale(.72)"/>
+  <text x="92" y="178" fill="#FBCF88" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="8">SYSTEM / SOUND</text>
+  <text x="92" y="324" fill="#F2EBDD" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">面倒を、</text>
+  <text x="92" y="414" fill="#C77732" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">仕組みに変える。</text>
+  <text x="96" y="502" fill="#CFC6B8" font-family="Arial, Helvetica, sans-serif" font-size="28">AI Solution Engineering / Music</text>
+  <text x="96" y="555" fill="#9E9589" font-family="Arial, Helvetica, sans-serif" font-size="24">永谷 悟郎｜静岡県藤枝市</text>
+</svg>
