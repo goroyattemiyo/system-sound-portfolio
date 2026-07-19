@@ -6,19 +6,25 @@
  * the F-hole occluding the rear segment, not by an artificial brightness shift.
  */
 
+/* Give the orbit a little more breathing room around the F-hole. */
+body .mark svg.orbit-svg {
+  width: 146% !important;
+  height: 15.5% !important;
+}
+
 /*
  * Rear/upper guide line.
- * The existing SVG only draws the lower/front half of the pale orbit guide.
- * This matching upper half sits behind the wooden mark so the guide reads as
- * one complete loop while still disappearing naturally at the silhouette.
+ * This matching upper half sits behind the wooden mark so the pale guide reads
+ * as one complete loop while still disappearing naturally at the silhouette.
+ * The dimensions match the visible ellipse inside the widened SVG viewport.
  */
 body .mark::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 51%;
-  width: 121.44%;
-  height: 9.24%;
+  width: 134.32%;
+  height: 10.85%;
   translate: -50% -50%;
   box-sizing: border-box;
   border: 1.55px solid rgba(242, 237, 227, 0.27);
@@ -64,23 +70,28 @@ body .mark svg.orbit-light {
   display: block !important;
 }
 
-/*
- * Keep the bright light strictly inside the lower/front SVG clip.
- * The explicit high-specificity selectors prevent older hero overrides from
- * exposing the front dash around the complete ellipse.
- */
-body .mark svg.orbit-light ellipse.orbit-light-main,
-body .mark svg.orbit-light ellipse.orbit-light-highlight {
+/* Keep the moving red segment strictly inside the lower/front SVG clip. */
+body .mark svg.orbit-light ellipse.orbit-light-main {
   -webkit-clip-path: url(#orbit-light-front-half) !important;
   clip-path: url(#orbit-light-front-half) !important;
-}
-
-body .mark svg.orbit-light ellipse.orbit-light-main {
   opacity: 1;
 }
 
+/* Remove the thin white highlight that previously sat on top of the red dash. */
 body .mark svg.orbit-light ellipse.orbit-light-highlight {
-  opacity: 0.88;
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  body .mark svg.orbit-svg {
+    width: 154% !important;
+    height: 17% !important;
+  }
+
+  body .mark::before {
+    width: 141.68%;
+    height: 11.9%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
