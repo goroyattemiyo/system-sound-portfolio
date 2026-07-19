@@ -6,6 +6,29 @@
  * the F-hole occluding the rear segment, not by an artificial brightness shift.
  */
 
+/*
+ * Rear/upper guide line.
+ * The existing SVG only draws the lower/front half of the pale orbit guide.
+ * This matching upper half sits behind the wooden mark so the guide reads as
+ * one complete loop while still disappearing naturally at the silhouette.
+ */
+body .mark::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 51%;
+  width: 121.44%;
+  height: 9.24%;
+  translate: -50% -50%;
+  box-sizing: border-box;
+  border: 1.55px solid rgba(242, 237, 227, 0.27);
+  border-radius: 50%;
+  clip-path: inset(0 0 50% 0);
+  transform: rotate(-7deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* Rear/upper half: visible outside the mark, hidden by the wood at overlap. */
 body .mark svg.orbit-back {
   z-index: 1 !important;
