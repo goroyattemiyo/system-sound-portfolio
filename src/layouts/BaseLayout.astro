@@ -11,6 +11,7 @@ const base = import.meta.env.BASE_URL;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(`${base}og/system-sound-og.svg`, Astro.site);
 const faviconUrl = `${base}favicon/favicon.svg`;
+const storyAnimationUrl = `${base}story-animation.js`;
 ---
 
 <!doctype html>
@@ -39,5 +40,6 @@ const faviconUrl = `${base}favicon/favicon.svg`;
   </head>
   <body>
     <slot />
+    <script src={storyAnimationUrl} defer></script>
   </body>
 </html>
