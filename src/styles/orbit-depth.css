@@ -33,10 +33,21 @@ body .mark .orbit-front {
   display: block !important;
 }
 
-/* Front half: retain the inline lower-half clip and render above the wood. */
+/* Front half: only the lower/front half is allowed above the wood. */
 body .mark .orbit-light {
   z-index: 5 !important;
   display: block !important;
+}
+
+/*
+ * hero-mark.css intentionally removed the old clip while testing the rear pass.
+ * Reinstate the SVG clip here so the bright dash cannot cross the wooden mark
+ * while it is travelling on the upper/rear half of the ellipse.
+ */
+body .mark .orbit-light-main,
+body .mark .orbit-light-highlight {
+  -webkit-clip-path: url(#orbit-light-front-half) !important;
+  clip-path: url(#orbit-light-front-half) !important;
 }
 
 body .mark .orbit-light-main {
