@@ -2,6 +2,8 @@
  * Hero orbit depth.
  * One synchronized dash is split into a rear half and a front half.
  * The rear half sits below the wooden mark; the front half sits above it.
+ * Both halves use the same wine-red intensity so depth is created only by
+ * the F-hole occluding the rear segment, not by an artificial brightness shift.
  */
 
 /* Rear/upper half: visible outside the mark, hidden by the wood at overlap. */
@@ -13,12 +15,12 @@ body .mark svg.orbit-back {
 
 body .mark svg.orbit-back ellipse {
   fill: none;
-  stroke: #7f2b3b !important;
-  stroke-width: 4.25 !important;
+  stroke: #a93249 !important;
+  stroke-width: 6 !important;
   stroke-dasharray: 20 80 !important;
   stroke-linecap: round;
-  opacity: 0.36;
-  filter: drop-shadow(0 0 1px rgba(122, 31, 43, 0.24));
+  opacity: 1;
+  filter: drop-shadow(0 0 2px rgba(122, 31, 43, 0.5));
   animation: orbit-run 8.8s linear infinite;
 }
 
