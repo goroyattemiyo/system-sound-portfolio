@@ -34,10 +34,196 @@ section { padding: 6.8rem 0; border-top: 1px solid var(--color-line); }
 h1, h2 { letter-spacing: -0.035em; }
 h2 { margin: 0 0 1.5rem; font-size: clamp(2rem, 4.4vw, 4.4rem); line-height: 1.18; }
 
+/* Story: music becomes signal and data. Inspired by Launch Lab orbit and signal-rise patterns. */
+.music-data-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 46% 43%, rgba(200, 138, 74, 0.09), transparent 27%),
+    radial-gradient(ellipse at 67% 48%, rgba(122, 31, 43, 0.12), transparent 35%);
+}
+.music-orbit {
+  position: absolute;
+  left: 47%;
+  top: 43%;
+  translate: -50% -50%;
+  border: 1px solid rgba(242, 237, 227, 0.11);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+.music-orbit-a { width: 76%; height: 34%; }
+.music-orbit-b { width: 58%; height: 25%; opacity: 0.72; }
+.music-orbit-c { width: 91%; height: 45%; opacity: 0.46; }
+.note-runner {
+  position: absolute;
+  left: 47%;
+  top: 43%;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  color: var(--color-ivory);
+  transform-origin: center;
+  animation: music-orbit-run 8s linear infinite;
+}
+.note-runner svg { width: 100%; height: 100%; overflow: visible; }
+.note-runner path { fill: currentColor; }
+.note-runner-1 { animation-delay: 0s; }
+.note-runner-2 { width: 21px; height: 21px; margin: -10.5px 0 0 -10.5px; color: #d6a76d; animation-delay: -2.55s; animation-duration: 8.4s; }
+.note-runner-3 { width: 17px; height: 17px; margin: -8.5px 0 0 -8.5px; color: rgba(242, 237, 227, 0.68); animation-delay: -5.15s; animation-duration: 7.6s; }
+.conversion-gate {
+  position: absolute;
+  left: 70%;
+  top: 43%;
+  width: 52px;
+  height: 64px;
+  translate: -50% -50%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 5px;
+}
+.conversion-gate span {
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background: rgba(197, 79, 96, 0.9);
+  opacity: 0;
+  animation: pixel-convert 8s ease-in-out infinite;
+}
+.conversion-gate span:nth-child(2) { animation-delay: .08s; transform: translateY(-11px); }
+.conversion-gate span:nth-child(3) { animation-delay: .16s; transform: translateY(10px); }
+.conversion-gate span:nth-child(4) { animation-delay: .24s; transform: translateY(-6px); }
+.conversion-gate span:nth-child(5) { animation-delay: .32s; transform: translateY(7px); }
+.data-cluster {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 50%;
+  height: 42%;
+  translate: -8% -50%;
+  opacity: 0;
+  animation: data-appear 8s ease-in-out infinite;
+}
+.data-bars {
+  position: absolute;
+  left: 24%;
+  right: 4%;
+  bottom: 28%;
+  height: 44%;
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+}
+.data-bars i {
+  flex: 1;
+  height: calc(var(--h) * 100%);
+  min-width: 3px;
+  background: linear-gradient(to top, rgba(122, 31, 43, 0.3), rgba(200, 138, 74, 0.9));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: bar-resolve 8s ease-in-out infinite;
+}
+.data-bars i:nth-child(2) { animation-delay: .05s; }
+.data-bars i:nth-child(3) { animation-delay: .1s; }
+.data-bars i:nth-child(4) { animation-delay: .15s; }
+.data-bars i:nth-child(5) { animation-delay: .2s; }
+.data-bars i:nth-child(6) { animation-delay: .25s; }
+.data-bars i:nth-child(7) { animation-delay: .3s; }
+.data-code {
+  position: absolute;
+  right: 4%;
+  bottom: 14%;
+  display: flex;
+  gap: 9px;
+  color: rgba(242, 237, 227, 0.38);
+  font: 600 8px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+}
+.signal-line {
+  position: absolute;
+  left: 15%;
+  right: 12%;
+  top: 43%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 138, 74, 0.32), rgba(176, 61, 79, 0.95), rgba(200, 138, 74, 0.45), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  animation: signal-transfer 8s ease-in-out infinite;
+}
+.cycle-label {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(170, 163, 154, 0.58);
+  font-size: .6rem;
+  letter-spacing: .13em;
+}
+.cycle-label i { color: rgba(122, 31, 43, 0.9); font-style: normal; }
+
+@keyframes music-orbit-run {
+  0% { transform: rotate(205deg) translateX(145px) rotate(-205deg) scale(.84); opacity: 0; }
+  7% { opacity: .95; }
+  47% { transform: rotate(350deg) translateX(145px) rotate(-350deg) scale(1); opacity: .95; }
+  56% { transform: rotate(382deg) translateX(145px) rotate(-382deg) scale(.72); opacity: .12; }
+  62%, 100% { transform: rotate(405deg) translateX(145px) rotate(-405deg) scale(.35); opacity: 0; }
+}
+@keyframes pixel-convert {
+  0%, 42% { opacity: 0; }
+  48% { opacity: .95; transform: translateY(0) scale(1.2); }
+  58% { opacity: .7; transform: translateX(26px) scale(.8); }
+  65%, 100% { opacity: 0; transform: translateX(44px) scale(.35); }
+}
+@keyframes data-appear {
+  0%, 50% { opacity: 0; transform: translateX(16px); }
+  59%, 78% { opacity: 1; transform: translateX(0); }
+  90%, 100% { opacity: 0; transform: translateX(-18px); }
+}
+@keyframes bar-resolve {
+  0%, 52% { transform: scaleY(0); opacity: 0; }
+  62%, 78% { transform: scaleY(1); opacity: .9; }
+  90%, 100% { transform: scaleY(.03); opacity: 0; }
+}
+@keyframes signal-transfer {
+  0%, 43% { transform: scaleX(0); opacity: 0; }
+  48% { opacity: .9; }
+  62% { transform: scaleX(1); opacity: .85; }
+  76% { opacity: .2; }
+  82%, 100% { transform: scaleX(1); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .note-runner { animation-name: music-orbit-run-mobile; }
+  .cycle-label { font-size: .54rem; gap: 7px; }
+}
+@keyframes music-orbit-run-mobile {
+  0% { transform: rotate(205deg) translateX(105px) rotate(-205deg) scale(.84); opacity: 0; }
+  7% { opacity: .95; }
+  47% { transform: rotate(350deg) translateX(105px) rotate(-350deg) scale(1); opacity: .95; }
+  56% { transform: rotate(382deg) translateX(105px) rotate(-382deg) scale(.72); opacity: .12; }
+  62%, 100% { transform: rotate(405deg) translateX(105px) rotate(-405deg) scale(.35); opacity: 0; }
+}
+
 @media (max-width: 820px) {
   section { padding: 4.8rem 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .note-runner,
+  .conversion-gate span,
+  .data-cluster,
+  .data-bars i,
+  .signal-line { animation: none; }
+  .note-runner { display: none; }
+  .conversion-gate { display: none; }
+  .data-cluster { opacity: 1; transform: none; }
+  .data-bars i { transform: scaleY(1); opacity: .72; }
+  .signal-line { transform: scaleX(1); opacity: .38; }
 }
