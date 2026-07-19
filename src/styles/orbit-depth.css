@@ -1,65 +1,65 @@
 /*
- * Hero orbit depth correction.
- * The same moving dash is rendered twice: a dim rear half behind the mark,
- * and a brighter front half above it. Their shared timing makes the light
- * appear to pass continuously around the F-hole instead of fading or teleporting.
+ * Hero orbit depth.
+ * One synchronized dash is split into a rear half and a front half.
+ * The rear half sits below the wooden mark; the front half sits above it.
  */
 
-/* Rear half: repurpose the existing full orbit SVG as the moving back segment. */
-body .mark .orbit-back {
-  z-index: 2 !important;
+/* Rear/upper half: visible outside the mark, hidden by the wood at overlap. */
+body .mark svg.orbit-back {
+  z-index: 1 !important;
   display: block !important;
   clip-path: inset(0 0 50% 0);
 }
 
-body .mark .orbit-back ellipse {
-  stroke: #8e3042 !important;
-  stroke-width: 4.5 !important;
+body .mark svg.orbit-back ellipse {
+  fill: none;
+  stroke: #7f2b3b !important;
+  stroke-width: 4.25 !important;
   stroke-dasharray: 20 80 !important;
   stroke-linecap: round;
-  opacity: 0.48;
-  filter: drop-shadow(0 0 1.5px rgba(122, 31, 43, 0.34));
+  opacity: 0.36;
+  filter: drop-shadow(0 0 1px rgba(122, 31, 43, 0.24));
   animation: orbit-run 8.8s linear infinite;
 }
 
-/* The varnished F-hole sits between the rear and front halves. */
+/* The varnished F-hole is the physical divider between rear and front. */
 body .mark .mark-wood {
-  z-index: 3 !important;
+  z-index: 2 !important;
 }
 
-/* Restore the subtle front guide that was disabled in the previous revision. */
-body .mark .orbit-front {
+/* Lower/front guide. */
+body .mark svg.orbit-front {
+  z-index: 3 !important;
+  display: block !important;
+}
+
+/* Lower/front moving light. */
+body .mark svg.orbit-light {
   z-index: 4 !important;
   display: block !important;
 }
 
-/* Front half: only the lower/front half is allowed above the wood. */
-body .mark .orbit-light {
-  z-index: 5 !important;
-  display: block !important;
-}
-
 /*
- * hero-mark.css intentionally removed the old clip while testing the rear pass.
- * Reinstate the SVG clip here so the bright dash cannot cross the wooden mark
- * while it is travelling on the upper/rear half of the ellipse.
+ * Keep the bright light strictly inside the lower/front SVG clip.
+ * The explicit high-specificity selectors prevent older hero overrides from
+ * exposing the front dash around the complete ellipse.
  */
-body .mark .orbit-light-main,
-body .mark .orbit-light-highlight {
+body .mark svg.orbit-light ellipse.orbit-light-main,
+body .mark svg.orbit-light ellipse.orbit-light-highlight {
   -webkit-clip-path: url(#orbit-light-front-half) !important;
   clip-path: url(#orbit-light-front-half) !important;
 }
 
-body .mark .orbit-light-main {
+body .mark svg.orbit-light ellipse.orbit-light-main {
   opacity: 1;
 }
 
-body .mark .orbit-light-highlight {
-  opacity: 0.9;
+body .mark svg.orbit-light ellipse.orbit-light-highlight {
+  opacity: 0.88;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body .mark .orbit-back ellipse {
+  body .mark svg.orbit-back ellipse {
     animation: none;
     display: none;
   }

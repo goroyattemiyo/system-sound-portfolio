@@ -52,33 +52,6 @@ body .mark .mark-wood::after {
   will-change: transform, opacity;
 }
 
-/*
- * Orbit depth:
- * The wine-red segment now follows the complete ellipse continuously.
- * It sits behind the F-hole, so the wooden silhouette itself hides the
- * segment exactly at its edges instead of a half-ellipse clip making it vanish.
- */
-body .mark .orbit-back {
-  z-index: 1 !important;
-}
-
-body .mark .orbit-front {
-  display: none !important;
-}
-
-body .mark .orbit-light {
-  z-index: 2 !important;
-}
-
-body .mark .orbit-light ellipse {
-  -webkit-clip-path: none !important;
-  clip-path: none !important;
-}
-
-body .mark .mark-wood {
-  z-index: 3 !important;
-}
-
 @keyframes varnish-sweep {
   0%, 76%, 100% {
     transform: translate3d(-18%, 15%, 0);
