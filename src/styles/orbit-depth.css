@@ -1,0 +1,55 @@
+/*
+ * Hero orbit depth correction.
+ * The same moving dash is rendered twice: a dim rear half behind the mark,
+ * and a brighter front half above it. Their shared timing makes the light
+ * appear to pass continuously around the F-hole instead of fading or teleporting.
+ */
+
+/* Rear half: repurpose the existing full orbit SVG as the moving back segment. */
+body .mark .orbit-back {
+  z-index: 2 !important;
+  display: block !important;
+  clip-path: inset(0 0 50% 0);
+}
+
+body .mark .orbit-back ellipse {
+  stroke: #8e3042 !important;
+  stroke-width: 4.5 !important;
+  stroke-dasharray: 20 80 !important;
+  stroke-linecap: round;
+  opacity: 0.48;
+  filter: drop-shadow(0 0 1.5px rgba(122, 31, 43, 0.34));
+  animation: orbit-run 8.8s linear infinite;
+}
+
+/* The varnished F-hole sits between the rear and front halves. */
+body .mark .mark-wood {
+  z-index: 3 !important;
+}
+
+/* Restore the subtle front guide that was disabled in the previous revision. */
+body .mark .orbit-front {
+  z-index: 4 !important;
+  display: block !important;
+}
+
+/* Front half: retain the inline lower-half clip and render above the wood. */
+body .mark .orbit-light {
+  z-index: 5 !important;
+  display: block !important;
+}
+
+body .mark .orbit-light-main {
+  opacity: 1;
+}
+
+body .mark .orbit-light-highlight {
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .mark .orbit-back ellipse {
+    animation: none;
+    display: none;
+  }
+}
