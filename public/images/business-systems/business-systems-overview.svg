@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Business Systems - anonymized portfolio preview</title>
+  <desc id="desc">Four anonymized business support systems and their connected workflow: specification creation, technical document search database, rack configuration design, and system maintenance support.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b0c"/>
+      <stop offset="1" stop-color="#121114"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18181b"/>
+      <stop offset="1" stop-color="#111114"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+    <style><![CDATA[
+      .jp { font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .ivory { fill:#f2ede3; }
+      .muted { fill:#aaa39a; }
+      .wood { fill:#c88a4a; }
+      .wine { fill:#7a1f2b; }
+      .line { stroke:rgba(242,237,227,.14); stroke-width:1; }
+      .thin { stroke:rgba(242,237,227,.18); stroke-width:1.4; fill:none; }
+      .tiny { font-size:15px; letter-spacing:.06em; }
+      .small { font-size:18px; }
+      .body { font-size:20px; }
+      .cardTitle { font-size:25px; font-weight:700; }
+      .sectionTitle { font-size:48px; font-weight:700; letter-spacing:-.03em; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1420" cy="80" r="220" fill="#7a1f2b" opacity="0.07"/>
+  <circle cx="120" cy="910" r="280" fill="#c88a4a" opacity="0.05"/>
+
+  <!-- Header -->
+  <text x="80" y="72" class="jp wood tiny" font-weight="700" letter-spacing=".22em">BUSINESS SYSTEMS / ANONYMIZED PREVIEW</text>
+  <text x="80" y="132" class="jp ivory sectionTitle">実務で設計・開発した業務支援システム</text>
+  <text x="82" y="174" class="jp muted body">情報を集める・探す・設計する・文書化する。日々の反復作業を、小さな仕組みで改善した事例です。</text>
+
+  <g transform="translate(1190,46)">
+    <rect width="330" height="92" rx="18" fill="#17161a" stroke="rgba(242,237,227,.13)"/>
+    <rect x="22" y="21" width="42" height="50" rx="11" fill="#7a1f2b" opacity=".18" stroke="#b44a5a"/>
+    <path d="M33 43v-7a10 10 0 0 1 20 0v7M29 43h28v21H29z" fill="none" stroke="#f2ede3" stroke-width="2.6" stroke-linejoin="round"/>
+    <text x="80" y="38" class="jp ivory small" font-weight="700">公開用に匿名化</text>
+    <text x="80" y="64" class="jp muted tiny">固有名詞・内部情報・実データは非掲載</text>
+  </g>
+
+  <!-- Card 1 -->
+  <g transform="translate(70,225)" filter="url(#shadow)">
+    <rect width="350" height="485" rx="22" fill="url(#panel)" stroke="rgba(54,119,232,.48)"/>
+    <rect x="22" y="22" width="54" height="54" rx="14" fill="#1d56b5"/>
+    <text x="49" y="58" class="jp ivory" font-size="25" font-weight="700" text-anchor="middle">01</text>
+    <text x="92" y="43" class="jp ivory cardTitle">工事仕様書作成</text>
+    <text x="92" y="74" class="jp ivory cardTitle">プラットフォーム</text>
+    <text x="24" y="116" class="jp muted small">工事情報を一元入力し、仕様書・体制表・</text>
+    <text x="24" y="143" class="jp muted small">工程表などの関連資料をまとめて生成。</text>
+
+    <!-- mock UI -->
+    <g transform="translate(22,168)">
+      <rect width="306" height="170" rx="14" fill="#f0eee9"/>
+      <rect width="54" height="170" rx="14" fill="#102848"/>
+      <rect x="54" width="252" height="28" fill="#f7f5f1"/>
+      <circle cx="70" cy="14" r="4" fill="#1d56b5"/><rect x="82" y="9" width="58" height="8" rx="4" fill="#d1d5db"/>
+      <rect x="70" y="44" width="94" height="34" rx="6" fill="#ffffff" stroke="#cfd3d8"/>
+      <rect x="176" y="44" width="108" height="34" rx="6" fill="#ffffff" stroke="#cfd3d8"/>
+      <rect x="70" y="90" width="214" height="10" rx="5" fill="#d7dbe0"/>
+      <rect x="70" y="112" width="58" height="8" rx="4" fill="#3b82f6"/>
+      <rect x="134" y="112" width="52" height="8" rx="4" fill="#7eb6e8"/>
+      <rect x="192" y="112" width="70" height="8" rx="4" fill="#d59b5f"/>
+      <rect x="82" y="136" width="45" height="7" rx="3.5" fill="#6fa8dc"/>
+      <rect x="134" y="145" width="64" height="7" rx="3.5" fill="#65a9a2"/>
+      <rect x="205" y="153" width="54" height="7" rx="3.5" fill="#d69b63"/>
+      <g fill="#8ca3be" opacity=".95">
+        <rect x="16" y="26" width="22" height="4" rx="2"/><rect x="16" y="48" width="18" height="4" rx="2"/><rect x="16" y="70" width="24" height="4" rx="2"/><rect x="16" y="92" width="19" height="4" rx="2"/>
+      </g>
+    </g>
+
+    <text x="24" y="374" class="jp" font-size="16" fill="#6ba2ff" font-weight="700">主な機能</text>
+    <text x="24" y="402" class="jp ivory tiny">機器・部材管理 / 関係者管理</text>
+    <text x="24" y="426" class="jp ivory tiny">工程表生成 / 帳票・PDF出力</text>
+    <line x1="24" y1="450" x2="326" y2="450" class="line"/>
+    <text x="24" y="476" class="mono muted" font-size="13">React · Tailwind CSS · shadcn/ui · Motion</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(440,225)" filter="url(#shadow)">
+    <rect width="350" height="485" rx="22" fill="url(#panel)" stroke="rgba(70,155,107,.50)"/>
+    <rect x="22" y="22" width="54" height="54" rx="14" fill="#377d58"/>
+    <text x="49" y="58" class="jp ivory" font-size="25" font-weight="700" text-anchor="middle">02</text>
+    <text x="92" y="43" class="jp ivory cardTitle">技術資料スキャン・</text>
+    <text x="92" y="74" class="jp ivory cardTitle">検索DB構築システム</text>
+    <text x="24" y="116" class="jp muted small">共有ストレージ内の技術・保守資料を収集・</text>
+    <text x="24" y="143" class="jp muted small">解析し、検索できるデータベースへ整理。</text>
+
+    <g transform="translate(22,168)">
+      <rect width="306" height="170" rx="14" fill="#f1f0eb"/>
+      <rect width="50" height="170" rx="14" fill="#225d43"/>
+      <rect x="64" y="18" width="222" height="24" rx="12" fill="#ffffff" stroke="#ccd3cf"/>
+      <circle cx="274" cy="30" r="7" fill="none" stroke="#3a7b59" stroke-width="2"/>
+      <path d="M279 35l6 6" stroke="#3a7b59" stroke-width="2"/>
+      <g>
+        <rect x="64" y="56" width="222" height="22" rx="5" fill="#ffffff"/>
+        <rect x="64" y="84" width="222" height="22" rx="5" fill="#ffffff"/>
+        <rect x="64" y="112" width="222" height="22" rx="5" fill="#ffffff"/>
+        <rect x="64" y="140" width="222" height="18" rx="5" fill="#ffffff"/>
+        <rect x="78" y="63" width="88" height="7" rx="3.5" fill="#a9b3ad"/><rect x="214" y="62" width="46" height="9" rx="4.5" fill="#cde6d8"/>
+        <rect x="78" y="91" width="116" height="7" rx="3.5" fill="#a9b3ad"/><rect x="226" y="90" width="34" height="9" rx="4.5" fill="#d8eadf"/>
+        <rect x="78" y="119" width="78" height="7" rx="3.5" fill="#a9b3ad"/><rect x="208" y="118" width="52" height="9" rx="4.5" fill="#f1dfb9"/>
+      </g>
+      <g fill="#77ad8f"><circle cx="25" cy="30" r="7"/><circle cx="25" cy="60" r="7"/><circle cx="25" cy="90" r="7"/></g>
+    </g>
+
+    <text x="24" y="374" class="jp" font-size="16" fill="#6fc595" font-weight="700">主な機能</text>
+    <text x="24" y="402" class="jp ivory tiny">フォルダスキャン / 文書抽出 / DB化</text>
+    <text x="24" y="426" class="jp ivory tiny">タグ管理 / 信頼度・確認状況管理</text>
+    <line x1="24" y1="450" x2="326" y2="450" class="line"/>
+    <text x="24" y="476" class="mono muted" font-size="13">React · SQLite · Document extraction</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(810,225)" filter="url(#shadow)">
+    <rect width="350" height="485" rx="22" fill="url(#panel)" stroke="rgba(223,125,52,.52)"/>
+    <rect x="22" y="22" width="54" height="54" rx="14" fill="#d96b22"/>
+    <text x="49" y="58" class="jp ivory" font-size="25" font-weight="700" text-anchor="middle">03</text>
+    <text x="92" y="43" class="jp ivory cardTitle">ラック構成設計</text>
+    <text x="92" y="74" class="jp ivory cardTitle">ツール</text>
+    <text x="24" y="116" class="jp muted small">19インチラックへの機器配置とポート・</text>
+    <text x="24" y="143" class="jp muted small">構成情報を視覚的に設計・管理。</text>
+
+    <g transform="translate(22,168)">
+      <rect width="306" height="170" rx="14" fill="#ecebe7"/>
+      <rect x="15" y="16" width="66" height="138" rx="8" fill="#f7f5f1"/>
+      <rect x="98" y="12" width="100" height="146" rx="6" fill="#1b1e22"/>
+      <rect x="106" y="19" width="84" height="132" rx="3" fill="#2b3036" stroke="#666b70"/>
+      <g fill="#69727b">
+        <rect x="114" y="28" width="68" height="12" rx="2"/><rect x="114" y="45" width="68" height="18" rx="2"/>
+        <rect x="114" y="68" width="68" height="12" rx="2"/><rect x="114" y="85" width="68" height="20" rx="2"/>
+        <rect x="114" y="110" width="68" height="12" rx="2"/><rect x="114" y="127" width="68" height="15" rx="2"/>
+      </g>
+      <g fill="#c68a4c"><rect x="118" y="49" width="22" height="4" rx="2"/><rect x="145" y="49" width="30" height="4" rx="2"/></g>
+      <rect x="215" y="20" width="74" height="14" rx="4" fill="#ffffff"/><rect x="215" y="44" width="74" height="14" rx="4" fill="#ffffff"/><rect x="215" y="68" width="74" height="14" rx="4" fill="#ffffff"/>
+      <g fill="#d7dbde"><rect x="22" y="26" width="46" height="10" rx="5"/><rect x="22" y="46" width="46" height="10" rx="5"/><rect x="22" y="66" width="46" height="10" rx="5"/><rect x="22" y="86" width="46" height="10" rx="5"/></g>
+      <g fill="#8bc07c"><rect x="216" y="106" width="14" height="14" rx="3"/><rect x="234" y="106" width="14" height="14" rx="3"/><rect x="252" y="106" width="14" height="14" rx="3"/><rect x="270" y="106" width="14" height="14" rx="3"/></g>
+    </g>
+
+    <text x="24" y="374" class="jp" font-size="16" fill="#ef8c45" font-weight="700">主な機能</text>
+    <text x="24" y="402" class="jp ivory tiny">ドラッグ＆ドロップ / 空き判定</text>
+    <text x="24" y="426" class="jp ivory tiny">ポート管理 / Excel・PowerPoint・PDF出力</text>
+    <line x1="24" y1="450" x2="326" y2="450" class="line"/>
+    <text x="24" y="476" class="mono muted" font-size="13">React · Tailwind CSS · File System Access API</text>
+  </g>
+
+  <!-- Card 4 -->
+  <g transform="translate(1180,225)" filter="url(#shadow)">
+    <rect width="350" height="485" rx="22" fill="url(#panel)" stroke="rgba(111,76,181,.58)"/>
+    <rect x="22" y="22" width="54" height="54" rx="14" fill="#6745ae"/>
+    <text x="49" y="58" class="jp ivory" font-size="25" font-weight="700" text-anchor="middle">04</text>
+    <text x="92" y="43" class="jp ivory cardTitle">システム保守支援</text>
+    <text x="92" y="74" class="jp ivory cardTitle">プログラム</text>
+    <text x="24" y="116" class="jp muted small">大量の保守資料を横断検索し、障害対応に</text>
+    <text x="24" y="143" class="jp muted small">必要な確認情報へ素早く到達。</text>
+
+    <g transform="translate(22,168)">
+      <rect width="306" height="170" rx="14" fill="#f1f0ed"/>
+      <rect x="16" y="16" width="274" height="24" rx="12" fill="#ffffff" stroke="#d1d2d4"/>
+      <circle cx="274" cy="28" r="7" fill="none" stroke="#6044a6" stroke-width="2"/><path d="M279 33l6 6" stroke="#6044a6" stroke-width="2"/>
+      <rect x="16" y="52" width="116" height="100" rx="7" fill="#ffffff"/>
+      <rect x="142" y="52" width="148" height="100" rx="7" fill="#ffffff"/>
+      <g fill="#c9c8d2"><rect x="28" y="65" width="84" height="8" rx="4"/><rect x="28" y="86" width="72" height="8" rx="4"/><rect x="28" y="107" width="92" height="8" rx="4"/><rect x="28" y="128" width="64" height="8" rx="4"/></g>
+      <rect x="154" y="65" width="112" height="9" rx="4" fill="#7a1f2b" opacity=".18"/><rect x="154" y="86" width="122" height="7" rx="3.5" fill="#b6b5bd"/>
+      <rect x="154" y="102" width="108" height="7" rx="3.5" fill="#b6b5bd"/><rect x="154" y="118" width="124" height="7" rx="3.5" fill="#b6b5bd"/>
+      <rect x="154" y="134" width="86" height="7" rx="3.5" fill="#b6b5bd"/>
+    </g>
+
+    <text x="24" y="374" class="jp" font-size="16" fill="#9b7ad9" font-weight="700">主な機能</text>
+    <text x="24" y="402" class="jp ivory tiny">全文検索 / 関連箇所・前後文表示</text>
+    <text x="24" y="426" class="jp ivory tiny">確認情報・手順提示 / ローカル動作</text>
+    <line x1="24" y1="450" x2="326" y2="450" class="line"/>
+    <text x="24" y="476" class="mono muted" font-size="13">Windows · Local Web UI · SQLite</text>
+  </g>
+
+  <!-- Workflow -->
+  <text x="78" y="770" class="jp ivory" font-size="27" font-weight="700">4システムの連携イメージ</text>
+  <text x="79" y="800" class="jp muted tiny">個別ツールではなく、業務フロー全体を小さなシステムでつなぐ。</text>
+
+  <g transform="translate(70,830)">
+    <g>
+      <rect width="330" height="110" rx="18" fill="#15231c" stroke="rgba(70,155,107,.55)"/>
+      <circle cx="46" cy="55" r="25" fill="#377d58" opacity=".25"/><path d="M32 55h28M46 41v28" stroke="#79bf98" stroke-width="3"/>
+      <text x="86" y="43" class="jp ivory body" font-weight="700">資料の収集・DB化</text>
+      <text x="86" y="72" class="jp muted tiny">Scan → Extract → Database</text>
+    </g>
+    <text x="350" y="68" class="jp wood" font-size="42">→</text>
+    <g transform="translate(390,0)">
+      <rect width="330" height="110" rx="18" fill="#161c27" stroke="rgba(54,119,232,.55)"/>
+      <circle cx="46" cy="55" r="25" fill="#1d56b5" opacity=".23"/><circle cx="42" cy="51" r="12" fill="none" stroke="#75a4ec" stroke-width="3"/><path d="M51 60l10 10" stroke="#75a4ec" stroke-width="3"/>
+      <text x="86" y="43" class="jp ivory body" font-weight="700">検索・情報提示</text>
+      <text x="86" y="72" class="jp muted tiny">Search → Context → Check</text>
+    </g>
+    <text x="740" y="68" class="jp wine" font-size="42">→</text>
+    <g transform="translate(780,0)">
+      <rect width="330" height="110" rx="18" fill="#241c15" stroke="rgba(223,125,52,.58)"/>
+      <circle cx="46" cy="55" r="25" fill="#d96b22" opacity=".20"/><rect x="35" y="36" width="22" height="38" rx="3" fill="none" stroke="#e79b61" stroke-width="3"/><path d="M39 45h14M39 54h14M39 63h14" stroke="#e79b61" stroke-width="2"/>
+      <text x="86" y="43" class="jp ivory body" font-weight="700">設計・構成管理</text>
+      <text x="86" y="72" class="jp muted tiny">Arrange → Validate → Manage</text>
+    </g>
+    <text x="1130" y="68" class="jp wood" font-size="42">→</text>
+    <g transform="translate(1170,0)">
+      <rect width="330" height="110" rx="18" fill="#201928" stroke="rgba(111,76,181,.60)"/>
+      <circle cx="46" cy="55" r="25" fill="#6745ae" opacity=".23"/><path d="M36 38h17l9 9v27H36zM53 38v10h9" fill="none" stroke="#ab91df" stroke-width="3" stroke-linejoin="round"/>
+      <text x="86" y="43" class="jp ivory body" font-weight="700">文書化・出力</text>
+      <text x="86" y="72" class="jp muted tiny">Build → Preview → Export</text>
+    </g>
+  </g>
+
+  <text x="800" y="980" class="jp muted small" text-anchor="middle">実際の業務画面・固有名称・内部構成は公開せず、機能と改善の考え方のみを再現しています。</text>
+</svg>
