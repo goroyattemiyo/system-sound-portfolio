@@ -1,0 +1,55 @@
+name: Extract project preview ZIP
+
+on:
+  push:
+    branches:
+      - fix/replace-hires-webp
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/replace-hires-webp
+
+      - name: Extract and replace preview images
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZIP="public/images/projects/system-sound-site-ready-webp.zip"
+          test -f "$ZIP"
+
+          TMP="$(mktemp -d)"
+          unzip -o "$ZIP" -d "$TMP"
+
+          cp "$TMP/02-image-processing-zip-tool.webp" "public/images/projects/image-processing-zip-tool.webp"
+          for FILE in \
+            03-product-selection-assist.webp \
+            04-ai-voice-studio.webp \
+            05-codex-novel-workflow.webp \
+            06-line-stamp-sales-flow.webp \
+            07-construction-spec-platform.webp \
+            08-technical-doc-search-db.webp \
+            09-rack-layout-designer.webp \
+            10-maintenance-search-tool.webp
+          do
+            cp "$TMP/$FILE" "public/images/projects/$FILE"
+          done
+
+          rm "$ZIP"
+          rm ".github/workflows/extract-project-preview-zip.yml"
+
+      - name: Commit extracted images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Replace project previews with high-resolution WebP"
+          git push origin HEAD:fix/replace-hires-webp
