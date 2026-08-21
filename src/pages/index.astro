@@ -3,6 +3,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import logoSrc from '../../design/logo/system-sound-fhole-traced.svg';
 import lineQrSrc from '../../images/contact/line-qr.jpg';
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const featuredWorks = [
   {
     number: '01',
@@ -11,6 +13,8 @@ const featuredWorks = [
     title: 'AIとの会話から、Threads投稿・履歴・分析までを一つの運用へ。',
     copy: '投稿予約だけでなく、画像、ツリー投稿、履歴検索、エラー復旧、分析、トークン管理までをつないだSNS運用システムです。',
     flow: ['AI Chat', 'GitHub', 'Actions', 'Threads', 'Insights'],
+    previewImage: assetPath('images/projects/threads-automation.svg'),
+    previewAlt: 'AIとの会話からGitHub Actions、Threads投稿、履歴、分析までをつなぐSNS運用フロー図',
   },
   {
     number: '02',
@@ -19,6 +23,8 @@ const featuredWorks = [
     title: '40枚の画像加工を、ブラウザだけで一つのZIPへ。',
     copy: '画像分割、背景除去、枚数選択、ファイル名調整、LINE申請用ZIP生成を、外部送信なしで完結するツールです。',
     flow: ['1 Image', 'Split', 'Remove BG', 'Select', 'ZIP'],
+    previewImage: assetPath('images/projects/line-stamp-tool.svg'),
+    previewAlt: 'LINEスタンプ画像の分割、背景除去、選択、ZIP生成までを行うブラウザツールのプレビュー',
   },
   {
     number: '03',
@@ -27,6 +33,8 @@ const featuredWorks = [
     title: '迷い続ける商品選びを、比較できる選定フローへ。',
     copy: '価格やレビューを行き来する商品選定を、検索・比較・スコアリングで支援する個人事業主向けWebアプリです。',
     flow: ['Search', 'Compare', 'Score', 'Decide'],
+    previewImage: assetPath('images/projects/product-selection.svg'),
+    previewAlt: '商品検索、比較、スコアリング、意思決定を支援するWebアプリのプレビュー',
   },
   {
     number: '04',
@@ -35,6 +43,8 @@ const featuredWorks = [
     title: 'AI音声生成を、“一回試す”から“制作を続けられる流れ”へ。',
     copy: '声の設計、長文台本の分割生成、保存、試聴、SNS用動画変換をつないだ、AI音声制作の補助環境です。',
     flow: ['Voice Design', 'Script', 'Generate', 'Edit', 'Publish'],
+    previewImage: assetPath('images/projects/ai-voice-workflow.svg'),
+    previewAlt: '声の設計、台本分割、生成、編集、SNS公開までをつなぐAI音声制作フロー図',
   },
   {
     number: '05',
@@ -43,8 +53,20 @@ const featuredWorks = [
     title: '一人の長編制作を、役割分担とレビューで止まらない流れへ。',
     copy: '企画、世界観・キャラクター正本、プロット、本文、監査、改稿、伏線同期、公開記録までを一つの制作システムとして設計。CodexとGitHubを使い、長編ライトノベルを継続制作できるワークフローを構築しています。',
     flow: ['Bible', 'Outline', 'Draft', 'Review', 'Release'],
-    url: 'https://github.com/goroyattemiyo/gaten-reijou-novel',
-    linkLabel: 'GitHubで制作リポジトリを見る',
+    previewImage: assetPath('images/projects/novel-production.svg'),
+    previewAlt: '設定正本、プロット、本文、レビュー、公開記録をCodexとGitHubで回す長編制作フロー図',
+  },
+  {
+    number: '06',
+    status: 'Production & sales completed',
+    category: 'AI Creative / LINE Stickers / Sales',
+    title: 'AIで40個を作るところから、申請・販売まで実際に回す。',
+    copy: '表情バリエーションの生成、スタンプシート化、背景透過、main・tab画像、ZIP生成、LINE Creators Marketへの申請と審査対応までを実践。作って終わりではなく、販売までの工程を一通り検証しました。',
+    flow: ['Generate', 'Prepare', 'ZIP', 'Review', 'Sell'],
+    previewImage: assetPath('images/projects/line-stamp-production.svg'),
+    previewAlt: 'AIでLINEスタンプ40個を作成し、画像調整、申請、審査対応、販売まで進める制作フロー図',
+    url: 'https://note.com/goro_yattemiyo/n/n222268153952',
+    linkLabel: 'noteで制作・販売の記録を見る',
   },
 ];
 
@@ -145,7 +167,7 @@ const processSteps = [
         <div class="section-heading">
           <p class="kicker">Featured Works</p>
           <h2>作ったものではなく、<br />変えた流れを見る。</h2>
-          <p class="lead">公開準備中のものを含め、現在取り組んでいる代表事例です。状態を明記し、完成済みと検証中を分けて掲載しています。</p>
+          <p class="lead">公開準備中のものを含め、現在取り組んでいる代表事例です。詳細ページを持たない案件は、概要図をフローティング表示して内容を確認できます。</p>
         </div>
         <div class="works-grid">
           {featuredWorks.map((work) => (
@@ -159,20 +181,37 @@ const processSteps = [
                   <><span>{item}</span>{index < work.flow.length - 1 && <i aria-hidden="true">→</i>}</>
                 ))}
               </div>
-              {work.url && (
-                <a class="work-link" href={work.url} target="_blank" rel="noopener noreferrer">
-                  {work.linkLabel}<span aria-hidden="true">↗</span>
-                </a>
-              )}
+              <button
+                class="work-link preview-trigger"
+                type="button"
+                data-preview-image={work.previewImage}
+                data-preview-title={work.title}
+                data-preview-alt={work.previewAlt}
+                data-preview-url={work.url ?? ''}
+                data-preview-label={work.linkLabel ?? ''}
+              >
+                プレビューを見る<span aria-hidden="true">↗</span>
+              </button>
             </article>
           ))}
         </div>
         <div class="private-cases">
           <p class="kicker">Anonymous Business Cases</p>
           <div class="private-grid">
-            <article><span>Planning</span><h3>ラック図面作成を、Excelの図形操作からドラッグ＆ドロップへ。</h3><p>匿名再現版とダミーデータを準備してから公開します。</p></article>
-            <article><span>Planning</span><h3>増え続けるExcelの“虎の巻”を、まとめて探せるように。</h3><p>実データを使用せず、架空情報による検索デモとして公開予定です。</p></article>
+            <article><span>Built / Anonymized</span><h3>工事情報から、仕様書・体制表・工程表などをまとめて生成。</h3><p>固有名詞・内部情報・実データを除き、工事仕様書作成プラットフォームの機能だけを再現しています。</p></article>
+            <article><span>Built / Anonymized</span><h3>共有ストレージの技術資料を、収集・解析して検索DBへ。</h3><p>技術・保守資料を横断して探せるよう、文書抽出・タグ・確認状況を整理する仕組みです。</p></article>
+            <article><span>Built / Anonymized</span><h3>19インチラックの機器配置を、ドラッグ＆ドロップで設計。</h3><p>空き判定、ポート管理、Excel・PowerPoint・PDF出力までを含む構成設計ツールです。</p></article>
+            <article><span>Built / Anonymized</span><h3>大量の保守資料を横断検索し、障害対応に必要な情報へ素早く到達。</h3><p>全文検索、関連箇所・前後文表示、確認情報・手順提示をローカル環境で行う支援プログラムです。</p></article>
           </div>
+          <button
+            class="work-link preview-trigger private-preview"
+            type="button"
+            data-preview-image={assetPath('images/business-systems/business-systems-overview.svg')}
+            data-preview-title="実務で設計・開発した業務支援システム"
+            data-preview-alt="工事仕様書作成、技術資料検索DB、ラック構成設計、システム保守支援の4事例を匿名化してまとめたプレビュー"
+          >
+            4つの業務支援システムをまとめて見る<span aria-hidden="true">↗</span>
+          </button>
         </div>
       </div>
     </section>
@@ -237,8 +276,65 @@ const processSteps = [
     </section>
   </main>
 
+  <dialog class="preview-dialog" id="work-preview" aria-labelledby="preview-title">
+    <div class="preview-panel">
+      <div class="preview-head">
+        <div>
+          <p class="kicker">Project Preview</p>
+          <h2 id="preview-title">プロジェクトプレビュー</h2>
+        </div>
+        <button class="preview-close" type="button" aria-label="プレビューを閉じる">×</button>
+      </div>
+      <img class="preview-image" id="preview-image" src="" alt="" />
+      <div class="preview-foot">
+        <p>詳細ページが未公開の案件は、概要図のみを表示しています。</p>
+        <a class="button preview-external" id="preview-external" href="#" target="_blank" rel="noopener noreferrer" hidden>外部ページを見る</a>
+      </div>
+    </div>
+  </dialog>
+
   <footer><div class="shell">© SYSTEM / SOUND — Goro Nagaya</div></footer>
 </BaseLayout>
+
+<script is:inline>
+  const previewDialog = document.querySelector('#work-preview');
+  const previewImage = document.querySelector('#preview-image');
+  const previewTitle = document.querySelector('#preview-title');
+  const previewExternal = document.querySelector('#preview-external');
+  const previewClose = document.querySelector('.preview-close');
+
+  document.querySelectorAll('.preview-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      if (!(previewDialog instanceof HTMLDialogElement) || !(previewImage instanceof HTMLImageElement) || !(previewTitle instanceof HTMLElement) || !(previewExternal instanceof HTMLAnchorElement)) return;
+      const image = trigger.dataset.previewImage || '';
+      const title = trigger.dataset.previewTitle || 'プロジェクトプレビュー';
+      const alt = trigger.dataset.previewAlt || title;
+      const url = trigger.dataset.previewUrl || '';
+      const label = trigger.dataset.previewLabel || '外部ページを見る';
+
+      previewImage.src = image;
+      previewImage.alt = alt;
+      previewTitle.textContent = title;
+      if (url) {
+        previewExternal.href = url;
+        previewExternal.textContent = label;
+        previewExternal.hidden = false;
+      } else {
+        previewExternal.hidden = true;
+        previewExternal.removeAttribute('href');
+      }
+      previewDialog.showModal();
+    });
+  });
+
+  previewClose?.addEventListener('click', () => {
+    if (previewDialog instanceof HTMLDialogElement) previewDialog.close();
+  });
+
+  previewDialog?.addEventListener('click', (event) => {
+    if (event.target === previewDialog && previewDialog instanceof HTMLDialogElement) previewDialog.close();
+  });
+</script>
 
 <style>
   header{position:fixed;z-index:20;inset:0 0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100vw - 1120px)/2));background:rgba(11,11,12,.78);border-bottom:1px solid var(--color-line);backdrop-filter:blur(14px)}
@@ -248,13 +344,14 @@ const processSteps = [
   .actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--color-ivory);text-decoration:none;font-weight:700}.button.primary{background:var(--color-ivory);color:var(--color-stage)}.button.line{background:#06c755;border-color:#06c755;color:#07170c}
   .mark-stage{position:relative;display:grid;place-items:center;min-height:620px}.mark{position:relative;width:min(270px,62vw);aspect-ratio:237.806/827.353;isolation:isolate}.mark-wood{position:absolute;z-index:2;inset:0;background:linear-gradient(102deg,rgba(255,225,174,.2),transparent 18% 61%,rgba(255,235,194,.22) 73%,transparent 88%),repeating-linear-gradient(87deg,#8c4d2d 0 5px,#a96034 6px 12px,#c9844d 13px 19px,#a55c32 20px 27px,#d19559 28px 34px);-webkit-mask-image:var(--mark-mask);mask-image:var(--mark-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}.mark-wood::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,15,8,.18),transparent 20% 58%,rgba(255,224,173,.18) 72%,transparent 88%);mix-blend-mode:soft-light}.orbit-svg{position:absolute;left:50%;top:51%;width:132%;height:13.2%;translate:-50% -50%;overflow:visible;transform:rotate(-7deg)}.orbit-svg ellipse{fill:none}.orbit-back{z-index:1}.orbit-back ellipse{stroke:rgba(242,237,227,.12);stroke-width:1.25}.orbit-front{z-index:4}.orbit-front ellipse{stroke:rgba(242,237,227,.27);stroke-width:1.55}.orbit-light{z-index:5}.orbit-light-main,.orbit-light-highlight{stroke-dasharray:20 80;stroke-linecap:round;animation:orbit-run 8.8s linear infinite}.orbit-light-main{stroke:#a93249;stroke-width:6;filter:drop-shadow(0 0 2px rgba(122,31,43,.5))}.orbit-light-highlight{stroke:rgba(255,206,214,.8);stroke-width:1.5;stroke-dasharray:10 90;animation-delay:-.18s}.frequency{position:absolute;inset:15% -20%;opacity:.16;background:repeating-radial-gradient(ellipse at center,transparent 0 24px,rgba(242,237,227,.25) 25px 26px,transparent 27px 48px);animation:breathe 6s ease-in-out infinite}
   .story-grid,.two-column{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.story-visual{position:sticky;top:120px;min-height:460px;overflow:hidden;border:1px solid var(--color-line);background:radial-gradient(circle at 50% 42%,rgba(122,31,43,.14),transparent 48%),linear-gradient(145deg,rgba(255,255,255,.018),rgba(255,255,255,.004))}.story-frequency{position:absolute;inset:48px 38px 102px}.frequency-ring{position:absolute;left:50%;top:50%;translate:-50% -50%;border:1px solid rgba(242,237,227,.15);border-radius:50%}.ring-1{width:28%;height:14%}.ring-2{width:48%;height:27%}.ring-3{width:70%;height:43%}.ring-4{width:94%;height:62%;border-color:rgba(242,237,227,.09)}.frequency-sweep{position:absolute;left:3%;right:3%;top:50%;height:2px;background:linear-gradient(90deg,transparent,rgba(122,31,43,.18),rgba(184,73,91,.86),rgba(224,139,150,.72),rgba(122,31,43,.18),transparent);transform-origin:center;animation:signal-sweep 6s ease-in-out infinite}.story-cycle{position:absolute;left:30px;right:30px;bottom:28px;display:flex;align-items:center;justify-content:center;gap:14px;color:var(--color-muted);font-size:.68rem;letter-spacing:.16em}.story-cycle i{font-style:normal;color:var(--color-wine)}.lead{font-size:clamp(1.1rem,2vw,1.45rem);color:var(--color-ivory)}
-  .works-section{background:linear-gradient(180deg,var(--color-stage),#101012)}.section-heading{max-width:760px;margin-bottom:52px}.section-heading.compact{max-width:650px}.works-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.work-card{min-height:360px;padding:28px;border:1px solid var(--color-line);background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.005));display:flex;flex-direction:column}.work-meta{display:flex;justify-content:space-between;gap:16px;color:var(--color-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.work-meta span:last-child{color:var(--color-wood);text-align:right}.work-category{margin:42px 0 12px;color:var(--color-muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}.work-card h3,.private-grid h3,.process-card h3{font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.45;margin:0 0 16px}.flow{margin-top:auto;padding-top:24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;color:var(--color-muted);font-size:.72rem}.flow span{padding:6px 8px;border:1px solid var(--color-line)}.flow i{font-style:normal;color:var(--color-wine)}.work-link{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--color-line);color:var(--color-ivory);font-size:.78rem;text-decoration:none;letter-spacing:.04em}.work-link span{color:var(--color-wood);font-size:1rem}.work-link:hover{text-decoration:underline;text-underline-offset:4px}.private-cases{margin-top:64px;padding-top:32px;border-top:1px solid var(--color-line)}.private-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.private-grid article{padding:24px;border-left:2px solid var(--color-wine);background:var(--color-panel)}.private-grid article>span{font-size:.72rem;color:var(--color-wood);text-transform:uppercase;letter-spacing:.1em}
+  .works-section{background:linear-gradient(180deg,var(--color-stage),#101012)}.section-heading{max-width:760px;margin-bottom:52px}.section-heading.compact{max-width:650px}.works-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.work-card{min-height:390px;padding:28px;border:1px solid var(--color-line);background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.005));display:flex;flex-direction:column}.work-meta{display:flex;justify-content:space-between;gap:16px;color:var(--color-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.work-meta span:last-child{color:var(--color-wood);text-align:right}.work-category{margin:42px 0 12px;color:var(--color-muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}.work-card h3,.private-grid h3,.process-card h3{font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.45;margin:0 0 16px}.flow{margin-top:auto;padding-top:24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;color:var(--color-muted);font-size:.72rem}.flow span{padding:6px 8px;border:1px solid var(--color-line)}.flow i{font-style:normal;color:var(--color-wine)}.work-link{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px;padding:16px 0 0;border-top:1px solid var(--color-line);color:var(--color-ivory);font-size:.78rem;text-decoration:none;letter-spacing:.04em}.work-link span{color:var(--color-wood);font-size:1rem}.work-link:hover{text-decoration:underline;text-underline-offset:4px}.preview-trigger{width:100%;border-right:0;border-bottom:0;border-left:0;background:transparent;font:inherit;cursor:pointer;text-align:left}.private-cases{margin-top:64px;padding-top:32px;border-top:1px solid var(--color-line)}.private-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.private-grid article{padding:24px;border-left:2px solid var(--color-wine);background:var(--color-panel)}.private-grid article>span{font-size:.72rem;color:var(--color-wood);text-transform:uppercase;letter-spacing:.1em}.private-preview{max-width:520px;margin-top:28px}
+  .preview-dialog{width:min(1120px,calc(100vw - 32px));max-width:none;max-height:calc(100vh - 32px);padding:0;border:0;background:transparent;color:var(--color-ivory)}.preview-dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(8px)}.preview-panel{overflow:auto;max-height:calc(100vh - 32px);padding:26px;border:1px solid rgba(242,237,227,.18);background:#0d0d0f;box-shadow:0 30px 90px rgba(0,0,0,.55)}.preview-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:20px}.preview-head .kicker{margin-bottom:8px}.preview-head h2{margin:0;font-size:clamp(1.25rem,3vw,2rem)}.preview-close{flex:0 0 auto;width:44px;height:44px;border:1px solid var(--color-line);background:transparent;color:var(--color-ivory);font-size:1.8rem;line-height:1;cursor:pointer}.preview-image{display:block;width:100%;max-height:68vh;object-fit:contain;background:#0b0b0c;border:1px solid var(--color-line)}.preview-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:18px}.preview-foot p{margin:0;color:var(--color-muted);font-size:.82rem}.preview-external[hidden]{display:none}
   .process-section{background:#0d0d0f}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--color-line);border-left:1px solid var(--color-line)}.process-card{min-height:290px;padding:28px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line)}.process-card>div{display:flex;justify-content:space-between;margin-bottom:54px}.process-card span{font-size:1.4rem;color:var(--color-wood)}.process-card small{color:var(--color-muted);text-transform:uppercase;letter-spacing:.12em}
   dl{margin:36px 0 0}.fact{display:grid;grid-template-columns:130px 1fr;padding:15px 0;border-top:1px solid var(--color-line)}dt{color:var(--color-muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}dd{margin:0}.contact-box{padding:36px;border:1px solid var(--color-line);background:var(--color-panel)}.contact-list{display:grid;gap:10px;margin:26px 0}.qr-link{display:block;width:min(220px,100%);margin:0 0 20px}.line-qr{width:100%;height:auto;border-radius:8px;background:#fff;padding:8px}footer{padding:32px 0;color:var(--color-muted);border-top:1px solid var(--color-line)}
   @keyframes orbit-run{to{stroke-dashoffset:-100}}
   @keyframes breathe{50%{transform:scale(1.025);opacity:.23}}
   @keyframes signal-sweep{0%,100%{transform:scaleX(.66);opacity:.32}50%{transform:scaleX(1);opacity:.92}}
-  @media(max-width:900px){nav{display:none}.hero-grid,.story-grid,.two-column{grid-template-columns:1fr}.mark-stage{min-height:460px;order:-1}.mark{width:180px}.orbit-svg{width:140%;height:14.5%}.story-visual{position:relative;top:auto;min-height:320px}.story-frequency{inset:36px 24px 88px}.fact{grid-template-columns:1fr;gap:4px}.process-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:640px){.works-grid,.private-grid,.process-grid{grid-template-columns:1fr}.work-card{min-height:330px}.process-card{min-height:auto}.process-card>div{margin-bottom:32px}.story-cycle{left:18px;right:18px;gap:9px;font-size:.6rem}}
+  @media(max-width:900px){nav{display:none}.hero-grid,.story-grid,.two-column{grid-template-columns:1fr}.mark-stage{min-height:460px;order:-1}.mark{width:180px}.orbit-svg{width:140%;height:14.5%}.story-visual{position:relative;top:auto;min-height:320px}.story-frequency{inset:36px 24px 88px}.fact{grid-template-columns:1fr;gap:4px}.process-grid{grid-template-columns:repeat(2,1fr)}.preview-foot{align-items:flex-start;flex-direction:column}}
+  @media(max-width:640px){.works-grid,.private-grid,.process-grid{grid-template-columns:1fr}.work-card{min-height:350px}.process-card{min-height:auto}.process-card>div{margin-bottom:32px}.story-cycle{left:18px;right:18px;gap:9px;font-size:.6rem}.preview-panel{padding:18px}.preview-image{max-height:60vh}}
   @media(prefers-reduced-motion:reduce){.orbit-light-main,.orbit-light-highlight,.frequency,.frequency-sweep{animation:none}.orbit-light-main,.orbit-light-highlight{display:none}}
 </style>

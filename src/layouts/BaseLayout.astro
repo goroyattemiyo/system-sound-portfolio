@@ -14,6 +14,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(`${base}og/system-sound-og.svg`, Astro.site);
 const faviconUrl = `${base}favicon/favicon.svg`;
 const storyAnimationUrl = `${base}story-animation.js`;
+const projectPreviewsUrl = `${base}project-previews.js`;
 ---
 
 <!doctype html>
@@ -43,5 +44,6 @@ const storyAnimationUrl = `${base}story-animation.js`;
   <body>
     <slot />
     <script src={storyAnimationUrl} defer></script>
+    <script src={projectPreviewsUrl} defer></script>
   </body>
 </html>
