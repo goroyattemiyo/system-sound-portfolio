@@ -14,8 +14,8 @@
     {
       image: projectImage('image-processing-zip-tool.webp'),
       alt: 'シート画像の分割または個別画像の取り込みから、背景除去とLINE申請用ZIP生成までを行うブラウザツールのプレビュー',
-      url: 'https://goroyattemiyo.github.io/Background-removal-splitting/',
-      label: '公開デモを開く',
+      url: 'https://note.com/goro_yattemiyo/n/n222268153952',
+      label: 'noteで購入・詳細を見る',
     },
     {
       image: projectImage('03-product-selection-assist.webp'),
@@ -116,6 +116,10 @@
   }
 
   const secondCard = document.querySelectorAll('.works-grid .work-card')[1];
+  const secondStatus = secondCard?.querySelector('.work-meta span:last-child');
+  if (secondStatus) {
+    secondStatus.textContent = 'Available via note';
+  }
   const secondFlow = secondCard?.querySelector('.flow');
   if (secondFlow) {
     secondFlow.innerHTML = '<span>Upload</span><i aria-hidden="true">→</i><span>Split / Keep</span><i aria-hidden="true">→</i><span>Remove BG</span><i aria-hidden="true">→</i><span>Select</span><i aria-hidden="true">→</i><span>ZIP</span>';
