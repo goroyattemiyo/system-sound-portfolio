@@ -55,8 +55,6 @@ const featuredWorks = [
     flow: ['Bible', 'Outline', 'Draft', 'Review', 'Release'],
     previewImage: assetPath('images/projects/novel-production.svg'),
     previewAlt: '設定正本、プロット、本文、レビュー、公開記録をCodexとGitHubで回す長編制作フロー図',
-    url: 'https://github.com/goroyattemiyo/gaten-reijou-novel',
-    linkLabel: 'GitHubで制作リポジトリを見る',
   },
   {
     number: '06',
@@ -169,7 +167,7 @@ const processSteps = [
         <div class="section-heading">
           <p class="kicker">Featured Works</p>
           <h2>作ったものではなく、<br />変えた流れを見る。</h2>
-          <p class="lead">公開準備中のものを含め、現在取り組んでいる代表事例です。詳細ページを持たない案件は、404へ遷移させずプレビュー画像で内容を確認できます。</p>
+          <p class="lead">公開準備中のものを含め、現在取り組んでいる代表事例です。詳細ページを持たない案件は、概要図をフローティング表示して内容を確認できます。</p>
         </div>
         <div class="works-grid">
           {featuredWorks.map((work) => (
