@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
-  <title id="title">Computer vision automation preview</title>
-  <desc id="desc">A generic app-game automation research interface showing screen capture, object detection, path planning, mouse input, freshness checks, logs, and automatic retry.</desc>
+  <title id="title">画像認識・自動操作システム プレビュー</title>
+  <desc id="desc">画面取得、画像認識、経路計画、自動マウス操作、鮮度判定、ログ、再試行までを示す汎用的な自動化研究プレビュー。</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0b0c"/><stop offset="1" stop-color="#151214"/></linearGradient>
     <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d191b"/><stop offset="1" stop-color="#111012"/></linearGradient>
@@ -9,18 +9,18 @@
   <rect width="1600" height="1000" rx="36" fill="url(#bg)"/>
   <rect x="58" y="52" width="1484" height="896" rx="28" fill="#0f0f10" stroke="#393234" filter="url(#shadow)"/>
 
-  <g transform="translate(94 82)" font-family="Arial, sans-serif">
-    <text x="0" y="28" fill="#b97750" font-size="15" font-weight="700" letter-spacing="3">COMPUTER VISION / AUTOMATION R&amp;D</text>
-    <text x="0" y="71" fill="#f3ece4" font-size="32" font-weight="700">Screen → Detect → Plan → Input → Retry</text>
-    <text x="810" y="34" fill="#8f8586" font-size="14" letter-spacing="2">REAL-DEVICE LOOP</text>
-    <rect x="1190" y="0" width="220" height="46" rx="23" fill="#24181b" stroke="#6b3642"/><text x="1300" y="29" fill="#dca7b3" font-size="14" text-anchor="middle">LIVE LOGGING</text>
+  <g transform="translate(94 82)" font-family="'Noto Sans JP','Yu Gothic','Hiragino Kaku Gothic ProN',Arial,sans-serif">
+    <text x="0" y="28" fill="#b97750" font-size="15" font-weight="700" letter-spacing="2">画像認識 / 自動操作 R&amp;D</text>
+    <text x="0" y="71" fill="#f3ece4" font-size="32" font-weight="700">画面取得 → 認識 → 経路計画 → 操作 → 再試行</text>
+    <text x="810" y="34" fill="#8f8586" font-size="14" letter-spacing="1">実機ループ</text>
+    <rect x="1190" y="0" width="220" height="46" rx="23" fill="#24181b" stroke="#6b3642"/><text x="1300" y="29" fill="#dca7b3" font-size="14" text-anchor="middle">リアルタイムログ</text>
   </g>
 
-  <g transform="translate(94 190)" font-family="Arial, sans-serif">
+  <g transform="translate(94 190)" font-family="'Noto Sans JP','Yu Gothic','Hiragino Kaku Gothic ProN',Arial,sans-serif">
     <rect x="0" y="0" width="870" height="560" rx="24" fill="url(#panel)" stroke="#3a3335"/>
-    <text x="28" y="42" fill="#b97750" font-size="14" font-weight="700" letter-spacing="2">CAPTURED BOARD</text>
-    <text x="28" y="76" fill="#f3ece4" font-size="24" font-weight="700">Live screen recognition</text>
-    <text x="28" y="102" fill="#8d8486" font-size="14">Generic visual objects · no game assets reproduced</text>
+    <text x="28" y="42" fill="#b97750" font-size="14" font-weight="700" letter-spacing="2">取得画面</text>
+    <text x="28" y="76" fill="#f3ece4" font-size="24" font-weight="700">画面をリアルタイム認識</text>
+    <text x="28" y="102" fill="#8d8486" font-size="14">汎用図形で再現・ゲーム素材は不使用</text>
 
     <g transform="translate(34 132)">
       <rect width="802" height="384" rx="28" fill="#101214" stroke="#34373a"/>
@@ -33,44 +33,44 @@
         <path d="M112 164 C166 135 223 145 290 178 C341 204 390 223 440 272 C480 311 503 302 527 250"/>
       </g>
       <g fill="#fff"><circle cx="112" cy="164" r="10"/><circle cx="290" cy="178" r="10"/><circle cx="440" cy="272" r="10"/><circle cx="527" cy="250" r="10"/></g>
-      <rect x="548" y="310" width="224" height="46" rx="23" fill="#1e1719" stroke="#6b3642"/><text x="660" y="339" fill="#efbec8" font-size="14" text-anchor="middle">CHAIN CANDIDATE: 4</text>
+      <rect x="548" y="310" width="224" height="46" rx="23" fill="#1e1719" stroke="#6b3642"/><text x="660" y="339" fill="#efbec8" font-size="14" text-anchor="middle">経路候補：4個</text>
     </g>
   </g>
 
-  <g transform="translate(990 190)" font-family="Arial, sans-serif">
+  <g transform="translate(990 190)" font-family="'Noto Sans JP','Yu Gothic','Hiragino Kaku Gothic ProN',Arial,sans-serif">
     <g>
       <rect width="516" height="96" rx="18" fill="url(#panel)" stroke="#3a3335"/>
       <rect x="18" y="18" width="58" height="58" rx="14" fill="#21191b"/><text x="47" y="54" fill="#c68057" font-size="22" font-weight="700" text-anchor="middle">01</text>
-      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="2">CAPTURE</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">Screen frame acquisition</text>
+      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="1">画面取得</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">フレームを取得</text>
     </g>
     <g transform="translate(0 112)">
       <rect width="516" height="96" rx="18" fill="url(#panel)" stroke="#3a3335"/>
       <rect x="18" y="18" width="58" height="58" rx="14" fill="#21191b"/><text x="47" y="54" fill="#c68057" font-size="22" font-weight="700" text-anchor="middle">02</text>
-      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="2">DETECT</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">Object / state recognition</text>
+      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="1">認識</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">オブジェクト・状態を認識</text>
     </g>
     <g transform="translate(0 224)">
       <rect width="516" height="96" rx="18" fill="url(#panel)" stroke="#3a3335"/>
       <rect x="18" y="18" width="58" height="58" rx="14" fill="#21191b"/><text x="47" y="54" fill="#c68057" font-size="22" font-weight="700" text-anchor="middle">03</text>
-      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="2">PLAN</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">Chain / route selection</text>
+      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="1">経路計画</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">連結候補・経路を選択</text>
     </g>
     <g transform="translate(0 336)">
       <rect width="516" height="96" rx="18" fill="url(#panel)" stroke="#3a3335"/>
       <rect x="18" y="18" width="58" height="58" rx="14" fill="#21191b"/><text x="47" y="54" fill="#c68057" font-size="22" font-weight="700" text-anchor="middle">04</text>
-      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="2">INPUT</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">Mouse swipe / click action</text>
+      <text x="94" y="38" fill="#b97750" font-size="12" font-weight="700" letter-spacing="1">自動操作</text><text x="94" y="67" fill="#f0e8e1" font-size="19" font-weight="700">マウスのスワイプ・クリック</text>
     </g>
     <g transform="translate(0 448)">
       <rect width="516" height="112" rx="18" fill="#1d1618" stroke="#5a333c"/>
       <rect x="18" y="22" width="58" height="58" rx="14" fill="#321a20"/><text x="47" y="58" fill="#e398a7" font-size="22" font-weight="700" text-anchor="middle">05</text>
-      <text x="94" y="40" fill="#d68b9a" font-size="12" font-weight="700" letter-spacing="2">FRESHNESS / RETRY</text><text x="94" y="69" fill="#f5ece8" font-size="19" font-weight="700">Reject stale actions</text><text x="94" y="91" fill="#9c8e91" font-size="13">End detection → Retry → Start</text>
+      <text x="94" y="40" fill="#d68b9a" font-size="12" font-weight="700" letter-spacing="1">鮮度判定 / 再試行</text><text x="94" y="69" fill="#f5ece8" font-size="19" font-weight="700">古い判定結果を破棄</text><text x="94" y="91" fill="#9c8e91" font-size="13">終了判定 → 再試行 → 開始</text>
     </g>
   </g>
 
-  <g transform="translate(94 782)" font-family="Arial, sans-serif">
+  <g transform="translate(94 782)" font-family="'Noto Sans JP','Yu Gothic','Hiragino Kaku Gothic ProN',Arial,sans-serif">
     <rect x="0" y="0" width="1412" height="122" rx="22" fill="#151315" stroke="#44373a"/>
-    <g transform="translate(24 20)"><text x="0" y="18" fill="#b97750" font-size="12" font-weight="700" letter-spacing="2">MEASURED LOOP</text><text x="0" y="50" fill="#f3ece4" font-size="22" font-weight="700">Recognition is not enough — timing matters.</text><text x="0" y="78" fill="#8d8486" font-size="14">Frame age, processing time, action logs, safety gates and strategy separation are tracked on real-device tests.</text></g>
+    <g transform="translate(24 20)"><text x="0" y="18" fill="#b97750" font-size="12" font-weight="700" letter-spacing="1">実測ループ</text><text x="0" y="50" fill="#f3ece4" font-size="22" font-weight="700">認識精度だけでなく、タイミングも重要。</text><text x="0" y="78" fill="#8d8486" font-size="14">フレーム鮮度・処理時間・操作ログ・安全判定・戦略分離を実機テストで計測。</text></g>
     <g transform="translate(988 22)">
-      <rect width="172" height="78" rx="18" fill="#211d1e" stroke="#493c40"/><text x="86" y="29" fill="#8f8586" font-size="11" text-anchor="middle">FRESHNESS RULE</text><text x="86" y="58" fill="#f0e8e1" font-size="23" font-weight="700" text-anchor="middle">&lt; 80 ms</text>
-      <rect x="188" width="188" height="78" rx="18" fill="#211d1e" stroke="#493c40"/><text x="282" y="29" fill="#8f8586" font-size="11" text-anchor="middle">STRATEGY LAYER</text><text x="282" y="58" fill="#f0e8e1" font-size="18" font-weight="700" text-anchor="middle">EXTENSIBLE</text>
+      <rect width="172" height="78" rx="18" fill="#211d1e" stroke="#493c40"/><text x="86" y="29" fill="#8f8586" font-size="11" text-anchor="middle">鮮度ルール</text><text x="86" y="58" fill="#f0e8e1" font-size="23" font-weight="700" text-anchor="middle">&lt; 80 ms</text>
+      <rect x="188" width="188" height="78" rx="18" fill="#211d1e" stroke="#493c40"/><text x="282" y="29" fill="#8f8586" font-size="11" text-anchor="middle">戦略レイヤー</text><text x="282" y="58" fill="#f0e8e1" font-size="18" font-weight="700" text-anchor="middle">拡張可能</text>
     </g>
   </g>
 </svg>
