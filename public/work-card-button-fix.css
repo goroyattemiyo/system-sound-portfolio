@@ -1,0 +1,19 @@
+.works-grid button.work-link.preview-trigger {
+  width: 100%;
+  margin-inline: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.works-grid button.work-link.preview-trigger:focus-visible {
+  outline: 2px solid var(--color-wood);
+  outline-offset: 4px;
+}
