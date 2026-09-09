@@ -15,6 +15,7 @@ const ogImageUrl = new URL(`${base}og/system-sound-og.svg`, Astro.site);
 const faviconUrl = `${base}favicon/favicon.svg`;
 const storyAnimationUrl = `${base}story-animation.js`;
 const projectPreviewsUrl = `${base}project-previews.js`;
+const workCardsUrl = `${base}work-cards-v2.js`;
 ---
 
 <!doctype html>
@@ -45,5 +46,6 @@ const projectPreviewsUrl = `${base}project-previews.js`;
     <slot />
     <script src={storyAnimationUrl} defer></script>
     <script src={projectPreviewsUrl} defer></script>
+    <script src={workCardsUrl} defer></script>
   </body>
 </html>
