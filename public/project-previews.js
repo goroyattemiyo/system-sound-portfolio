@@ -69,6 +69,39 @@
     },
   ];
 
+  const newFeaturedWorks = [
+    {
+      number: '07',
+      status: 'Public app available',
+      category: 'Media / PWA / FFmpeg / Browser',
+      title: '再生・録音・変換を、ブラウザだけのメディアスタジオへ。',
+      copy: 'ローカル音声・動画の再生、永続ライブラリ、バックグラウンド再生、Media Session、マイク／タブ録音、FFmpeg変換、YouTube公式再生を、スマホ優先のPWAとして一つの操作系へまとめています。',
+      flow: ['Import', 'Play', 'Record', 'Process', 'Save'],
+      image: projectImage('11-web-media-studio.svg'),
+      alt: 'Web Media StudioのPlayer、Library、Recorder、FFmpeg Tools、フローティングミニプレーヤーをまとめたプレビュー',
+      url: 'https://goroyattemiyo.github.io/web-media-studio/',
+      label: 'Web Media Studioを開く',
+      related: [],
+    },
+    {
+      number: '08',
+      status: 'Ongoing R&D',
+      category: 'Computer Vision / Automation / Input Control',
+      title: '画像認識からマウス操作まで、某有名アプリゲームを自動化。',
+      copy: '画面キャプチャ、同一オブジェクト検出、経路探索、鮮度判定、自動マウス操作、終了判定・Retryまでを実機ログで改善。共通基盤とキャラクター別戦略を分離し、別条件へ拡張できる構成にしています。',
+      flow: ['Capture', 'Detect', 'Plan', 'Input', 'Retry'],
+      image: projectImage('12-vision-automation.svg'),
+      alt: 'ゲーム画面の取得、画像認識、経路探索、鮮度判定、自動マウス操作、Retryまでのコンピュータビジョン自動化フロー',
+      url: '',
+      label: '',
+      related: [
+        ['note 開発記・第1話', 'https://note.com/goro_yattemiyo/n/ndc8c39a26d84'],
+        ['note 開発記・第2話', 'https://note.com/goro_yattemiyo/n/n5ad625d057d3'],
+        ['note 開発記・第3話', 'https://note.com/goro_yattemiyo/n/n62cf15a8552e'],
+      ],
+    },
+  ];
+
   const dialog = document.querySelector('#work-preview');
   const previewImage = document.querySelector('#preview-image');
   const previewTitle = document.querySelector('#preview-title');
@@ -98,6 +131,11 @@
   fullSizeLink.setAttribute('aria-label', 'プレビュー画像を原寸表示する');
   previewActions.prepend(fullSizeLink);
 
+  const relatedLinksBox = document.createElement('div');
+  relatedLinksBox.className = 'preview-related';
+  relatedLinksBox.hidden = true;
+  previewFoot.append(relatedLinksBox);
+
   const zoomHint = document.createElement('span');
   zoomHint.className = 'preview-zoom-hint';
   zoomHint.textContent = '画像をタップすると拡大できます';
@@ -111,8 +149,13 @@
     .preview-zoom-hint{position:absolute;right:10px;bottom:10px;padding:7px 10px;background:rgba(11,11,12,.82);border:1px solid rgba(242,237,227,.2);color:#d7d0c6;font-size:.68rem;letter-spacing:.03em;pointer-events:none;backdrop-filter:blur(8px)}
     .preview-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin-left:auto}
     .preview-fullsize{white-space:nowrap}
+    .preview-foot{flex-wrap:wrap}
+    .preview-related{flex:0 0 100%;display:flex;flex-wrap:wrap;gap:8px;padding-top:14px;border-top:1px solid var(--color-line)}
+    .preview-related[hidden]{display:none}
+    .preview-related a{display:inline-flex;min-height:38px;align-items:center;padding:0 13px;border:1px solid var(--color-line);color:var(--color-ivory);text-decoration:none;font-size:.74rem;letter-spacing:.03em}
+    .preview-related a:hover{text-decoration:underline;text-underline-offset:4px}
     @media(max-width:900px){.preview-actions{width:100%;margin-left:0;justify-content:flex-start}.preview-image-stage{max-height:66vh}}
-    @media(max-width:640px){.preview-image-stage{max-height:62vh;margin-inline:-10px}.preview-image-stage.is-zoomed .preview-image{width:2048px}.preview-zoom-hint{font-size:.62rem}.preview-actions .button{width:100%}}
+    @media(max-width:640px){.preview-image-stage{max-height:62vh;margin-inline:-10px}.preview-image-stage.is-zoomed .preview-image{width:2048px}.preview-zoom-hint{font-size:.62rem}.preview-actions .button{width:100%}.preview-related a{flex:1 1 100%;justify-content:center}}
   `;
   document.head.append(style);
 
@@ -129,6 +172,24 @@
     fullSizeLink.href = source || '#';
     imageStage.classList.remove('is-zoomed');
     imageStage.scrollTo({ left: 0, top: 0 });
+  };
+
+  const setRelatedLinks = (links = []) => {
+    relatedLinksBox.replaceChildren();
+    if (!Array.isArray(links) || links.length === 0) {
+      relatedLinksBox.hidden = true;
+      return;
+    }
+
+    links.forEach(([label, url]) => {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = label;
+      relatedLinksBox.append(link);
+    });
+    relatedLinksBox.hidden = false;
   };
 
   const buildHighResolutionCopy = (source) => {
@@ -203,12 +264,13 @@
   existingTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const source = trigger.dataset.previewImage || '';
+      setRelatedLinks([]);
       // The inline modal handler runs first; this listener upgrades the zoom copy.
       requestAnimationFrame(() => prepareZoom(source));
     });
   });
 
-  const openInjectedPreview = (trigger) => {
+  const openInjectedPreview = (trigger, related = []) => {
     const source = trigger.dataset.previewImage || '';
     previewImage.src = source;
     previewImage.alt = trigger.dataset.previewAlt || trigger.dataset.previewTitle || 'プロジェクトプレビュー';
@@ -222,9 +284,65 @@
       previewExternal.hidden = true;
       previewExternal.removeAttribute('href');
     }
+    setRelatedLinks(related);
     dialog.showModal();
     prepareZoom(source);
   };
+
+  const worksGrid = document.querySelector('.works-grid');
+  if (worksGrid instanceof HTMLElement) {
+    newFeaturedWorks.forEach((config) => {
+      const article = document.createElement('article');
+      article.className = 'work-card';
+
+      const meta = document.createElement('div');
+      meta.className = 'work-meta';
+      const number = document.createElement('span');
+      number.textContent = config.number;
+      const status = document.createElement('span');
+      status.textContent = config.status;
+      meta.append(number, status);
+
+      const category = document.createElement('p');
+      category.className = 'work-category';
+      category.textContent = config.category;
+
+      const title = document.createElement('h3');
+      title.textContent = config.title;
+
+      const copy = document.createElement('p');
+      copy.textContent = config.copy;
+
+      const flow = document.createElement('div');
+      flow.className = 'flow';
+      flow.setAttribute('aria-label', '処理の流れ');
+      config.flow.forEach((item, index) => {
+        const step = document.createElement('span');
+        step.textContent = item;
+        flow.append(step);
+        if (index < config.flow.length - 1) {
+          const arrow = document.createElement('i');
+          arrow.setAttribute('aria-hidden', 'true');
+          arrow.textContent = '→';
+          flow.append(arrow);
+        }
+      });
+
+      const button = document.createElement('button');
+      button.className = 'work-link preview-trigger injected-preview-trigger';
+      button.type = 'button';
+      button.dataset.previewImage = config.image;
+      button.dataset.previewTitle = config.title;
+      button.dataset.previewAlt = config.alt;
+      button.dataset.previewUrl = config.url || '';
+      button.dataset.previewLabel = config.label || '';
+      button.innerHTML = 'プレビューを見る<span aria-hidden="true">↗</span>';
+      button.addEventListener('click', () => openInjectedPreview(button, config.related));
+
+      article.append(meta, category, title, copy, flow, button);
+      worksGrid.append(article);
+    });
+  }
 
   const privateArticles = Array.from(document.querySelectorAll('.private-grid article'));
   privateArticles.forEach((article, index) => {
@@ -238,7 +356,7 @@
     button.dataset.previewTitle = config.title;
     button.dataset.previewAlt = config.alt;
     button.innerHTML = 'プレビューを見る<span aria-hidden="true">↗</span>';
-    button.addEventListener('click', () => openInjectedPreview(button));
+    button.addEventListener('click', () => openInjectedPreview(button, []));
     article.append(button);
   });
 
@@ -263,5 +381,6 @@
     renderToken += 1;
     revokeGeneratedZoom();
     imageStage.classList.remove('is-zoomed');
+    setRelatedLinks([]);
   });
 })();
