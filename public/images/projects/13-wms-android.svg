@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">WMS Android ネイティブメディアプレーヤー</title>
+  <desc id="desc">検索や共有から端末内保存、ライブラリ、プレイリスト、バックグラウンド再生までをつなぐAndroid版Web Media Studioの日本語プレビュー。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090a"/><stop offset="1" stop-color="#181214"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d191a"/><stop offset="1" stop-color="#111011"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c47c4f"/><stop offset="1" stop-color="#7a1f2b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".38"/></filter>
+  </defs>
+  <rect width="1600" height="1000" rx="38" fill="url(#bg)"/>
+  <rect x="54" y="48" width="1492" height="904" rx="30" fill="#0e0e0f" stroke="#3a3134" filter="url(#shadow)"/>
+
+  <g font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <text x="92" y="105" fill="#c47c4f" font-size="16" font-weight="700" letter-spacing="3">NATIVE ANDROID / LOCAL-FIRST MEDIA</text>
+    <text x="92" y="151" fill="#f3ece4" font-size="34" font-weight="700">WMS Android — 端末の中に、自分専用のメディア環境を。</text>
+    <text x="92" y="185" fill="#958b8d" font-size="16">検索・共有・端末ファイル → 権利確認 → ローカル保存 → Library / Playlist → 画面OFF再生</text>
+    <g transform="translate(1190 91)">
+      <rect width="274" height="42" rx="21" fill="#21191b" stroke="#68414a"/>
+      <circle cx="22" cy="21" r="6" fill="#c47c4f"/>
+      <text x="145" y="27" fill="#e0b4bd" font-size="13" font-weight="700" text-anchor="middle">実機検証済み / UI再設計中</text>
+    </g>
+  </g>
+
+  <g transform="translate(92 226)" font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <!-- Home / Import -->
+    <g>
+      <rect width="430" height="580" rx="34" fill="#0b0b0c" stroke="#484043" stroke-width="2"/>
+      <rect x="18" y="18" width="394" height="544" rx="24" fill="url(#panel)"/>
+      <text x="42" y="59" fill="#c47c4f" font-size="13" font-weight="700" letter-spacing="2">HOME / SEARCH</text>
+      <text x="42" y="96" fill="#f3ece4" font-size="24" font-weight="700">メディアを探す・受け取る</text>
+      <rect x="42" y="122" width="346" height="48" rx="14" fill="#111113" stroke="#55484b"/>
+      <text x="61" y="153" fill="#958b8d" font-size="14">キーワード または URL</text>
+      <rect x="42" y="190" width="346" height="104" rx="18" fill="#151315" stroke="#393235"/>
+      <rect x="58" y="207" width="74" height="70" rx="12" fill="#2b2527"/>
+      <path d="M79 235h32M79 247h24" stroke="#c47c4f" stroke-width="4" stroke-linecap="round"/>
+      <text x="150" y="225" fill="#f1eae3" font-size="15" font-weight="700">検索結果 / 共有URL</text>
+      <text x="150" y="249" fill="#918789" font-size="12">タイトル・時間・サムネイル</text>
+      <rect x="150" y="261" width="112" height="24" rx="12" fill="#6f2230"/>
+      <text x="206" y="278" fill="#fff3ef" font-size="11" text-anchor="middle">WMSに追加</text>
+      <text x="42" y="335" fill="#b98a6b" font-size="12" font-weight="700">IMPORT SHEET</text>
+      <rect x="42" y="354" width="346" height="130" rx="18" fill="#151315" stroke="#44383b"/>
+      <text x="60" y="385" fill="#f0e8e1" font-size="15" font-weight="700">保存形式</text>
+      <rect x="60" y="400" width="86" height="28" rx="14" fill="#7a1f2b"/><text x="103" y="419" fill="#fff" font-size="11" text-anchor="middle">MP3 192</text>
+      <rect x="154" y="400" width="72" height="28" rx="14" fill="#211d1e"/><text x="190" y="419" fill="#d7ceca" font-size="11" text-anchor="middle">M4A</text>
+      <rect x="234" y="400" width="72" height="28" rx="14" fill="#211d1e"/><text x="270" y="419" fill="#d7ceca" font-size="11" text-anchor="middle">MP4</text>
+      <text x="60" y="457" fill="#8e8587" font-size="12">✓ 権利・利用許可を確認して保存</text>
+      <rect x="42" y="505" width="346" height="36" rx="18" fill="url(#accent)"/>
+      <text x="215" y="529" fill="#fff8f4" font-size="13" font-weight="700" text-anchor="middle">端末へ保存</text>
+    </g>
+
+    <!-- Library / Playlist -->
+    <g transform="translate(474 0)">
+      <rect width="430" height="580" rx="34" fill="#0b0b0c" stroke="#484043" stroke-width="2"/>
+      <rect x="18" y="18" width="394" height="544" rx="24" fill="url(#panel)"/>
+      <text x="42" y="59" fill="#c47c4f" font-size="13" font-weight="700" letter-spacing="2">LIBRARY / PLAYLIST</text>
+      <text x="42" y="96" fill="#f3ece4" font-size="24" font-weight="700">保存したメディアを整理</text>
+      <g transform="translate(42 126)">
+        <rect width="346" height="94" rx="16" fill="#151315" stroke="#393235"/>
+        <rect x="14" y="14" width="66" height="66" rx="12" fill="#31272a"/>
+        <circle cx="47" cy="47" r="22" fill="none" stroke="#c47c4f" stroke-width="3"/><path d="M42 36 58 47 42 58Z" fill="#f1e9e2"/>
+        <text x="96" y="34" fill="#f1eae3" font-size="14" font-weight="700">Recently Added</text>
+        <text x="96" y="56" fill="#958b8d" font-size="12">音声 / 動画・再生位置を保存</text>
+        <text x="96" y="78" fill="#bc8768" font-size="11">Room Database</text>
+      </g>
+      <g transform="translate(42 236)">
+        <rect width="346" height="184" rx="16" fill="#151315" stroke="#393235"/>
+        <text x="18" y="30" fill="#b98a6b" font-size="12" font-weight="700">PLAYLIST</text>
+        <text x="18" y="59" fill="#f1eae3" font-size="17" font-weight="700">Night Drive Mix</text>
+        <g fill="#30282a"><rect x="18" y="78" width="310" height="28" rx="8"/><rect x="18" y="112" width="310" height="28" rx="8"/><rect x="18" y="146" width="310" height="22" rx="8"/></g>
+        <g fill="#c8bfb9"><circle cx="34" cy="92" r="5"/><circle cx="34" cy="126" r="5"/><circle cx="34" cy="157" r="5"/></g>
+        <g fill="#918789" font-size="11"><text x="50" y="96">01　Audio Track</text><text x="50" y="130">02　Video Clip</text><text x="50" y="161">03　Local File</text></g>
+      </g>
+      <rect x="42" y="444" width="164" height="42" rx="14" fill="#211d1e" stroke="#4d4043"/>
+      <text x="124" y="471" fill="#e4dcd6" font-size="12" text-anchor="middle">並べ替え</text>
+      <rect x="224" y="444" width="164" height="42" rx="14" fill="#211d1e" stroke="#4d4043"/>
+      <text x="306" y="471" fill="#e4dcd6" font-size="12" text-anchor="middle">再生キューへ</text>
+      <text x="42" y="527" fill="#857c7e" font-size="11">削除・共有・再生位置復元にも対応</text>
+    </g>
+
+    <!-- Player -->
+    <g transform="translate(948 0)">
+      <rect width="430" height="580" rx="34" fill="#0b0b0c" stroke="#484043" stroke-width="2"/>
+      <rect x="18" y="18" width="394" height="544" rx="24" fill="url(#panel)"/>
+      <text x="42" y="59" fill="#c47c4f" font-size="13" font-weight="700" letter-spacing="2">NOW PLAYING / MEDIA3</text>
+      <text x="42" y="96" fill="#f3ece4" font-size="24" font-weight="700">画面OFFでも再生を継続</text>
+      <rect x="42" y="122" width="346" height="230" rx="22" fill="#0d0d0f" stroke="#42363a"/>
+      <circle cx="215" cy="235" r="84" fill="none" stroke="#3d2e32" stroke-width="16"/>
+      <circle cx="215" cy="235" r="62" fill="none" stroke="#7a1f2b" stroke-width="5" stroke-dasharray="7 9"/>
+      <path d="M151 247 C167 188 183 294 199 213 S231 289 247 205 S279 273 295 223" fill="none" stroke="#c47c4f" stroke-width="5" stroke-linecap="round"/>
+      <text x="42" y="386" fill="#f1eae3" font-size="18" font-weight="700">Playing Media</text>
+      <text x="42" y="410" fill="#958b8d" font-size="12">Media3 / ExoPlayer · audio focus</text>
+      <rect x="42" y="438" width="346" height="6" rx="3" fill="#30292b"/><rect x="42" y="438" width="224" height="6" rx="3" fill="#c47c4f"/>
+      <g transform="translate(72 470)">
+        <circle cx="34" cy="34" r="27" fill="#211d1e"/><path d="M39 24 26 34 39 44Z" fill="#ddd4ce"/>
+        <circle cx="143" cy="34" r="34" fill="#7a1f2b"/><rect x="135" y="21" width="6" height="26" fill="#fff"/><rect x="146" y="21" width="6" height="26" fill="#fff"/>
+        <circle cx="252" cy="34" r="27" fill="#211d1e"/><path d="M247 24 260 34 247 44Z" fill="#ddd4ce"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(92 836)" font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <rect width="1378" height="76" rx="18" fill="#151315" stroke="#44373a"/>
+    <text x="24" y="28" fill="#b98a6b" font-size="11" font-weight="700" letter-spacing="2">VERIFIED STACK</text>
+    <text x="24" y="53" fill="#f0e8e1" font-size="15" font-weight="700">Kotlin　/　Jetpack Compose　/　Room　/　Media3　/　yt-dlp</text>
+    <g transform="translate(900 17)" font-size="11">
+      <rect width="132" height="42" rx="21" fill="#211d1e"/><text x="66" y="26" fill="#d9cfc9" text-anchor="middle">音声・動画</text>
+      <rect x="144" width="132" height="42" rx="21" fill="#211d1e"/><text x="210" y="26" fill="#d9cfc9" text-anchor="middle">画面OFF再生</text>
+      <rect x="288" width="166" height="42" rx="21" fill="#26191c" stroke="#60323c"/><text x="371" y="26" fill="#e0aeb8" text-anchor="middle">Local-first</text>
+    </g>
+  </g>
+</svg>
