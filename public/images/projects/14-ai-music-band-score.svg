@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">MP3から17パートのバンド譜へ</title>
+  <desc id="desc">MP3音源からリードシート、MusicXML、17パートのジャズバンド用スコア、個別パート譜へ展開するAI Music Score Labの日本語プレビュー。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0909"/><stop offset="1" stop-color="#171214"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1819"/><stop offset="1" stop-color="#111011"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c17b4d"/><stop offset="1" stop-color="#7a1f2b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".38"/></filter>
+  </defs>
+  <rect width="1600" height="1000" rx="38" fill="url(#bg)"/>
+  <rect x="54" y="48" width="1492" height="904" rx="30" fill="#0e0e0f" stroke="#3a3134" filter="url(#shadow)"/>
+
+  <g font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <text x="92" y="105" fill="#c17b4d" font-size="16" font-weight="700" letter-spacing="3">AI MUSIC SCORE LAB / TRANSCRIPTION → ARRANGEMENT</text>
+    <text x="92" y="151" fill="#f3ece4" font-size="34" font-weight="700">MP3音源を、演奏できる17パートのバンド譜へ。</text>
+    <text x="92" y="185" fill="#958b8d" font-size="16">音源解析だけで終わらせず、演奏者が読める譜面・移調譜・個別パートへつなぐ制作パイプライン</text>
+  </g>
+
+  <!-- Main flow -->
+  <g transform="translate(92 236)" font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <!-- MP3 -->
+    <g>
+      <rect width="236" height="390" rx="24" fill="url(#panel)" stroke="#403638"/>
+      <text x="22" y="42" fill="#c17b4d" font-size="12" font-weight="700" letter-spacing="2">01 / SOURCE</text>
+      <text x="22" y="78" fill="#f3ece4" font-size="22" font-weight="700">MP3 / WAV</text>
+      <text x="22" y="104" fill="#92888a" font-size="12">完成音源を入力</text>
+      <g transform="translate(22 144)" fill="none" stroke="#c17b4d" stroke-width="5" stroke-linecap="round">
+        <path d="M0 62 9 48 18 82 27 22 36 98 45 38 54 76 63 16 72 106 81 42 90 70 99 29 108 92 117 54 126 82 135 35 144 68 153 24 162 97 171 44 180 72 189 57"/>
+      </g>
+      <rect x="22" y="282" width="192" height="56" rx="14" fill="#151315" stroke="#393235"/>
+      <text x="38" y="306" fill="#b98a6b" font-size="11">解析対象</text>
+      <text x="38" y="327" fill="#e7dfd8" font-size="13">メロディ / コード / 構成</text>
+      <text x="22" y="365" fill="#807779" font-size="11">Tempo・Key・Meterも抽出</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(248 172)"><path d="M0 22h58" stroke="#7a1f2b" stroke-width="4"/><path d="m48 11 14 11-14 11" fill="none" stroke="#c17b4d" stroke-width="4" stroke-linejoin="round"/></g>
+
+    <!-- Lead sheet -->
+    <g transform="translate(318 0)">
+      <rect width="286" height="390" rx="24" fill="url(#panel)" stroke="#403638"/>
+      <text x="22" y="42" fill="#c17b4d" font-size="12" font-weight="700" letter-spacing="2">02 / LEAD SHEET</text>
+      <text x="22" y="78" fill="#f3ece4" font-size="22" font-weight="700">演奏者向けに整形</text>
+      <text x="22" y="104" fill="#92888a" font-size="12">機械採譜 → 読める譜面へ</text>
+      <rect x="22" y="130" width="242" height="194" rx="12" fill="#ece7df"/>
+      <g stroke="#645d59" stroke-width="1.5"><path d="M38 174h210M38 188h210M38 202h210M38 216h210M38 230h210"/><path d="M38 254h210M38 268h210M38 282h210M38 296h210M38 310h210"/></g>
+      <g fill="#292527"><ellipse cx="75" cy="202" rx="8" ry="6"/><path d="M82 202v-32" stroke="#292527" stroke-width="3"/><ellipse cx="116" cy="188" rx="8" ry="6"/><path d="M123 188v-30" stroke="#292527" stroke-width="3"/><ellipse cx="158" cy="216" rx="8" ry="6"/><path d="M165 216v-36" stroke="#292527" stroke-width="3"/><ellipse cx="204" cy="194" rx="8" ry="6"/><path d="M211 194v-30" stroke="#292527" stroke-width="3"/></g>
+      <g fill="#7a1f2b" font-size="11" font-weight="700"><text x="48" y="154">Cmaj7</text><text x="110" y="154">Dm7</text><text x="164" y="154">G7</text></g>
+      <text x="22" y="354" fill="#dba890" font-size="12" font-weight="700">Gate 1：PASS</text>
+      <text x="22" y="374" fill="#807779" font-size="11">MusicXML / PDF / SVG / PNG</text>
+    </g>
+
+    <g transform="translate(616 172)"><path d="M0 22h58" stroke="#7a1f2b" stroke-width="4"/><path d="m48 11 14 11-14 11" fill="none" stroke="#c17b4d" stroke-width="4" stroke-linejoin="round"/></g>
+
+    <!-- MusicXML -->
+    <g transform="translate(686 0)">
+      <rect width="214" height="390" rx="24" fill="url(#panel)" stroke="#403638"/>
+      <text x="22" y="42" fill="#c17b4d" font-size="12" font-weight="700" letter-spacing="2">03 / EDITABLE</text>
+      <text x="22" y="78" fill="#f3ece4" font-size="22" font-weight="700">MusicXML</text>
+      <text x="22" y="104" fill="#92888a" font-size="12">譜面を編集可能なデータへ</text>
+      <rect x="38" y="145" width="138" height="164" rx="12" fill="#171416" stroke="#4d3d41"/>
+      <path d="M64 178h84M64 200h72M64 222h94M64 244h62M64 266h84" stroke="#b07a5a" stroke-width="4" stroke-linecap="round"/>
+      <path d="M54 160h-12v132h12M160 160h12v132h-12" fill="none" stroke="#7a1f2b" stroke-width="3"/>
+      <text x="107" y="337" fill="#d8cfc9" font-size="12" text-anchor="middle">110 measures</text>
+      <text x="107" y="360" fill="#8c8385" font-size="11" text-anchor="middle">128 chord symbols</text>
+    </g>
+
+    <g transform="translate(912 172)"><path d="M0 22h58" stroke="#7a1f2b" stroke-width="4"/><path d="m48 11 14 11-14 11" fill="none" stroke="#c17b4d" stroke-width="4" stroke-linejoin="round"/></g>
+
+    <!-- 17-part score -->
+    <g transform="translate(982 0)">
+      <rect width="396" height="390" rx="24" fill="url(#panel)" stroke="#403638"/>
+      <text x="22" y="42" fill="#c17b4d" font-size="12" font-weight="700" letter-spacing="2">04 / BIG BAND SCORE</text>
+      <text x="22" y="78" fill="#f3ece4" font-size="22" font-weight="700">17パートのフルスコアへ</text>
+      <text x="22" y="104" fill="#92888a" font-size="12">コンサートピッチの骨格を自動生成</text>
+      <g transform="translate(22 132)">
+        <rect width="352" height="158" rx="12" fill="#ece7df"/>
+        <g stroke="#756c68" stroke-width="1"><path d="M16 156h320"/><path d="M16 146h320"/><path d="M16 136h320"/><path d="M16 126h320"/><path d="M16 116h320"/><path d="M16 103h320"/><path d="M16 93h320"/><path d="M16 83h320"/><path d="M16 73h320"/><path d="M16 63h320"/><path d="M16 50h320"/><path d="M16 40h320"/><path d="M16 30h320"/><path d="M16 20h320"/></g>
+        <g fill="#7a1f2b"><circle cx="78" cy="40" r="4"/><circle cx="130" cy="73" r="4"/><circle cx="188" cy="93" r="4"/><circle cx="244" cy="116" r="4"/><circle cx="296" cy="136" r="4"/></g>
+      </g>
+      <g transform="translate(22 310)" font-size="11">
+        <rect width="82" height="34" rx="17" fill="#211d1e"/><text x="41" y="22" fill="#d8cfc9" text-anchor="middle">Sax ×5</text>
+        <rect x="90" width="96" height="34" rx="17" fill="#211d1e"/><text x="138" y="22" fill="#d8cfc9" text-anchor="middle">Trumpet ×4</text>
+        <rect x="194" width="104" height="34" rx="17" fill="#211d1e"/><text x="246" y="22" fill="#d8cfc9" text-anchor="middle">Trombone ×4</text>
+        <rect x="306" width="68" height="34" rx="17" fill="#26191c"/><text x="340" y="22" fill="#e0aeb8" text-anchor="middle">Rhythm ×4</text>
+      </g>
+      <text x="22" y="374" fill="#dba890" font-size="12" font-weight="700">17-part skeleton：PASS / 編曲：進行中</text>
+    </g>
+  </g>
+
+  <!-- Deliverable and status -->
+  <g transform="translate(92 664)" font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <rect width="1378" height="112" rx="22" fill="#151315" stroke="#44373a"/>
+    <text x="24" y="32" fill="#b98a6b" font-size="12" font-weight="700" letter-spacing="2">TARGET DELIVERABLE</text>
+    <text x="24" y="66" fill="#f3ece4" font-size="20" font-weight="700">フルスコアPDF + 17個別パートPDF + MusicXML + MIDI → 実バンドでリハーサル → 改訂</text>
+    <text x="24" y="91" fill="#8f8586" font-size="13">MuseScoreを最終の譜面編集・レンダリング境界にし、AI生成結果は必ず演奏者目線で確認する。</text>
+  </g>
+
+  <g transform="translate(92 802)" font-family="Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif">
+    <rect width="1378" height="110" rx="20" fill="#111012" stroke="#3d3235"/>
+    <text x="24" y="30" fill="#c17b4d" font-size="12" font-weight="700" letter-spacing="2">CURRENT STATUS</text>
+    <g transform="translate(24 48)" font-size="12" font-weight="700">
+      <rect width="220" height="42" rx="21" fill="#211d1e" stroke="#4d4043"/><text x="110" y="26" fill="#eadfd8" text-anchor="middle">リードシート　PASS</text>
+      <rect x="234" width="246" height="42" rx="21" fill="#211d1e" stroke="#4d4043"/><text x="357" y="26" fill="#eadfd8" text-anchor="middle">17パート骨格　PASS</text>
+      <rect x="494" width="238" height="42" rx="21" fill="#2a191d" stroke="#65323d"/><text x="613" y="26" fill="#e3b2bc" text-anchor="middle">編曲・移調譜　進行中</text>
+    </g>
+    <text x="858" y="75" fill="#8f8586" font-size="12">Playable score, not forensic transcription.</text>
+  </g>
+</svg>
